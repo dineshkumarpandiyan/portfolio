@@ -1,0 +1,186 @@
+/* Contact Page Styles */
+#contact {
+  background-image: url(./assets/contact_bg.png);
+  background-color: #1e2326;
+  color: #fff;
+  min-height: 100dvh;
+  padding: 80px 10% 30px;
+}
+
+
+.contact-head h2 {
+  font-size: 48px;
+  text-align: center;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.contact-head h2 span {
+  color: #2cc1db;
+}
+
+#contact .contact-content {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "left right";
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image-content {
+  background: #807182;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 350px;
+  height: 450px;
+}
+
+.contact-image-content:hover {
+  transform: scale(1.01);
+}
+
+.contact-image-content h1,
+.contact-image-content p {
+  position: absolute;
+  display: block;
+  width: inherit;
+  text-align: center;
+  z-index: 1;
+}
+
+.contact-image-content h1 {
+  color: rgba(255, 255, 255);
+  font-size: 24px;
+  bottom: 70px;
+}
+
+.contact-image-content p {
+  color: #000;
+  padding: 10px;
+  font-size: 12px;
+  background: #2cc1db;
+  bottom: 0px;
+}
+
+.contact-image-content .bg_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/assets/original\ \(1\).jpg) center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.right-container {
+  background: #2cc1db;
+  display: grid;
+  grid-template-areas: "." ".";
+  width: 350px;
+  height: 450px;
+}
+
+.right-container .form {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+  position: relative;
+}
+
+.right-container input,
+.right-container textarea {
+  font-family: sans-serif;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 5px;
+  padding-left: 35px;
+}
+
+.right-container input {
+  height: 35px;
+}
+
+.right-container textarea {
+  padding-top: 7px;
+}
+
+.right-container .fit_icon {
+  font-size: 20px;
+  color: #2cc1db;
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  z-index: 1;
+  padding: 3px;
+}
+
+.right-container input,
+.right-container label,
+.right-container textarea {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.right-container .contact-form-header {
+  padding: 10px 40px 0px;
+}
+
+.right-container label,
+.right-container input,
+.right-container textarea {
+  width: 250px;
+}
+
+.right-container .contact-footer {
+  padding: 5px 40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.send-button button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #2cc1db;
+  border-radius: 4px;
+  width: fit-content;
+  display: block;
+  margin: 10px auto;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: #000;
+  position: relative;
+  z-index: 10;
+}
+
+.send-button button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2cc1db;
+  z-index: -1;
+  transition: 1s;
+}
+
+.send-button button:hover .overlay {
+  width: 100%;
+}
+
+.send-button button .bx {
+  font-size: 20px;
+}
+
+.form_name label,
+.form_mail label,
+.form_message label,
+.form_contact label {
+  display: block;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,177 @@
+/* Skills Page Styles */
+#skills {
+    min-height: 100dvh;
+    background: #fff;
+    padding: 70px 10% 10px;
+  }
+  
+  .skills-head h2 {
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .skills-head h2 span {
+    color: #2cc1db;
+  }
+  
+  
+  /* skills-content */
+  .skills-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3em auto;
+  }
+  
+  /* Badge */
+  .badge {
+    position: relative;
+    margin: 1.5em 3em;
+    width: 6em;
+    height: 6em;
+    border-radius: 20%;
+    display: inline-block;
+    top: 0;
+    transition: all 0.2s ease;
+    box-shadow: 8px 10px 12px 3px rgba(0, 0, 0, 0.43);
+  }
+  
+  .badge .rounded {
+    width: 50px;
+    height: 50px;
+    background: white;
+    position: absolute;
+    margin: 22px 22px auto;
+    z-index: 10;
+    border-radius: 30%;
+    box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.23);
+  }
+  
+  .badge .ribbon {
+    position: absolute;
+    border-radius: 5px;
+    padding: 5px 5px 4px;
+    width: 120px;
+    z-index: 11;
+    color: #000;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -60px;
+    height: 26px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #2cc1db, #f0f3fd);
+    cursor: default;
+  }
+  
+  .rounded img {
+    height: inherit;
+    margin-top: -10px;
+    padding: 3px;
+    background: #fff;
+    border-radius: 25%;
+  }
+  
+  .badge:hover {
+    top: -10px;
+  }
+  
+  /* Colors */
+  .html {
+    background: linear-gradient(to bottom right, #ff4000 0%, #e14e1d 100%);
+    color: #c62828;
+  }
+  
+  .css {
+    background: linear-gradient(to bottom right, #00a2ff 0%, #0277bd 100%);
+    color: #f68401;
+  }
+  
+  .tailwind {
+    background: linear-gradient(to bottom right, #04f7ef 0%, #1ebeba 100%);
+    color: #34a297;
+  }
+  
+  .js {
+    background: linear-gradient(to bottom right, #ffe600 0%, #f0db4f 100%);
+    color: #ffb300;
+  }
+  
+  .ts {
+    background: linear-gradient(to bottom right, #0099ff 0%, #007acc 100%);
+    color: #1c68c5;
+  }
+  
+  .angular {
+    background: linear-gradient(to bottom right, #e23237 0%, #b52e31 100%);
+    color: #7127a8;
+  }
+  
+  .nodejs {
+    background: linear-gradient(to bottom right, #61b90e 0%, #81cd39 100%);
+    color: #00944a;
+  }
+  
+  .nestjs {
+    background: linear-gradient(to bottom right, #ff0055 0%, #e0234e 100%);
+    color: #dc306f;
+  }
+  
+  .mongo {
+    background: linear-gradient(to bottom right, #10aa50 0%, #12924f 100%);
+    color: #7cb342;
+  }
+  
+  .git {
+    background: linear-gradient(to bottom right, #eb2a2a 0%, #f03c2e 100%);
+    color: #9e9e9e;
+  }
+  
+  .github {
+    background: linear-gradient(to bottom right, #2d2e2f 0%, #242938 100%);
+    color: #b7892b;
+  }
+  
+  .vscode {
+    background: linear-gradient(to bottom right, #2489ca 0%, #3c99d4 100%);
+    color: #259af3;
+  }
+  
+  
+  .interests h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .interests .interests-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .interests .interests-content .interest {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+  
+  .interests .interests-content .interest:hover {
+    background-color: #2cc1db;
+    color: #fff;
+  }
+  
+  .interests .interests-content .interest i {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }

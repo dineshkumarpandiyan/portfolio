@@ -1,0 +1,110 @@
+/* Projects Page Styles */
+#projects {
+  background: #f0f3fd;
+    min-height: 100dvh;
+    padding: 80px 10% 30px;
+  }
+  
+  .projects-title h2 {
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 60px;
+  }
+  
+  .projects-title h2 span {
+    color: #2cc1db;
+  }
+  
+  .projects_main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10vh;
+    margin: 50px auto;
+    padding: 30px 0;
+  }
+  
+  .project_card {
+    position: relative;
+    max-width: 350px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 3%;
+    border: 2px solid #2cc1db;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .project_card:hover {
+    height: 500px;
+  }
+  
+  .project_card .project_img_container {
+    position: relative;
+    top: -100px;
+    left: 35px;
+    z-index: 1;
+    width: 250px;
+    height: 250px;
+    border-radius: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project_card .project_img_container .project_img_box {
+    width: inherit;
+    height: inherit;
+    background-color: #f0f3fd;
+    background-position: top;
+    border-radius: inherit;
+    border: 2px solid #2cc1db;
+    overflow: hidden;
+    transition: 3s ease-in-out;
+  }
+  
+  .project_card .project_img_container .project_img_box.project_1 {
+    background-image: url(./assets/car-rental-full.png);
+    background-size: cover;
+  }
+  
+  .project_card .project_img_container .project_img_box.project_2 {
+    background: url(./assets/car-rental-full.png);
+    background-size: cover;
+  }
+  
+  .project_card .project_img_container .project_img_box.project_3 {
+    background: url(./assets/car-rental-full.png);
+    background-size: cover;
+  }
+  
+  .project_card .project_img_container .project_img_box:hover {
+    background-position: bottom;
+  }
+  
+  .project_card:hover .project_img_container .project_img_box {
+    background-position: bottom;
+  }
+  
+  .project_card .content {
+    position: relative;
+    margin-top: -150px;
+    padding: 10px 15px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .project_card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+  }

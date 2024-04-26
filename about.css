@@ -1,0 +1,157 @@
+/* About Page Styles */
+#about {
+    min-height: 100dvh;
+    background: #f0f3fd;
+    padding: 70px 10% 30px;
+  }
+  
+  .about-head h2 {
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 60px;
+    text-transform: uppercase;
+  }
+  
+  .about-head h2 span {
+    color: #2cc1db;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+  }
+  
+  .about-profile-image {
+    width: 250px;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #2cc1db;
+    border-radius: 3%;
+    position: relative;
+    margin: 0 auto;
+    cursor: none;
+  }
+  
+  .about-profile-image img {
+    background: linear-gradient(135deg, #fff, #f0f3fd);
+    border: .5px solid #2cc1db;
+    border-radius: 3%;
+    height: inherit;
+    width: inherit;
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .about-profile-info {
+    padding-top: 60px;
+  }
+  
+  .about-profile-info h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .about-profile-info ul {
+    list-style: none;
+  }
+  
+  .about-profile-info ul li {
+    margin: 10px 0;
+  }
+  
+  .about-profile-info ul li strong {
+    display: inline-block;
+    color: #2cc1db;
+    width: 130px;
+  }
+  
+  .about-profile-info ul li span {
+    background-color: #2cc1db;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .social-media {
+    text-align: center;
+  }
+  
+  .social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #2cc1db;
+    background: transparent;
+    border: 2px solid #2cc1db;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 15px 15px 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .social-media a:hover {
+    background: #2cc1db;
+    color: #f0f3fd;
+    transform: rotate(360deg);
+  }
+  
+  .about-text H3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .about-text {
+    width: 65%;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 16px;
+  }
+  
+  
+  /* About Page Responsive Styles */
+  @media screen and (max-width: 800px) {
+    .about-content {
+      flex-direction: column-reverse;
+      gap: 80px;
+    }
+  
+    .about-text {
+      width: 80vw;
+    }
+  
+    .about-profile-info ul li strong {
+      width: 200px;
+    }
+  }
+  
+  @media screen and (max-width: 424px) {
+    .about-content {
+      flex-direction: column;
+      gap: 80px;
+    }
+  
+    .about-text {
+      width: 80vw;
+    }
+  
+    .about-profile-info h3 {
+      text-align: center;
+    }
+  
+    .about-profile-info ul li strong {
+      width: 150px;
+    }
+  }

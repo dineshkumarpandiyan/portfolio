@@ -1,0 +1,46 @@
+/* Footer Styles */
+footer {
+    background-color: #252a2e;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    color: #fff;
+    font-size: 10px;
+    padding: 0;
+  }
+  
+  footer .hi {
+    font-size: 64px;
+  }
+  
+  footer p a {
+    color: #2cc1db;
+  }
+  
+  .footer-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #2cc1db;
+    background: transparent;
+    border: 2px solid #2cc1db;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 5px 15px 15px 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .footer-links a:hover {
+    background: #2cc1db;
+    color: #f0f3fd;
+    transform: rotate(360deg);
+  }
