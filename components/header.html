@@ -1,0 +1,127 @@
+<header x-data="{
+    atTop: true,
+    open: false,
+    active: (() => {
+            const page = window.location.pathname.split('/').pop() || 'index.html';
+
+            return {
+                'index.html': 'home',
+                'about.html': 'about',
+                'projects.html': 'projects',
+                'experience.html': 'experience',
+                'contact.html': 'contact'
+            }[page] || 'home';
+        })(),
+    showScrollTop: false
+  }" @scroll.window="
+    atTop = window.scrollY <= 50;
+    showScrollTop = window.scrollY > 500;
+  " @click.outside="open = false">
+    <div class="
+         fixed inset-x-0 z-50 mx-auto mt-2 sm:mt-4
+         w-[calc(100%-28px)]
+         px-8 py-0
+         bg-white dark:bg-white/10 
+         text-slate-900 dark:text-white
+         backdrop-blur-xl
+         shadow-lg shadow-slate-900/5 dark:shadow-none
+         transition-all duration-300 ease-in-out
+         transform
+         sm:py-1
+         lg:py-2"
+        :class="(atTop ? 'max-w-5xl' : 'max-w-7xl') + ' ' + (open ? 'rounded-2xl duration-0' : 'rounded-full')">
+        <div class="mx-auto flex w-full flex-col p-2
+             md:flex-row md:items-center md:justify-between">
+            <!-- Logo + Mobile Toggle -->
+            <div class="flex flex-row items-center justify-between">
+                <a href="/" @click="open = false"
+                    class="text-lg font-bold tracking-tighter text-slate-900 dark:text-white transition-all duration-300 hover:-translate-y-0.5">
+                    Dinesh Kumar
+                </a>
+
+                <div class="flex flex-row items-center gap-2 justify-center md:hidden">
+                    <button x-show="!open" type="button" data-theme-toggle aria-label="Switch theme"
+                        @click="toggleDarkMode()"
+                        class="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-slate-300 dark:border-white/10 bg-white/60 dark:bg-white/5 text-slate-600 dark:text-white/70 transition hover:border-cyan-500 hover:text-cyan-600 dark:hover:border-cyan-400 dark:hover:text-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 transition-all duration-300 hover:-translate-y-0.5">
+                        <i data-theme-icon class="bx bx-moon text-lg"></i>
+                    </button>
+                    <button type="button" @click="open = !open"
+                        class="text-slate-900 dark:text-white focus:outline-none transition-all duration-300 hover:-translate-y-0 translate-y-0.5"
+                        aria-label="Toggle menu">
+                        <i x-show="!open" class="bx bx-menu text-3xl"></i>
+                        <i x-show="open" class="bx bx-x text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav :class="(active === 'home' ? 'nav' : '') + ' ' + (open ? 'flex py-4' : 'hidden')"
+                class="flex-grow flex-col justify-end gap-4 lg:gap-8 md:flex md:flex-row md:items-center md:py-0 lg:ml-auto">
+                <a href="index.html#home" style="--i: 1" @click="open = false"
+                    :class="active === 'home' ? 'text-cyan-600 dark:text-cyan-400' : 'text-slate-700 dark:text-white/80'"
+                    class="inline-block transition-all duration-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:-translate-y-0.5">
+                    Home
+                </a>
+
+                <a href="about.html" style="--i: 2" @click="open = false"
+                    :class="active === 'about' ? 'text-cyan-600 dark:text-cyan-400' : 'text-slate-700 dark:text-white/80'"
+                    class="inline-block transition-all duration-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:-translate-y-0.5">
+                    About
+                </a>
+
+                <a href="experience.html" style="--i: 3" @click="open = false"
+                    :class="active === 'experience' ? 'text-cyan-600 dark:text-cyan-400' : 'text-slate-700 dark:text-white/80'"
+                    class="inline-block transition-all duration-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:-translate-y-0.5">
+                    Experience
+                </a>
+
+                <a href="projects.html" style="--i: 4" @click="open = false"
+                    :class="active === 'projects' ? 'text-cyan-600 dark:text-cyan-400' : 'text-slate-700 dark:text-white/80'"
+                    class="inline-block transition-all duration-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:-translate-y-0.5">
+                    Projects
+                </a>
+
+                <a href="contact.html" style="--i: 5" @click="open = false"
+                    :class="active === 'contact' ? 'text-cyan-600 dark:text-cyan-400' : 'text-slate-700 dark:text-white/80'"
+                    class="inline-block transition-all duration-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:-translate-y-0.5">
+                    Contact
+                </a>
+            </nav>
+
+            <!-- Theme Toggle + Let's Talk -->
+            <nav :class="open ? 'flex pb-4' : 'hidden'"
+                class="flex-grow flex-col justify-end gap-4 md:flex md:flex-row md:items-center lg:ml-4">
+                <button x-show="!open" type="button" data-theme-toggle aria-label="Switch theme"
+                    @click="toggleDarkMode()"
+                    class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-slate-300 dark:border-white/10 bg-white/60 dark:bg-white/5 text-slate-600 dark:text-white/70 transition hover:border-cyan-500 hover:text-cyan-600 dark:hover:border-cyan-400 dark:hover:text-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 transition-all duration-300 hover:-translate-y-0.5">
+                    <i data-theme-icon class="bx bx-moon text-xl"></i>
+                </button>
+
+                <a href="contact.html" @click="open = false" :class="
+            active === 'contact'
+              ? 'border-cyan-600 text-cyan-600 dark:border-cyan-400 dark:text-cyan-400'
+              : 'border-slate-300 text-slate-900 dark:border-white/30 dark:text-white'
+          " class="whitespace-nowrap rounded-full border px-4 py-1 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-600 hover:text-cyan-600 dark:hover:border-cyan-400 dark:hover:text-cyan-400">
+                    Let's talk
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Scroll To Top -->
+    <button x-show="showScrollTop" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-75" x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-75" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        type="button" title="Back to top" aria-label="Back to top"
+        class="fixed right-5 bottom-5 z-[9999] flex h-8 w-8 items-center justify-center rounded-full bg-cyan-600 dark:bg-cyan-500 text-white shadow-lg shadow-cyan-600/30 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-500 dark:hover:bg-cyan-400 [animation:arrow_3s_infinite_alternate]"
+        style="display: none">
+        <i class="bx bx-chevrons-up text-2xl"></i>
+    </button>
+    <script>
+        function toggleDarkMode() {
+            const isDark = document.documentElement.classList.toggle('dark')
+            localStorage.theme = isDark ? 'dark' : 'light'
+        }
+    </script>
+</header>

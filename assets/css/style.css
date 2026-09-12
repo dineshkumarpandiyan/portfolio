@@ -1,0 +1,163 @@
+@keyframes role {
+  25% {
+    transform: translateX(-5px);
+    color: #000;
+  }
+
+  50% {
+    transform: translateX(0px);
+    color: #22D3EE;
+  }
+
+  75% {
+    transform: translateX(5px);
+    color: #000;
+  }
+}
+
+.animate-role {
+  animation: role 3s infinite ease-in-out;
+}
+
+@keyframes role-dark {
+  25% {
+    transform: translateX(-5px);
+    color: #fff;
+  }
+
+  50% {
+    transform: translateX(0px);
+    color: #22D3EE;
+  }
+
+  75% {
+    transform: translateX(5px);
+    color: #fff;
+  }
+}
+
+.animate-role-dark {
+  animation: role-dark 3s infinite ease-in-out;
+}
+
+/* --- Hero profile image blob shape --- */
+@keyframes image-blob {
+
+  0%,
+  100% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translateX(1px);
+  }
+
+  20% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+
+  40% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+
+  60% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+
+  80% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+}
+
+.animate-blob {
+  border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  animation: image-blob 10s ease-in-out infinite;
+  transition: all 5s ease-in-out;
+}
+
+/* animate-pulse2 isn't a real Tailwind utility, so it never ran natively.
+   Defined here so the "Available for new roles" status dot actually pulses. */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+.animate-pulse2 {
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+/* Scroll-to-top arrow bounce — driven via Tailwind arbitrary value
+   [animation:arrow_3s_infinite_alternate] on the button in index.html */
+@keyframes arrow {
+
+  0%,
+  50%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  25%,
+  75% {
+    transform: translateY(5px);
+  }
+}
+
+.nav a {
+  opacity: 0;
+  animation: slideLeft 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes slideLeft {
+  0% {
+    translate: 100px 0;
+    opacity: 0;
+  }
+
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+/* Respect users who've asked for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-role,
+  .animate-blob,
+  .animate-pulse2 {
+    animation: none !important;
+  }
+}
+
+/* Fluid-sim canvas: attrs were fixed at 100x100 while CSS stretched it to
+   full width/height -> blurry upscale. JS sizes the drawing buffer to
+   match the actual rendered size (device-pixel aware). */
+#pretty-bg {
+  display: block;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(34, 211, 238, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(34, 211, 238, 0.8);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(34, 211, 238, 0.1);
+  border-radius: 5px;
+}

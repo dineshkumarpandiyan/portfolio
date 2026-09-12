@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="description" content="Selected projects and engineering work by Dinesh Kumar.">
+    <title>Projects — Dinesh Kumar</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/dk_logo.png" type="image/x-icon" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+                    }
+                },
+                animation: {
+                    role: "role 3s infinite ease-in-out",
+                    "role-dark": "role-dark 3s infinite ease-in-out",
+                },
+            },
+        };
+    </script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Script -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-white dark:bg-black text-black dark:text-white font-sans antialiased selection:bg-cyan-400/30 selection:text-white transition-all duration-500 ease-in-out">
+    <header id="site-header"></header>
+    <main>
+        <!-- =========================
+       Projects Hero
+  ========================== -->
+        <section class="pb-16 pt-36 sm:pt-44">
+            <div class="mx-auto w-[calc(100%-28px)] max-w-6xl
+             sm:w-[calc(100%-40px)]">
+                <p class="text-[11px] font-extrabold tracking-[.18em]
+               text-cyan-500 dark:text-cyan-400">
+                    PROJECTS
+                </p>
+
+                <h1 class="mt-5 text-[clamp(3.5rem,9vw,8rem)]
+               font-semibold leading-[.88] tracking-[-.075em]
+               text-slate-900 dark:text-white">
+                    Selected work<br>
+                    <span class="text-slate-400 dark:text-slate-500">
+                        & experiments.
+                    </span>
+                </h1>
+
+                <p class="mt-8 max-w-2xl text-lg leading-8
+               text-slate-600 dark:text-slate-400">
+                    Product work, architecture, and experiments that represent how I
+                    like to build.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- =========================
+       Projects
+  ========================== -->
+        <section class="py-16">
+            <div class="mx-auto w-[calc(100%-28px)] max-w-6xl space-y-5
+             sm:w-[calc(100%-40px)]">
+
+                <!-- SendMyStyle -->
+                <article id="sendmystyle" class="rounded-3xl border border-slate-200 bg-white p-6
+               shadow-sm shadow-slate-900/5
+               transition-all duration-300
+               hover:-translate-y-1 hover:border-cyan-400/40
+               hover:shadow-md
+               sm:p-10
+               dark:border-white/10 dark:bg-white/[0.03]
+               dark:shadow-none dark:hover:border-cyan-400/30">
+                    <div class="flex justify-between gap-4 text-[10px] font-bold
+                 tracking-[.16em] text-slate-500">
+                        <span>01 / PRODUCT</span>
+                        <span class="text-cyan-600 dark:text-cyan-400">
+                            IN PROGRESS
+                        </span>
+                    </div>
+
+                    <h2 class="mt-10 text-5xl font-semibold tracking-[-.06em]
+                 text-slate-900 sm:text-7xl dark:text-white">
+                        SendMyStyle
+                    </h2>
+
+                    <p class="mt-4 max-w-3xl text-lg leading-8
+                 text-slate-600 dark:text-slate-400">
+                        An India-first multi-vendor fashion marketplace where sellers can
+                        define product customization options and customers can personalize
+                        products before ordering.
+                    </p>
+
+                    <div class="mt-10 grid gap-7 md:grid-cols-3">
+
+                        <div>
+                            <b class="text-sm text-slate-900 dark:text-white">
+                                Architecture
+                            </b>
+
+                            <p class="mt-2 text-sm leading-7
+                     text-slate-600 dark:text-slate-400">
+                                NestJS monolith, TypeORM, PostgreSQL, MongoDB, and Redis.
+                            </p>
+                        </div>
+
+                        <div>
+                            <b class="text-sm text-slate-900 dark:text-white">
+                                Experience
+                            </b>
+
+                            <p class="mt-2 text-sm leading-7
+                     text-slate-600 dark:text-slate-400">
+                                Customer, seller, admin, and CMS workflows with responsive
+                                Angular experiences.
+                            </p>
+                        </div>
+
+                        <div>
+                            <b class="text-sm text-slate-900 dark:text-white">
+                                USP
+                            </b>
+
+                            <p class="mt-2 text-sm leading-7
+                     text-slate-600 dark:text-slate-400">
+                                Seller-defined customization with an MVP-first 2D product
+                                preview.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <p class="mt-10 border-t border-slate-200 pt-5 text-xs
+                 text-slate-500
+                 dark:border-white/10 dark:text-slate-400">
+                        NestJS · TypeScript · PostgreSQL · MongoDB · Redis · Angular ·
+                        Tailwind
+                    </p>
+                </article>
+
+
+                <!-- SMS Platform -->
+                <article id="sms" class="rounded-3xl border border-slate-200 bg-white p-6
+               shadow-sm shadow-slate-900/5
+               transition-all duration-300
+               hover:-translate-y-1 hover:border-cyan-400/40
+               hover:shadow-md
+               sm:p-10
+               dark:border-white/10 dark:bg-white/[0.03]
+               dark:shadow-none dark:hover:border-cyan-400/30">
+                    <div class="flex justify-between gap-4 text-[10px] font-bold
+                 tracking-[.16em] text-slate-500">
+                        <span>02 / PLATFORM</span>
+
+                        <span class="text-cyan-600 dark:text-cyan-400">
+                            BUILDING
+                        </span>
+                    </div>
+
+                    <h2 class="mt-10 text-5xl font-semibold tracking-[-.06em]
+                 text-slate-900 sm:text-7xl dark:text-white">
+                        SMS Platform
+                    </h2>
+
+                    <p class="mt-4 max-w-3xl text-lg leading-8
+                 text-slate-600 dark:text-slate-400">
+                        A commerce platform foundation designed around clear customer,
+                        seller, admin, and CMS boundaries.
+                    </p>
+
+                    <div class="mt-10 grid gap-7 md:grid-cols-3">
+
+                        <div>
+                            <b class="text-sm text-slate-900 dark:text-white">
+                                Backend
+                            </b>
+
+                            <p class="mt-2 text-sm leading-7
+                     text-slate-600 dark:text-slate-400">
+                                NestJS, PostgreSQL, TypeORM, MongoDB, and Redis.
+                            </p>
+                        </div>
+
+                        <div>
+                            <b class="text-sm text-slate-900 dark:text-white">
+                                Security
+                            </b>
+
+                            <p class="mt-2 text-sm leading-7
+                     text-slate-600 dark:text-slate-400">
+                                OTP and password authentication, access and refresh sessions,
+                                cookies, and role-aware context.
+                            </p>
+                        </div>
+
+                        <div>
+                            <b class="text-sm text-slate-900 dark:text-white">
+                                Operations
+                            </b>
+
+                            <p class="mt-2 text-sm leading-7
+                     text-slate-600 dark:text-slate-400">
+                                Health checks, request IDs, validation, Winston logging,
+                                exception handling, and graceful shutdown.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <p class="mt-10 border-t border-slate-200 pt-5 text-xs
+                 text-slate-500
+                 dark:border-white/10 dark:text-slate-400">
+                        NestJS · TypeScript · PostgreSQL · Redis · TypeORM · JWT
+                    </p>
+                </article>
+
+
+                <!-- Travel Integrations -->
+                <article class="rounded-3xl border border-slate-200 bg-white p-6
+               shadow-sm shadow-slate-900/5
+               transition-all duration-300
+               hover:-translate-y-1 hover:border-cyan-400/40
+               hover:shadow-md
+               sm:p-10
+               dark:border-white/10 dark:bg-white/[0.03]
+               dark:shadow-none dark:hover:border-cyan-400/30">
+                    <div class="flex justify-between gap-4 text-[10px] font-bold
+                 tracking-[.16em] text-slate-500">
+                        <span>03 / PROFESSIONAL</span>
+                        <span>TRAVEL</span>
+                    </div>
+
+                    <h2 class="mt-10 text-5xl font-semibold tracking-[-.06em]
+                 text-slate-900 sm:text-7xl dark:text-white">
+                        Travel integrations
+                    </h2>
+
+                    <p class="mt-4 max-w-3xl text-lg leading-8
+                 text-slate-600 dark:text-slate-400">
+                        Backend work around B2C travel products, provider integrations,
+                        booking workflows, and distributed communication.
+                    </p>
+
+                    <p class="mt-10 border-t border-slate-200 pt-5 text-xs
+                 text-slate-500
+                 dark:border-white/10 dark:text-slate-400">
+                        NestJS · REST APIs · Kafka · Redis · PostgreSQL · Microservices
+                    </p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+</body>
+
+</html>
