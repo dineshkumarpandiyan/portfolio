@@ -6,7 +6,7 @@
 
   50% {
     transform: translateX(0px);
-    color: #22D3EE;
+    color: #22d3ee;
   }
 
   75% {
@@ -27,7 +27,7 @@
 
   50% {
     transform: translateX(0px);
-    color: #22D3EE;
+    color: #22d3ee;
   }
 
   75% {
@@ -42,7 +42,6 @@
 
 /* --- Hero profile image blob shape --- */
 @keyframes image-blob {
-
   0%,
   100% {
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
@@ -75,7 +74,6 @@
 /* animate-pulse2 isn't a real Tailwind utility, so it never ran natively.
    Defined here so the "Available for new roles" status dot actually pulses. */
 @keyframes pulse {
-
   0%,
   100% {
     opacity: 1;
@@ -95,7 +93,6 @@
 /* Scroll-to-top arrow bounce — driven via Tailwind arbitrary value
    [animation:arrow_3s_infinite_alternate] on the button in index.html */
 @keyframes arrow {
-
   0%,
   50%,
   100% {
@@ -128,7 +125,6 @@
 
 /* Respect users who've asked for reduced motion */
 @media (prefers-reduced-motion: reduce) {
-
   .animate-role,
   .animate-blob,
   .animate-pulse2 {
@@ -160,4 +156,13 @@
 ::-webkit-scrollbar-track {
   background-color: rgba(34, 211, 238, 0.1);
   border-radius: 5px;
+}
+
+/* Kill all transitions during a theme switch to prevent border/background
+   flicker. The class is added just before toggling .dark and removed on the
+   next frame (see toggleDarkMode in script.js). */
+.theme-switching *,
+.theme-switching *::before,
+.theme-switching *::after {
+  transition: none !important;
 }

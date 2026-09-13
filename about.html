@@ -1,418 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="description"
+      content="About Dinesh Kumar — Software Engineer focused on scalable backend systems, full-stack products, integrations and practical AI-powered applications."
+    />
+    <title>About — Dinesh Kumar</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="description"
-    content="About Dinesh Kumar — Software Engineer focused on scalable backend systems, full-stack products, integrations and practical AI-powered applications.">
-  <title>About — Dinesh Kumar</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/dk_logo.png" type="image/x-icon" />
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./assets/images/dk_logo.png" type="image/x-icon" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Tailwind Configuration -->
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
-          }
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+            animation: {
+              role: "role 3s infinite ease-in-out",
+              "role-dark": "role-dark 3s infinite ease-in-out",
+            },
+          },
         },
-        animation: {
-          role: "role 3s infinite ease-in-out",
-          "role-dark": "role-dark 3s infinite ease-in-out",
-        },
-      },
-    };
-  </script>
+      };
+    </script>
 
-  <!-- Alpine.js -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <!-- Script -->
-  <script src="assets/js/script.js"></script>
+    <!-- Script -->
+    <script src="assets/js/script.js"></script>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Boxicons -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
 
-<body
-  class="bg-white dark:bg-black text-black dark:text-white font-sans antialiased selection:bg-cyan-400/30 selection:text-white transition-all duration-500 ease-in-out">
-  <header id="site-header"></header>
-  <main>
-    <!-- =========================
+  <body
+    class="bg-white font-sans text-black antialiased transition-colors duration-300 ease-in-out selection:bg-cyan-400/30 selection:text-white dark:bg-black dark:text-white"
+  >
+    <header id="site-header"></header>
+    <main>
+      <!-- =========================
        About Hero
   ========================== -->
-    <section class="pb-16 pt-36 sm:pt-44">
-      <div class="mx-auto w-[calc(100%-28px)] max-w-6xl
-             sm:w-[calc(100%-40px)]">
-        <p class="text-[11px] font-extrabold tracking-[.18em]
-               text-cyan-500 dark:text-cyan-400">
-          ABOUT
-        </p>
+      <section class="pb-16 pt-36 sm:pt-44">
+        <div class="mx-auto w-[calc(100%-28px)] max-w-6xl sm:w-[calc(100%-40px)]">
+          <p class="text-[11px] font-extrabold tracking-[.18em] text-cyan-500 dark:text-cyan-400">ABOUT</p>
 
-        <h1 class="mt-5 max-w-5xl text-[clamp(3.5rem,9vw,8rem)]
-               font-semibold leading-[.99] tracking-[-.075em]
-               text-slate-900 dark:text-white">
-          Engineer.<br>
-          Builder.<br>
-          <span class="text-slate-500 dark:text-slate-500">
-            Product thinker.
-          </span>
-        </h1>
+          <h1
+            class="mt-5 max-w-5xl text-[clamp(3.5rem,9vw,8rem)] font-semibold leading-[.99] tracking-[-.075em] text-slate-900 dark:text-white"
+          >
+            Engineer.<br />
+            Builder.<br />
+            <span class="text-slate-500 dark:text-slate-500"> Product thinker. </span>
+          </h1>
 
-        <p class="mt-8 max-w-2xl text-lg leading-8
-               text-slate-600 dark:text-slate-400">
-          A backend-first Software Engineer who enjoys turning product ideas
-          into reliable, production-ready software.
-        </p>
-      </div>
-    </section>
+          <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">
+            A backend-first Software Engineer who enjoys turning product ideas into reliable, production-ready software.
+          </p>
+        </div>
+      </section>
 
-
-    <!-- =========================
+      <!-- =========================
        My Story
   ========================== -->
-    <section class="py-20">
-      <div class="mx-auto grid w-[calc(100%-28px)] max-w-6xl gap-12
-             sm:w-[calc(100%-40px)]
-             lg:grid-cols-2 lg:gap-24">
-        <div>
-          <p class="text-[11px] font-extrabold tracking-[.18em]
-                 text-cyan-500 dark:text-cyan-400">
-            01 / MY STORY
-          </p>
+      <section class="py-20">
+        <div class="mx-auto grid w-[calc(100%-28px)] max-w-6xl gap-12 sm:w-[calc(100%-40px)] lg:grid-cols-2 lg:gap-24">
+          <div>
+            <p class="text-[11px] font-extrabold tracking-[.18em] text-cyan-500 dark:text-cyan-400">01 / MY STORY</p>
 
-          <h2 class="mt-5 text-3xl font-bold tracking-tight
-                 text-slate-900 sm:text-4xl dark:text-white">
-            Building software<br>
-            <span class="text-slate-400 dark:text-slate-500">
-              that makes sense.
-            </span>
-          </h2>
+            <h2 class="mt-5 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+              Building software<br />
+              <span class="text-slate-400 dark:text-slate-500"> that makes sense. </span>
+            </h2>
 
-          <div class="mt-7 space-y-5 leading-8
-                 text-slate-600 dark:text-slate-400">
-            <p>
-              I’m a Software Engineer focused mainly on backend development.
-              Most of my work revolves around building APIs, integrations,
-              data-driven applications, and systems that need to work reliably
-              in production.
-            </p>
+            <div class="mt-7 space-y-5 leading-8 text-slate-600 dark:text-slate-400">
+              <p>
+                I’m a Software Engineer with a backend-first approach. My work spans APIs, business logic, integrations,
+                and data flows — systems that need to stay reliable in production.
+              </p>
 
-            <p>
-              I enjoy working across the stack when the product needs it.
-              That means understanding the frontend, designing the API,
-              shaping the data model, and making sure everything works together
-              as one system.
-            </p>
+              <p>
+                I’ve worked across authentication, caching, messaging, bookings, and pricing flows, and I like
+                understanding the complete flow so every piece fits together as one system. I’ve built both monolithic
+                and microservice systems using NestJS, PostgreSQL, MongoDB, Redis, Kafka, and AWS.
+              </p>
 
-            <p>
-              Along the way, I’ve worked with both monolithic and microservice
-              architectures, along with technologies such as Redis, Kafka,
-              PostgreSQL, MongoDB, and AWS.
-            </p>
+              <p>
+                My approach is pragmatic: understand the problem, choose the right level of complexity, and build
+                something maintainable. Lately I’ve been exploring practical AI-powered applications and agentic
+                workflows, focused on real product value rather than hype.
+              </p>
+            </div>
+          </div>
 
-            <p>
-              I’m also exploring practical AI applications and agentic
-              workflows — not just experimenting with AI, but looking at where
-              it can genuinely improve a product or workflow.
-            </p>
+          <!-- Engineering Focus -->
+          <div class="grid gap-3">
+            <div
+              class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <small class="text-xs font-medium text-slate-400 dark:text-slate-500"> 01 </small>
+
+              <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-white">Backend engineering</h3>
+
+              <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                NestJS, Express, TypeScript, APIs, authentication, queues, caching, webhooks, and integrations.
+              </p>
+            </div>
+
+            <div
+              class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <small class="text-xs font-medium text-slate-400 dark:text-slate-500"> 02 </small>
+
+              <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-white">Data & architecture</h3>
+
+              <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                PostgreSQL, MongoDB, TypeORM, Redis, Kafka, microservices, and pragmatic monolithic systems.
+              </p>
+            </div>
+
+            <div
+              class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <small class="text-xs font-medium text-slate-400 dark:text-slate-500"> 03 </small>
+
+              <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-white">Full-stack delivery</h3>
+
+              <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                Angular, React, Next.js, and Tailwind — from API contracts to responsive user interfaces.
+              </p>
+            </div>
+
+            <div
+              class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <small class="text-xs font-medium text-slate-400 dark:text-slate-500"> 04 </small>
+
+              <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-white">AI exploration</h3>
+
+              <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                AI-powered applications, LLM integrations, and agentic workflows focused on useful product tasks.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-
-        <!-- Engineering Focus -->
-        <div class="grid gap-3">
-          <div class="rounded-2xl border border-slate-200 bg-white p-6
-                 shadow-sm shadow-slate-900/5
-                 transition-all duration-300
-                 hover:-translate-y-1 hover:border-cyan-400/40
-                 dark:border-white/10 dark:bg-white/[0.03]
-                 dark:shadow-none dark:hover:border-cyan-400/30">
-            <small class="text-xs font-medium text-slate-400 dark:text-slate-500">
-              01
-            </small>
-
-            <h3 class="mt-2 text-xl font-semibold
-                   text-slate-900 dark:text-white">
-              Backend engineering
-            </h3>
-
-            <p class="mt-2 text-sm leading-7
-                   text-slate-600 dark:text-slate-400">
-              NestJS, Express, TypeScript, APIs, authentication, queues,
-              caching, webhooks, and integrations.
-            </p>
-          </div>
-
-
-          <div class="rounded-2xl border border-slate-200 bg-white p-6
-                 shadow-sm shadow-slate-900/5
-                 transition-all duration-300
-                 hover:-translate-y-1 hover:border-cyan-400/40
-                 dark:border-white/10 dark:bg-white/[0.03]
-                 dark:shadow-none dark:hover:border-cyan-400/30">
-            <small class="text-xs font-medium text-slate-400 dark:text-slate-500">
-              02
-            </small>
-
-            <h3 class="mt-2 text-xl font-semibold
-                   text-slate-900 dark:text-white">
-              Data & architecture
-            </h3>
-
-            <p class="mt-2 text-sm leading-7
-                   text-slate-600 dark:text-slate-400">
-              PostgreSQL, MongoDB, TypeORM, Redis, Kafka, microservices,
-              and pragmatic monolithic systems.
-            </p>
-          </div>
-
-
-          <div class="rounded-2xl border border-slate-200 bg-white p-6
-                 shadow-sm shadow-slate-900/5
-                 transition-all duration-300
-                 hover:-translate-y-1 hover:border-cyan-400/40
-                 dark:border-white/10 dark:bg-white/[0.03]
-                 dark:shadow-none dark:hover:border-cyan-400/30">
-            <small class="text-xs font-medium text-slate-400 dark:text-slate-500">
-              03
-            </small>
-
-            <h3 class="mt-2 text-xl font-semibold
-                   text-slate-900 dark:text-white">
-              Full-stack delivery
-            </h3>
-
-            <p class="mt-2 text-sm leading-7
-                   text-slate-600 dark:text-slate-400">
-              Angular, React, Next.js, and Tailwind — from API contracts
-              to responsive user interfaces.
-            </p>
-          </div>
-
-
-          <div class="rounded-2xl border border-slate-200 bg-white p-6
-                 shadow-sm shadow-slate-900/5
-                 transition-all duration-300
-                 hover:-translate-y-1 hover:border-cyan-400/40
-                 dark:border-white/10 dark:bg-white/[0.03]
-                 dark:shadow-none dark:hover:border-cyan-400/30">
-            <small class="text-xs font-medium text-slate-400 dark:text-slate-500">
-              04
-            </small>
-
-            <h3 class="mt-2 text-xl font-semibold
-                   text-slate-900 dark:text-white">
-              AI exploration
-            </h3>
-
-            <p class="mt-2 text-sm leading-7
-                   text-slate-600 dark:text-slate-400">
-              AI-powered applications, LLM integrations, and agentic
-              workflows focused on useful product tasks.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- =========================
+      <!-- =========================
        How I Work
   ========================== -->
-    <section class="border-t border-slate-200 py-20
-           dark:border-white/10">
-      <div class="mx-auto w-[calc(100%-28px)] max-w-6xl
-             sm:w-[calc(100%-40px)]">
-        <p class="text-[11px] font-extrabold tracking-[.18em]
-               text-cyan-500 dark:text-cyan-400">
-          02 / HOW I WORK
-        </p>
+      <section class="border-t border-slate-200 py-20 dark:border-white/10">
+        <div class="mx-auto w-[calc(100%-28px)] max-w-6xl sm:w-[calc(100%-40px)]">
+          <p class="text-[11px] font-extrabold tracking-[.18em] text-cyan-500 dark:text-cyan-400">02 / HOW I WORK</p>
 
-        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <div class="mt-10 grid gap-4 lg:grid-cols-3">
+            <div
+              class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none"
+            >
+              <span class="text-3xl font-semibold text-slate-200 dark:text-white/20"> 01 </span>
 
-          <div class="rounded-3xl border border-slate-200 bg-white p-7
-                 shadow-sm shadow-slate-900/5
-                 dark:border-white/10 dark:bg-white/[0.03]
-                 dark:shadow-none">
-            <span class="text-3xl font-semibold text-slate-200 dark:text-white/20">
-              01
-            </span>
+              <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">Understand the problem</h3>
 
-            <h3 class="mt-5 text-xl font-bold
-                   text-slate-900 dark:text-white">
-              Understand the problem
-            </h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                I start by understanding what needs solving and why it matters.
+              </p>
+            </div>
 
-            <p class="mt-3 text-sm leading-7
-                   text-slate-600 dark:text-slate-400">
-              I prefer understanding the product problem first instead of
-              jumping straight into implementation.
-            </p>
+            <div
+              class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none"
+            >
+              <span class="text-3xl font-semibold text-slate-200 dark:text-white/20"> 02 </span>
+
+              <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">Build in small, clear steps</h3>
+
+              <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                I break complex problems into small, focused, maintainable pieces.
+              </p>
+            </div>
+
+            <div
+              class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none"
+            >
+              <span class="text-3xl font-semibold text-slate-200 dark:text-white/20"> 03 </span>
+
+              <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">Think about production</h3>
+
+              <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                I treat validation, security, and observability as part of the build — not afterthoughts.
+              </p>
+            </div>
           </div>
-
-
-          <div class="rounded-3xl border border-slate-200 bg-white p-7
-                 shadow-sm shadow-slate-900/5
-                 dark:border-white/10 dark:bg-white/[0.03]
-                 dark:shadow-none">
-            <span class="text-3xl font-semibold text-slate-200 dark:text-white/20">
-              02
-            </span>
-
-            <h3 class="mt-5 text-xl font-bold
-                   text-slate-900 dark:text-white">
-              Keep it practical
-            </h3>
-
-            <p class="mt-3 text-sm leading-7
-                   text-slate-600 dark:text-slate-400">
-              I choose the simplest approach that solves the current problem
-              while leaving room for the product to grow.
-            </p>
-          </div>
-
-
-          <div class="rounded-3xl border border-slate-200 bg-white p-7
-                 shadow-sm shadow-slate-900/5
-                 dark:border-white/10 dark:bg-white/[0.03]
-                 dark:shadow-none">
-            <span class="text-3xl font-semibold text-slate-200 dark:text-white/20">
-              03
-            </span>
-
-            <h3 class="mt-5 text-xl font-bold
-                   text-slate-900 dark:text-white">
-              Build for production
-            </h3>
-
-            <p class="mt-3 text-sm leading-7
-                   text-slate-600 dark:text-slate-400">
-              Reliability, observability, security, maintainability, and
-              predictable behaviour matter as much as writing the code.
-            </p>
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-
-    <!-- =========================
+      <!-- =========================
        Projects
   ========================== -->
-    <section class="border-t border-slate-200 py-20
-           dark:border-white/10">
-      <div class="mx-auto w-[calc(100%-28px)] max-w-6xl
-             sm:w-[calc(100%-40px)]">
-        <div class="flex flex-col gap-4
-               sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p class="text-[11px] font-extrabold tracking-[.18em]
-                   text-cyan-500 dark:text-cyan-400">
-              03 / PROJECTS
-            </p>
+      <section class="border-t border-slate-200 py-20 dark:border-white/10">
+        <div class="mx-auto w-[calc(100%-28px)] max-w-6xl sm:w-[calc(100%-40px)]">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="text-[11px] font-extrabold tracking-[.18em] text-cyan-500 dark:text-cyan-400">03 / PROJECTS</p>
 
-            <h2 class="mt-4 text-3xl font-bold tracking-tight
-                   text-slate-900 sm:text-4xl dark:text-white">
-              Things I’m building.
-            </h2>
+              <h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+                Things I’m building.
+              </h2>
+            </div>
+
+            <a
+              href="index.html#work"
+              class="text-sm font-bold text-slate-700 transition-colors hover:text-cyan-600 dark:text-white dark:hover:text-cyan-400"
+            >
+              View selected work →
+            </a>
           </div>
 
-          <a href="index.html#work" class="text-sm font-bold text-slate-700
-                 transition-colors hover:text-cyan-600
-                 dark:text-white dark:hover:text-cyan-400">
-            View selected work →
-          </a>
+          <div class="mt-10 grid gap-4 lg:grid-cols-2">
+            <article
+              class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <p class="text-xs font-medium text-cyan-600 dark:text-cyan-400">PRODUCT</p>
+
+              <h3 class="mt-4 text-2xl font-bold text-slate-900 dark:text-white">SendMyStyle</h3>
+
+              <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                A fashion marketplace concept focused on product customization, where customers can personalize products
+                before placing an order.
+              </p>
+
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                >
+                  NestJS
+                </span>
+
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                >
+                  PostgreSQL
+                </span>
+
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                >
+                  Angular
+                </span>
+              </div>
+            </article>
+
+            <article
+              class="flex min-h-full flex-col justify-center rounded-3xl border border-dashed border-slate-300 p-7 dark:border-white/10"
+            >
+              <p class="text-xs font-medium text-slate-400 dark:text-slate-500">MORE TO COME</p>
+
+              <h3 class="mt-4 text-2xl font-bold text-slate-900 dark:text-white">Building in public, slowly.</h3>
+
+              <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                I’m gradually turning ideas and experiments into practical products and tools.
+              </p>
+            </article>
+          </div>
         </div>
-
-        <div class="mt-10 grid gap-4 md:grid-cols-2">
-
-          <article class="rounded-3xl border border-slate-200 bg-white p-7
-                 shadow-sm shadow-slate-900/5
-                 transition-all duration-300
-                 hover:-translate-y-1 hover:border-cyan-400/40
-                 hover:shadow-md
-                 dark:border-white/10 dark:bg-white/[0.03]
-                 dark:shadow-none dark:hover:border-cyan-400/30">
-            <p class="text-xs font-medium text-cyan-600 dark:text-cyan-400">
-              PRODUCT
-            </p>
-
-            <h3 class="mt-4 text-2xl font-bold
-                   text-slate-900 dark:text-white">
-              SendMyStyle
-            </h3>
-
-            <p class="mt-3 text-sm leading-7
-                   text-slate-600 dark:text-slate-400">
-              A fashion marketplace concept focused on product customization,
-              where customers can personalize products before placing an order.
-            </p>
-
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="rounded-full border border-slate-200 bg-slate-50
-                     px-3 py-1 text-xs font-medium text-slate-600
-                     dark:border-white/10 dark:bg-white/5
-                     dark:text-slate-400">
-                NestJS
-              </span>
-
-              <span class="rounded-full border border-slate-200 bg-slate-50
-                     px-3 py-1 text-xs font-medium text-slate-600
-                     dark:border-white/10 dark:bg-white/5
-                     dark:text-slate-400">
-                PostgreSQL
-              </span>
-
-              <span class="rounded-full border border-slate-200 bg-slate-50
-                     px-3 py-1 text-xs font-medium text-slate-600
-                     dark:border-white/10 dark:bg-white/5
-                     dark:text-slate-400">
-                Angular
-              </span>
-            </div>
-          </article>
-
-
-          <article class="flex min-h-full flex-col justify-center
-                 rounded-3xl border border-dashed border-slate-300
-                 p-7
-                 dark:border-white/10">
-            <p class="text-xs font-medium text-slate-400
-                   dark:text-slate-500">
-              MORE TO COME
-            </p>
-
-            <h3 class="mt-4 text-2xl font-bold
-                   text-slate-900 dark:text-white">
-              Building in public, slowly.
-            </h3>
-
-            <p class="mt-3 text-sm leading-7
-                   text-slate-600 dark:text-slate-400">
-              I’m gradually turning ideas and experiments into practical
-              products and tools.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer id="site-footer"></footer>
-</body>
-
+      </section>
+    </main>
+    <footer id="site-footer"></footer>
+  </body>
 </html>

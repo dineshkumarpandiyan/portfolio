@@ -1,512 +1,590 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="description"
+      content="Dinesh Kumar — Software Engineer focused on scalable backend systems, full-stack products, integrations and practical AI-powered applications."
+    />
+    <title>Dinesh Kumar — Software Engineer</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="description"
-    content="Dinesh Kumar — Software Engineer focused on scalable backend systems, full-stack products, integrations and practical AI-powered applications." />
-  <title>Dinesh Kumar — Software Engineer</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/dk_logo.png" type="image/x-icon" />
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./assets/images/dk_logo.png" type="image/x-icon" />
+    <!-- Preload hero image for immediate load (LCP) -->
+    <link rel="preload" as="image" href="./assets/images/profile.webp" type="image/webp" fetchpriority="high" />
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Configuration -->
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
-          }
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+            animation: {
+              role: "role 3s infinite ease-in-out",
+              "role-dark": "role-dark 3s infinite ease-in-out",
+            },
+          },
         },
-        animation: {
-          role: "role 3s infinite ease-in-out",
-          "role-dark": "role-dark 3s infinite ease-in-out",
-        },
-      },
-    };
-  </script>
+      };
+    </script>
 
-  <!-- Alpine.js -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <!-- Script -->
-  <script src="assets/js/script.js"></script>
+    <!-- Script -->
+    <script src="assets/js/script.js"></script>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Boxicons -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
 
-<body
-  class="bg-white dark:bg-black text-black dark:text-white font-sans antialiased selection:bg-cyan-400/30 selection:text-white transition-all duration-500 ease-in-out">
-  <header id="site-header"></header>
-  <main>
-    <section id="home"
-      class="relative flex min-h-screen flex-col-reverse items-center justify-center gap-10 overflow-hidden px-5 pb-10 pt-28 sm:px-8 lg:gap-0 lg:px-[10%] xl:flex-row xl:items-center xl:justify-between xl:pt-24">
-      <!-- Fluid sim canvas: fixed full-screen background, decorative only -->
-      <canvas id="pretty-bg" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+  <body
+    class="bg-white font-sans text-black antialiased transition-colors duration-300 ease-in-out selection:bg-cyan-400/30 selection:text-white dark:bg-black dark:text-white"
+  >
+    <header id="site-header"></header>
+    <main>
+      <section id="home" class="relative lg:min-h-screen overflow-hidden">
+        <!-- Fluid sim canvas: full-screen background, decorative only -->
+        <canvas id="pretty-bg" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
 
-      <!-- Hero content -->
-      <div class="relative z-10 max-w-4xl cursor-default rounded-2xl p-4 backdrop-blur-lg">
-        <!-- Availability / Role -->
         <div
-          class="mb-7 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-900/10 bg-slate-900/[0.03] px-3 py-1.5 text-xs font-semibold text-slate-600 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-400">
-          <span class="h-1.5 w-1.5 animate-pulse2 rounded-full bg-emerald-400"></span>
-
-          <span>Open to new opportunities</span>
-
-          <span class="hidden text-slate-300 md:block dark:text-white/20">·</span>
-
-          <span class="mb-1 text-cyan-500 animate-role sm:mx-2 sm:mb-0 dark:text-cyan-400 dark:animate-role-dark">
-            SOFTWARE ENGINEER · BACKEND · FULL STACK · AI
-          </span>
-        </div>
-
-        <!-- Heading -->
-        <h1
-          class="max-w-4xl text-5xl font-black leading-[.95] tracking-[-.05em] text-slate-900 sm:text-6xl lg:text-8xl dark:text-white">
-          I build systems<br />
-          <span class="text-slate-500 dark:text-slate-500"> that scale. </span>
-        </h1>
-
-        <!-- Intro -->
-        <p class="mt-8 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg dark:text-slate-400">
-          Software Engineer focused on scalable backend systems, full-stack B2B/B2C products, and
-          practical AI-powered workflows. I build reliable software from idea to production.
-        </p>
-
-        <!-- CTA -->
-        <div class="relative mt-9 flex flex-wrap gap-3">
-          <a href="projects.html"
-            class="rounded-full bg-slate-900 px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-400 hover:text-slate-950 dark:bg-white dark:text-slate-900 dark:hover:bg-cyan-300">
-            View my work ↗
-          </a>
-
-          <a href="about.html"
-            class="rounded-full border border-slate-300 px-5 py-3 text-sm font-bold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-cyan-600 dark:border-white/10 dark:text-white dark:hover:border-cyan-400/40 dark:hover:text-cyan-400">
-            About me ↗
-          </a>
-        </div>
-      </div>
-
-      <!-- Profile -->
-      <div class="relative z-10 h-[240px] w-[240px] shrink-0 sm:h-[300px] sm:w-[300px] lg:h-[400px] lg:w-[400px]">
-        <img src="./assets/images/profile.png" alt="Dinesh Kumar profile picture"
-          class="block h-full w-full cursor-default animate-blob object-cover bg-gradient-to-br from-[#24335D] to-[#f0f3fd]" />
-      </div>
-    </section>
-
-    <section id="about" class="border-t border-slate-200 py-28 dark:border-white/10">
-      <div class="mx-auto max-w-6xl px-5">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[.3em] text-cyan-500 dark:text-cyan-400">
-          01 / APPROACH
-        </p>
-
-        <div class="grid gap-12 lg:grid-cols-2">
-          <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
-            Engineering with a<br />
-            <span class="text-slate-500 dark:text-slate-500"> product mindset. </span>
-          </h2>
-
-          <div class="space-y-5 leading-7 text-slate-600 dark:text-slate-400">
-            <p>
-              I enjoy turning ideas into production-ready software — from architecture and APIs to
-              data models, integrations, frontend experiences, and deployment.
-            </p>
-
-            <p>
-              My strongest area is backend engineering, but I’m comfortable working across the stack
-              and building systems that connect products, data, and users. I’m also exploring
-              practical AI applications and agentic workflows, with a focus on how AI can create real
-              value in software products.
-            </p>
-
-            <!-- About stats -->
+          class="mx-auto flex lg:min-h-screen max-w-7xl flex-col-reverse items-center justify-center gap-10 px-5 pb-10 pt-28 sm:px-8 xl:flex-row xl:items-center xl:justify-between xl:gap-0 xl:pt-24"
+        >
+          <!-- Hero content -->
+          <div class="relative z-10 max-w-4xl cursor-default rounded-2xl p-4 backdrop-blur-lg">
+            <!-- Availability / Role -->
             <div
-              class="relative mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-2xl shadow-slate-900/5 dark:shadow-black/5 backdrop-blur-xl xl:grid-cols-2 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none">
-              <!-- Stat 1 -->
-              <div
-                class="bg-white/70 p-5 backdrop-blur-xl transition-colors duration-300 hover:bg-white dark:bg-white/[0.03] dark:hover:bg-white/[0.06]">
-                <b class="block text-xl tracking-tight text-slate-900 dark:text-white"> 3+ yrs </b>
+              class="mb-7 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-900/10 bg-slate-900/[0.03] px-3 py-2 text-xs font-semibold text-slate-600 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-400 sm:py-1.5"
+            >
+              <span class="animate-pulse2 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
 
-                <span class="text-xs text-slate-500 dark:text-slate-400">
-                  Software engineering
-                </span>
-              </div>
+              <span>Open to new opportunities</span>
 
-              <!-- Stat 2 -->
-              <div
-                class="bg-white/70 p-5 backdrop-blur-xl transition-colors duration-300 hover:bg-white dark:bg-white/[0.03] dark:hover:bg-white/[0.06]">
-                <b class="block text-xl tracking-tight text-slate-900 dark:text-white">
-                  B2B · B2C
-                </b>
+              <span class="hidden text-slate-300 dark:text-white/20 md:block">·</span>
 
-                <span class="text-xs text-slate-500 dark:text-slate-400">
-                  Real-world products
-                </span>
-              </div>
-
-              <!-- Stat 3 -->
-              <div
-                class="bg-white/70 p-5 backdrop-blur-xl transition-colors duration-300 hover:bg-white dark:bg-white/[0.03] dark:hover:bg-white/[0.06]">
-                <b class="block text-xl tracking-tight text-slate-900 dark:text-white"> Backend </b>
-
-                <span class="text-xs text-slate-500 dark:text-slate-400"> Node.js / NestJS </span>
-              </div>
-
-              <!-- Stat 4 -->
-              <div
-                class="bg-white/70 p-5 backdrop-blur-xl transition-colors duration-300 hover:bg-white dark:bg-white/[0.03] dark:hover:bg-white/[0.06]">
-                <b class="block text-xl tracking-tight text-slate-900 dark:text-white">
-                  AI + Agents
-                </b>
-
-                <span class="text-xs text-slate-500 dark:text-slate-400">
-                  Practical workflows
-                </span>
-              </div>
+              <span
+                class="animate-role whitespace-nowrap text-cyan-500 dark:animate-role-dark dark:text-cyan-400 sm:mx-2"
+              >
+                SOFTWARE ENGINEER <span class="hidden sm:inline-block">· BACKEND</span> · FULL STACK · AI
+              </span>
             </div>
 
-            <a href="about.html"
-              class="inline-block font-bold text-slate-900 transition-colors duration-300 hover:text-cyan-600 dark:text-white dark:hover:text-cyan-300">
-              More about my engineering journey →
+            <!-- Heading -->
+            <h1
+              class="max-w-4xl text-4xl font-black leading-[.95] tracking-[-.05em] text-slate-900 dark:text-white min-[400px]:text-5xl sm:text-6xl lg:text-8xl"
+            >
+              I build systems<br />
+              <span class="text-slate-500 dark:text-slate-500"> that scale. </span>
+            </h1>
+
+            <!-- Intro -->
+            <p
+              class="mt-6 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-400 min-[400px]:text-base sm:mt-8 sm:text-lg"
+            >
+              Software Engineer focused on scalable backend systems, full-stack B2B/B2C products, and practical
+              AI-powered workflows. I build reliable software from idea to production.
+            </p>
+
+            <!-- CTA -->
+            <div class="relative mt-9 flex flex-wrap gap-3">
+              <a
+                href="projects.html"
+                class="rounded-full bg-slate-900 px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-400 hover:text-slate-950 dark:bg-white dark:text-slate-900 dark:hover:bg-cyan-300"
+              >
+                View my work ↗
+              </a>
+
+              <a
+                href="about.html"
+                class="rounded-full border border-slate-300 px-5 py-3 text-sm font-bold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-cyan-600 dark:border-white/10 dark:text-white dark:hover:border-cyan-400/40 dark:hover:text-cyan-400"
+              >
+                About me ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div class="relative z-10 h-[260px] w-[260px] shrink-0 sm:h-[300px] sm:w-[300px] lg:h-[400px] lg:w-[400px]">
+            <picture>
+              <source srcset="./assets/images/profile.webp" type="image/webp" />
+              <img
+                src="./assets/images/profile-opt.png"
+                alt="Dinesh Kumar"
+                width="400"
+                height="400"
+                fetchpriority="high"
+                decoding="async"
+                class="animate-blob block h-full w-full bg-gradient-to-br from-[#24335D] to-[#f0f3fd] object-cover"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="border-t border-slate-200 py-16 md:py-28 dark:border-white/10">
+        <div class="mx-auto max-w-6xl px-5">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[.3em] text-cyan-500 dark:text-cyan-400">01 / APPROACH</p>
+
+          <div class="grid gap-12 lg:grid-cols-2">
+            <h2 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+              Engineering with a<br />
+              <span class="text-slate-500 dark:text-slate-500"> product mindset. </span>
+            </h2>
+
+            <div class="space-y-5 leading-7 text-slate-600 dark:text-slate-400">
+              <p>
+                I enjoy turning ideas into production-ready software — from architecture and APIs to data models,
+                integrations, frontend experiences, and deployment.
+              </p>
+
+              <p>
+                My strongest area is backend engineering, but I’m comfortable working across the stack and building
+                systems that connect products, data, and users. I’m also exploring practical AI applications and agentic
+                workflows, with a focus on how AI can create real value in software products.
+              </p>
+
+              <!-- About stats -->
+              <div
+                class="relative mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-2xl shadow-slate-900/5 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:shadow-black/5 xl:grid-cols-2"
+              >
+                <!-- Stat 1 -->
+                <div
+                  class="bg-white/70 p-5 backdrop-blur-xl transition-colors duration-300 hover:bg-white dark:bg-white/[0.03] dark:hover:bg-white/[0.06]"
+                >
+                  <b class="block text-xl tracking-tight text-slate-900 dark:text-white"> 3+ yrs </b>
+
+                  <span class="text-xs text-slate-500 dark:text-slate-400"> Software engineering </span>
+                </div>
+
+                <!-- Stat 2 -->
+                <div
+                  class="bg-white/70 p-5 backdrop-blur-xl transition-colors duration-300 hover:bg-white dark:bg-white/[0.03] dark:hover:bg-white/[0.06]"
+                >
+                  <b class="block text-xl tracking-tight text-slate-900 dark:text-white"> B2B · B2C </b>
+
+                  <span class="text-xs text-slate-500 dark:text-slate-400"> Real-world products </span>
+                </div>
+
+                <!-- Stat 3 -->
+                <div
+                  class="bg-white/70 p-5 backdrop-blur-xl transition-colors duration-300 hover:bg-white dark:bg-white/[0.03] dark:hover:bg-white/[0.06]"
+                >
+                  <b class="block text-xl tracking-tight text-slate-900 dark:text-white"> Backend </b>
+
+                  <span class="text-xs text-slate-500 dark:text-slate-400"> Node.js / NestJS </span>
+                </div>
+
+                <!-- Stat 4 -->
+                <div
+                  class="bg-white/70 p-5 backdrop-blur-xl transition-colors duration-300 hover:bg-white dark:bg-white/[0.03] dark:hover:bg-white/[0.06]"
+                >
+                  <b class="block text-xl tracking-tight text-slate-900 dark:text-white"> AI + Agents </b>
+
+                  <span class="text-xs text-slate-500 dark:text-slate-400"> Practical workflows </span>
+                </div>
+              </div>
+
+              <a
+                href="about.html"
+                class="inline-block font-bold text-slate-900 transition-colors duration-300 hover:text-cyan-600 dark:text-white dark:hover:text-cyan-300"
+              >
+                More about my engineering journey →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="border-t bg-black/5 py-16 md:py-28 dark:border-white/5 dark:bg-white/5">
+        <div class="mx-auto max-w-6xl px-5">
+          <div class="mb-12 flex items-end justify-between">
+            <div>
+              <p class="mb-4 text-xs font-bold uppercase tracking-[.3em] text-cyan-400">02 / Selected work</p>
+              <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Things I’ve been building.</h2>
+            </div>
+          </div>
+          <div class="grid gap-5 lg:grid-cols-2">
+            <!-- Project 01 -->
+            <article
+              class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/5 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="rounded-full bg-cyan-50 px-3 py-1 text-xs font-medium text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-300"
+                >
+                  01 · Product
+                </span>
+
+                <span class="text-xs text-slate-500 dark:text-slate-500"> E-commerce </span>
+              </div>
+
+              <h3 class="mt-7 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">SendMyStyle</h3>
+
+              <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+                A multi-vendor fashion marketplace with product customization. Designed around a scalable catalog,
+                seller workflows, customer experience, and customization-first commerce.
+              </p>
+
+              <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium">
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >Next.js</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >Angular</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >NestJS</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >MongoDB</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >Redis</span
+                >
+              </div>
+            </article>
+
+            <!-- Project 02 -->
+            <article
+              class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/5 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-emerald-400/30"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-600 dark:bg-emerald-400/10 dark:text-emerald-300"
+                >
+                  02 · Platform
+                </span>
+
+                <span class="text-xs text-slate-500 dark:text-slate-500"> B2C / B2B </span>
+              </div>
+
+              <h3 class="mt-7 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                Travel & Booking Systems
+              </h3>
+
+              <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+                Worked on travel platforms integrating external suppliers and APIs, handling booking flows,
+                availability, pricing, and service orchestration across B2C and B2B use cases.
+              </p>
+
+              <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium">
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >NestJS</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >Kafka</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >Redis</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >REST APIs</span
+                >
+              </div>
+            </article>
+
+            <!-- Project 03 -->
+            <article
+              class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/40 hover:shadow-lg hover:shadow-purple-500/5 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-purple-400/30 lg:col-span-2"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="rounded-full bg-purple-50 px-3 py-1 text-xs font-medium text-purple-600 dark:bg-purple-400/10 dark:text-purple-300"
+                >
+                  03 · Infrastructure
+                </span>
+
+                <span class="text-xs text-slate-500 dark:text-slate-500"> Backend engineering </span>
+              </div>
+
+              <h3 class="mt-7 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                Production-ready backend foundations
+              </h3>
+
+              <p class="mt-4 max-w-3xl leading-7 text-slate-600 dark:text-slate-400">
+                Authentication, OTP infrastructure, Redis sessions, JWT flows, validation, structured logging, health
+                checks, graceful shutdown, security headers, exception handling, and modular NestJS architecture.
+              </p>
+
+              <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium">
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >JWT</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >Redis</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >TypeORM</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >Winston</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >Helmet</span
+                >
+                <span
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400"
+                  >Terminus</span
+                >
+              </div>
+            </article>
+
+            <a
+              href="projects.html"
+              class="text-sm font-bold text-slate-700 transition-colors hover:text-cyan-600 dark:text-white dark:hover:text-cyan-400"
+            >
+              View selected work →
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="work" class="border-t dark:border-white/5 dark:bg-white/5 bg-black/5 py-28">
-      <div class="mx-auto max-w-6xl px-5">
-        <div class="mb-12 flex items-end justify-between">
-          <div>
-            <p class="mb-4 text-xs font-bold uppercase tracking-[.3em] text-cyan-400">
-              02 / Selected work
-            </p>
-            <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Things I’ve been building.</h2>
-          </div>
-        </div>
-        <div class="grid gap-5 lg:grid-cols-2">
-          <!-- Project 01 -->
-          <article
-            class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/5 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30">
-            <div class="flex items-center justify-between">
-              <span
-                class="rounded-full bg-cyan-50 px-3 py-1 text-xs font-medium text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-300">
-                01 · Product
-              </span>
-
-              <span class="text-xs text-slate-500 dark:text-slate-500"> E-commerce </span>
-            </div>
-
-            <h3 class="mt-7 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-              SendMyStyle
-            </h3>
-
-            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-              A multi-vendor fashion marketplace with product customization. Designed around a
-              scalable catalog, seller workflows, customer experience, and customization-first
-              commerce.
-            </p>
-
-            <div class="mt-6 flex flex-wrap gap-2">
-              <span class="tag">Next.js</span>
-              <span class="tag">Angular</span>
-              <span class="tag">NestJS</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">Redis</span>
-            </div>
-          </article>
-
-          <!-- Project 02 -->
-          <article
-            class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/5 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-emerald-400/30">
-            <div class="flex items-center justify-between">
-              <span
-                class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-600 dark:bg-emerald-400/10 dark:text-emerald-300">
-                02 · Platform
-              </span>
-
-              <span class="text-xs text-slate-500 dark:text-slate-500"> B2C / B2B </span>
-            </div>
-
-            <h3 class="mt-7 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-              Travel & Booking Systems
-            </h3>
-
-            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-              Worked on travel platforms integrating external suppliers and APIs, handling booking
-              flows, availability, pricing, and service orchestration across B2C and B2B use cases.
-            </p>
-
-            <div class="mt-6 flex flex-wrap gap-2">
-              <span class="tag">NestJS</span>
-              <span class="tag">Kafka</span>
-              <span class="tag">Redis</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">REST APIs</span>
-            </div>
-          </article>
-
-          <!-- Project 03 -->
-          <article
-            class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/40 hover:shadow-lg hover:shadow-purple-500/5 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-purple-400/30 lg:col-span-2">
-            <div class="flex items-center justify-between">
-              <span
-                class="rounded-full bg-purple-50 px-3 py-1 text-xs font-medium text-purple-600 dark:bg-purple-400/10 dark:text-purple-300">
-                03 · Infrastructure
-              </span>
-
-              <span class="text-xs text-slate-500 dark:text-slate-500"> Backend engineering </span>
-            </div>
-
-            <h3 class="mt-7 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-              Production-ready backend foundations
-            </h3>
-
-            <p class="mt-4 max-w-3xl leading-7 text-slate-600 dark:text-slate-400">
-              Authentication, OTP infrastructure, Redis sessions, JWT flows, validation, structured
-              logging, health checks, graceful shutdown, security headers, exception handling, and
-              modular NestJS architecture.
-            </p>
-
-            <div class="mt-6 flex flex-wrap gap-2">
-              <span class="tag">JWT</span>
-              <span class="tag">Redis</span>
-              <span class="tag">TypeORM</span>
-              <span class="tag">Winston</span>
-              <span class="tag">Helmet</span>
-              <span class="tag">Terminus</span>
-            </div>
-          </article>
-
-          <a href="projects.html" class="text-sm font-bold text-slate-700
-                 transition-colors hover:text-cyan-600
-                 dark:text-white dark:hover:text-cyan-400">
-            View selected work →
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="stack" class="border-t border-slate-200 py-28 dark:border-white/10">
-      <div class="mx-auto max-w-6xl px-5">
-        <p class="mb-4 text-xs font-bold uppercase tracking-[.3em] text-cyan-500 dark:text-cyan-400">
-          03 / Engineering stack
-        </p>
-
-        <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
-          Tools I use to turn ideas<br />
-          <span class="text-slate-500 dark:text-slate-500">into systems.</span>
-        </h2>
-
-        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <!-- Backend -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30">
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-500">BACKEND</p>
-
-            <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">
-              Node.js · NestJS · Express
-            </p>
-
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              REST APIs, modular architecture, auth, integrations.
-            </p>
-          </div>
-
-          <!-- Data -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30">
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-500">DATA</p>
-
-            <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">PostgreSQL · MongoDB</p>
-
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Relational modelling, catalog data, TypeORM, Mongoose.
-            </p>
-          </div>
-
-          <!-- Systems -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30">
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-500">SYSTEMS</p>
-
-            <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Redis · Kafka</p>
-
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Caching, sessions, messaging, event-driven workflows.
-            </p>
-          </div>
-
-          <!-- Frontend -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30">
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-500">FRONTEND</p>
-
-            <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">
-              Angular · React · Next.js
-            </p>
-
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Product interfaces with TypeScript and Tailwind.
-            </p>
-          </div>
-
-          <!-- Language -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30">
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-500">LANGUAGE</p>
-
-            <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">TypeScript · JavaScript</p>
-
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Strong typing, clean APIs, maintainable code.
-            </p>
-          </div>
-
-          <!-- Cloud -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30">
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-500">CLOUD</p>
-
-            <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">AWS</p>
-
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Cloud-ready application architecture and deployment.
-            </p>
-          </div>
-
-          <!-- AI -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30">
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-500">AI</p>
-
-            <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">AI Apps · Agents</p>
-
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Exploring practical AI and agentic workflows.
-            </p>
-          </div>
-
-          <!-- Practices -->
-          <div
-            class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30">
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-500">PRACTICES</p>
-
-            <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">
-              Security · Observability
-            </p>
-
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Validation, logging, health checks, resilient services.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="border-t border-slate-200 py-28 dark:border-white/10">
-      <div class="mx-auto max-w-6xl px-5">
-        <div
-          class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:border-cyan-400/30 hover:shadow-md sm:p-12 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/20">
-          <p class="text-xs font-bold uppercase tracking-[.3em] text-cyan-500 dark:text-cyan-400">
-            04 / How I think
+      <section id="stack" class="border-t border-slate-200 py-16 md:py-28 dark:border-white/10">
+        <div class="mx-auto max-w-6xl px-5">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[.3em] text-cyan-500 dark:text-cyan-400">
+            03 / Engineering stack
           </p>
 
-          <div class="mt-8 grid gap-8 md:grid-cols-3">
-            <!-- 01 -->
-            <div>
-              <div class="text-3xl font-semibold text-slate-300 dark:text-white/20">01</div>
+          <h2 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+            Tools I use to turn ideas<br />
+            <span class="text-slate-500 dark:text-slate-500">into systems.</span>
+          </h2>
 
-              <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">Start simple</h3>
+          <div class="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <!-- Backend -->
+            <div
+              class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <p class="text-xs font-medium text-slate-500 dark:text-slate-500">BACKEND</p>
+
+              <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Node.js · NestJS · Express</p>
 
               <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Choose the simplest architecture that solves today’s problem without blocking
-                tomorrow.
+                REST APIs, modular architecture, auth, integrations.
               </p>
             </div>
 
-            <!-- 02 -->
-            <div>
-              <div class="text-3xl font-semibold text-slate-300 dark:text-white/20">02</div>
+            <!-- Data -->
+            <div
+              class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <p class="text-xs font-medium text-slate-500 dark:text-slate-500">DATA</p>
 
-              <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">Design for change</h3>
+              <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">PostgreSQL · MongoDB</p>
 
               <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Keep boundaries clear so products can evolve without turning every change into a
-                rewrite.
+                Relational modelling, catalog data, TypeORM, Mongoose.
               </p>
             </div>
 
-            <!-- 03 -->
-            <div>
-              <div class="text-3xl font-semibold text-slate-300 dark:text-white/20">03</div>
+            <!-- Systems -->
+            <div
+              class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <p class="text-xs font-medium text-slate-500 dark:text-slate-500">SYSTEMS</p>
 
-              <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">
-                Ship with confidence
-              </h3>
+              <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Redis · Kafka</p>
 
               <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Validation, observability, security, and graceful failure are part of the feature.
+                Caching, sessions, messaging, event-driven workflows.
+              </p>
+            </div>
+
+            <!-- Frontend -->
+            <div
+              class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <p class="text-xs font-medium text-slate-500 dark:text-slate-500">FRONTEND</p>
+
+              <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Angular · React · Next.js</p>
+
+              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                Product interfaces with TypeScript and Tailwind.
+              </p>
+            </div>
+
+            <!-- Language -->
+            <div
+              class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <p class="text-xs font-medium text-slate-500 dark:text-slate-500">LANGUAGE</p>
+
+              <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">TypeScript · JavaScript</p>
+
+              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                Strong typing, clean APIs, maintainable code.
+              </p>
+            </div>
+
+            <!-- Cloud -->
+            <div
+              class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <p class="text-xs font-medium text-slate-500 dark:text-slate-500">CLOUD</p>
+
+              <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">AWS</p>
+
+              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                Cloud-ready application architecture and deployment.
+              </p>
+            </div>
+
+            <!-- AI -->
+            <div
+              class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <p class="text-xs font-medium text-slate-500 dark:text-slate-500">AI</p>
+
+              <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">AI Apps · Agents</p>
+
+              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                Exploring practical AI and agentic workflows.
+              </p>
+            </div>
+
+            <!-- Practices -->
+            <div
+              class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/30"
+            >
+              <p class="text-xs font-medium text-slate-500 dark:text-slate-500">PRACTICES</p>
+
+              <p class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Security · Observability</p>
+
+              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                Validation, logging, health checks, resilient services.
               </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact" class="border-t border-slate-200 py-28 dark:border-white/10">
-      <div class="mx-auto max-w-4xl px-5 text-center">
-        <p class="text-xs font-bold uppercase tracking-[.3em] text-cyan-500 dark:text-cyan-400">
-          05 / LET'S TALK
-        </p>
+      <section class="border-t border-slate-200 py-16 md:py-28 dark:border-white/10">
+        <div class="mx-auto max-w-6xl px-5">
+          <div
+            class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:border-cyan-400/30 hover:shadow-md dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-cyan-400/20 sm:p-12"
+          >
+            <p class="text-xs font-bold uppercase tracking-[.3em] text-cyan-500 dark:text-cyan-400">04 / How I think</p>
 
-        <h2 class="mt-5 text-4xl font-black tracking-[-.04em] text-slate-900 sm:text-6xl dark:text-white">
-          Have something<br />
-          <span class="text-slate-500"> worth building? </span>
-        </h2>
+            <div class="mt-8 grid gap-8 lg:grid-cols-3">
+              <!-- 01 -->
+              <div>
+                <div class="text-3xl font-semibold text-slate-300 dark:text-white/20">01</div>
 
-        <p class="mx-auto mt-6 max-w-xl leading-7 text-slate-600 dark:text-slate-400">
-          Whether it’s a software problem, product idea, or engineering opportunity, I’m always open to a
-          good conversation.
-        </p>
+                <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">Start simple</h3>
 
-        <div class="mt-9 flex flex-wrap justify-center gap-3">
-          <!-- Email -->
-          <a href="mailto:dineshpandiyan2@gmail.com"
-            class="rounded-full bg-slate-900 px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-400 hover:text-slate-950 dark:bg-white dark:text-black dark:hover:bg-cyan-300">
-            Email me ↗
-          </a>
+                <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                  Pick the simplest approach that solves the problem well.
+                </p>
+              </div>
 
-          <!-- GitHub -->
-          <a href="https://github.com/dineshkumarpandiyan" target="_blank"
-            class="rounded-full border border-slate-200 px-6 py-3 text-sm font-bold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-cyan-600 dark:border-white/10 dark:text-white dark:hover:border-cyan-400/40 dark:hover:text-cyan-400">
-            GitHub ↗
-          </a>
+              <!-- 02 -->
+              <div>
+                <div class="text-3xl font-semibold text-slate-300 dark:text-white/20">02</div>
 
-          <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/dineshkumarpandiyan/" target="_blank"
-            class="rounded-full border border-slate-200 px-6 py-3 text-sm font-bold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-cyan-600 dark:border-white/10 dark:text-white dark:hover:border-cyan-400/40 dark:hover:text-cyan-400">
-            LinkedIn ↗
-          </a>
+                <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">Think beyond the code</h3>
+
+                <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                  Think about the product, users, and data — not just the code.
+                </p>
+              </div>
+
+              <!-- 03 -->
+              <div>
+                <div class="text-3xl font-semibold text-slate-300 dark:text-white/20">03</div>
+
+                <h3 class="mt-4 text-xl font-bold text-slate-900 dark:text-white">Design for change</h3>
+
+                <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                  Build clear foundations so the product can evolve easily.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer id="site-footer"></footer>
-  <!-- Hero Fluid simulation js-->
-  <script src="assets/js/fluid-simulation.js"></script>
-</body>
+      </section>
 
+      <section id="contact" class="border-t border-slate-200 py-16 md:py-28 dark:border-white/10">
+        <div class="mx-auto max-w-4xl px-5 text-center">
+          <p class="text-xs font-bold uppercase tracking-[.3em] text-cyan-500 dark:text-cyan-400">05 / LET'S TALK</p>
+
+          <h2 class="mt-5 text-4xl font-black tracking-[-.04em] text-slate-900 dark:text-white sm:text-6xl">
+            Have something<br />
+            <span class="text-slate-500"> worth building? </span>
+          </h2>
+
+          <p class="mx-auto mt-6 max-w-xl leading-7 text-slate-600 dark:text-slate-400">
+            Whether it’s a software problem, product idea, or engineering opportunity, I’m always open to a good
+            conversation.
+          </p>
+
+          <div class="mt-9 flex flex-wrap justify-center gap-3">
+            <!-- Email -->
+            <a
+              href="mailto:dineshpandiyan2@gmail.com"
+              class="rounded-full bg-slate-900 px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-400 hover:text-slate-950 dark:bg-white dark:text-black dark:hover:bg-cyan-300"
+            >
+              Email me ↗
+            </a>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/dineshkumarpandiyan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full border border-slate-200 px-6 py-3 text-sm font-bold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-cyan-600 dark:border-white/10 dark:text-white dark:hover:border-cyan-400/40 dark:hover:text-cyan-400"
+            >
+              GitHub ↗
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/dineshkumarpandiyan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full border border-slate-200 px-6 py-3 text-sm font-bold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:text-cyan-600 dark:border-white/10 dark:text-white dark:hover:border-cyan-400/40 dark:hover:text-cyan-400"
+            >
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="site-footer"></footer>
+    <!-- Hero fluid simulation JS -->
+    <script src="assets/js/fluid-simulation.js"></script>
+  </body>
 </html>
