@@ -183,11 +183,23 @@ function initCustomize() {
     const detail = Object.keys(selection)
       .map((k) => CUSTOMIZE_OPTIONS[k].choices[selection[k]].label)
       .join(", ");
-    Cart.add({ id: p.id, name: p.name, seller: p.seller, price: p.price + delta, image: p.image, size: "M", qty: 1, customized: true, detail });
+    Cart.add({
+      id: p.id,
+      name: p.name,
+      seller: p.seller,
+      price: p.price + delta,
+      image: p.image,
+      size: "M",
+      qty: 1,
+      customized: true,
+      detail,
+    });
     updateCartBadges();
     const btn = root.querySelector("[data-add-custom]");
     btn.innerHTML = '<i class="bx bx-check"></i> Added to Bag';
-    setTimeout(() => { location.href = "cart.html"; }, 700);
+    setTimeout(() => {
+      location.href = "cart.html";
+    }, 700);
   });
 
   recompute();
@@ -313,7 +325,7 @@ function slideTemplate(slide, index) {
   const chips = slide.chips
     .map(
       (c) =>
-        `<span class="rounded-full bg-surface/90 px-2.5 py-1 text-[11px] font-semibold text-primary shadow-sm backdrop-blur">${c}</span>`
+        `<span class="rounded-full bg-surface/90 px-2.5 py-1 text-[11px] font-semibold text-primary shadow-sm backdrop-blur">${c}</span>`,
     )
     .join("");
 
@@ -373,7 +385,7 @@ function initHeroCarousel() {
   track.innerHTML = HERO_SLIDES.map(slideTemplate).join("");
   dotsWrap.innerHTML = HERO_SLIDES.map(
     (_, i) =>
-      `<button type="button" role="tab" aria-label="Go to slide ${i + 1}" data-hero-dot class="h-2.5 rounded-full bg-sendmystyle-300 transition-all"></button>`
+      `<button type="button" role="tab" aria-label="Go to slide ${i + 1}" data-hero-dot class="h-2.5 rounded-full bg-sendmystyle-300 transition-all"></button>`,
   ).join("");
 
   const slides = Array.from(track.querySelectorAll("[data-hero-slide]"));
@@ -421,10 +433,21 @@ function initHeroCarousel() {
   }
 
   // Controls
-  nextBtn && nextBtn.addEventListener("click", () => { next(); restart(); });
-  prevBtn && prevBtn.addEventListener("click", () => { prev(); restart(); });
+  nextBtn &&
+    nextBtn.addEventListener("click", () => {
+      next();
+      restart();
+    });
+  prevBtn &&
+    prevBtn.addEventListener("click", () => {
+      prev();
+      restart();
+    });
   dots.forEach((dot, i) =>
-    dot.addEventListener("click", () => { show(i); restart(); })
+    dot.addEventListener("click", () => {
+      show(i);
+      restart();
+    }),
   );
 
   // Pause on hover (desktop)
@@ -434,18 +457,28 @@ function initHeroCarousel() {
   // Keyboard navigation
   hero.setAttribute("tabindex", "0");
   hero.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") { prev(); restart(); }
-    if (e.key === "ArrowRight") { next(); restart(); }
+    if (e.key === "ArrowLeft") {
+      prev();
+      restart();
+    }
+    if (e.key === "ArrowRight") {
+      next();
+      restart();
+    }
   });
 
   // Swipe (mobile)
   let startX = 0;
   let dragging = false;
-  track.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-    dragging = true;
-    stop();
-  }, { passive: true });
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      dragging = true;
+      stop();
+    },
+    { passive: true },
+  );
   track.addEventListener("touchend", (e) => {
     if (!dragging) return;
     dragging = false;
@@ -596,8 +629,14 @@ function initListing() {
   }
 
   function renderFilters() {
-    if (filtersDesktop) { filtersDesktop.innerHTML = filtersHTML(); bindFilterInputs(filtersDesktop); }
-    if (filtersMobile) { filtersMobile.innerHTML = filtersHTML(); bindFilterInputs(filtersMobile); }
+    if (filtersDesktop) {
+      filtersDesktop.innerHTML = filtersHTML();
+      bindFilterInputs(filtersDesktop);
+    }
+    if (filtersMobile) {
+      filtersMobile.innerHTML = filtersHTML();
+      bindFilterInputs(filtersMobile);
+    }
   }
 
   function activeChips() {
@@ -611,11 +650,12 @@ function initListing() {
     if (!chipsEl) return;
     chipsEl.innerHTML = chips.length
       ? chips
-        .map(
-          ([g, v, label]) =>
-            `<button type="button" data-chip data-group="${g}" data-value="${v}" class="inline-flex items-center gap-1 rounded-full bg-sendmystyle-100 px-3 py-1 text-xs font-semibold text-primary">${label} <i class="bx bx-x text-sm"></i></button>`
-        )
-        .join("") + `<button type="button" data-clear-all class="text-xs font-semibold text-body underline underline-offset-2 hover:text-primary">Clear all</button>`
+          .map(
+            ([g, v, label]) =>
+              `<button type="button" data-chip data-group="${g}" data-value="${v}" class="inline-flex items-center gap-1 rounded-full bg-sendmystyle-100 px-3 py-1 text-xs font-semibold text-primary">${label} <i class="bx bx-x text-sm"></i></button>`,
+          )
+          .join("") +
+        `<button type="button" data-clear-all class="text-xs font-semibold text-body underline underline-offset-2 hover:text-primary">Clear all</button>`
       : "";
 
     chipsEl.querySelectorAll("[data-chip]").forEach((btn) => {
@@ -662,8 +702,7 @@ function initListing() {
     if (sort === "low") items.sort((a, b) => a.price - b.price);
     else if (sort === "high") items.sort((a, b) => b.price - a.price);
     else if (sort === "rating") items.sort((a, b) => b.rating - a.rating);
-    else if (sort === "discount")
-      items.sort((a, b) => (b.mrp - b.price) / b.mrp - (a.mrp - a.price) / a.mrp);
+    else if (sort === "discount") items.sort((a, b) => (b.mrp - b.price) / b.mrp - (a.mrp - a.price) / a.mrp);
 
     grid.innerHTML = items.map(productCard).join("");
     if (countEl) countEl.textContent = items.length;
@@ -685,11 +724,15 @@ function initListing() {
     const closeEls = drawer.querySelectorAll("[data-close-filters], [data-filter-overlay]");
     const open = () => {
       drawer.classList.remove("hidden");
-      requestAnimationFrame(() => { overlay.classList.remove("opacity-0"); panel.classList.remove("translate-x-full"); });
+      requestAnimationFrame(() => {
+        overlay.classList.remove("opacity-0");
+        panel.classList.remove("translate-x-full");
+      });
       document.body.style.overflow = "hidden";
     };
     const close = () => {
-      overlay.classList.add("opacity-0"); panel.classList.add("translate-x-full");
+      overlay.classList.add("opacity-0");
+      panel.classList.add("translate-x-full");
       document.body.style.overflow = "";
       setTimeout(() => drawer.classList.add("hidden"), 250);
     };
@@ -714,10 +757,7 @@ function initProductDetails() {
   const off = Math.round(((p.mrp - p.price) / p.mrp) * 100);
 
   const thumbs = (p.gallery.length ? p.gallery : [p.image, p.image, p.image])
-    .map(
-      (src) =>
-        `<img src="${src}" alt="" class="h-20 w-16 rounded-lg border border-border object-cover" />`
-    )
+    .map((src) => `<img src="${src}" alt="" class="h-20 w-16 rounded-lg border border-border object-cover" />`)
     .join("");
 
   const customBadge = p.customizable
@@ -793,10 +833,21 @@ function initProductDetails() {
   const addBtn = root.querySelector("[data-add-bag]");
   if (addBtn) {
     addBtn.addEventListener("click", () => {
-      Cart.add({ id: p.id, name: p.name, seller: p.seller, price: p.price, image: p.image, size: "M", qty: 1, customized: false });
+      Cart.add({
+        id: p.id,
+        name: p.name,
+        seller: p.seller,
+        price: p.price,
+        image: p.image,
+        size: "M",
+        qty: 1,
+        customized: false,
+      });
       updateCartBadges();
       addBtn.innerHTML = '<i class="bx bx-check"></i> Added to Bag';
-      setTimeout(() => { addBtn.innerHTML = '<i class="bx bx-cart"></i> Add to Bag'; }, 1500);
+      setTimeout(() => {
+        addBtn.innerHTML = '<i class="bx bx-cart"></i> Add to Bag';
+      }, 1500);
     });
   }
 
@@ -828,9 +879,13 @@ function initSearch() {
 
 function updateCartBadges() {
   const count = Cart.count();
-  document.querySelectorAll("[data-cart-count], #site-web-header a[href='cart.html'] span, #site-mobile-header a[href='cart.html'] span").forEach((el) => {
-    el.textContent = count;
-  });
+  document
+    .querySelectorAll(
+      "[data-cart-count], #site-web-header a[href='cart.html'] span, #site-mobile-header a[href='cart.html'] span",
+    )
+    .forEach((el) => {
+      el.textContent = count;
+    });
 }
 
 function initCart() {
@@ -890,13 +945,27 @@ function initCart() {
 
     // Bind actions
     list.querySelectorAll("[data-remove]").forEach((b) =>
-      b.addEventListener("click", () => { Cart.removeAt(+b.dataset.remove); render(); updateCartBadges(); })
+      b.addEventListener("click", () => {
+        Cart.removeAt(+b.dataset.remove);
+        render();
+        updateCartBadges();
+      }),
     );
     list.querySelectorAll("[data-inc]").forEach((b) =>
-      b.addEventListener("click", () => { const i = +b.dataset.inc; Cart.setQty(i, (Cart.all()[i].qty || 1) + 1); render(); updateCartBadges(); })
+      b.addEventListener("click", () => {
+        const i = +b.dataset.inc;
+        Cart.setQty(i, (Cart.all()[i].qty || 1) + 1);
+        render();
+        updateCartBadges();
+      }),
     );
     list.querySelectorAll("[data-dec]").forEach((b) =>
-      b.addEventListener("click", () => { const i = +b.dataset.dec; Cart.setQty(i, (Cart.all()[i].qty || 1) - 1); render(); updateCartBadges(); })
+      b.addEventListener("click", () => {
+        const i = +b.dataset.dec;
+        Cart.setQty(i, (Cart.all()[i].qty || 1) - 1);
+        render();
+        updateCartBadges();
+      }),
     );
   }
 

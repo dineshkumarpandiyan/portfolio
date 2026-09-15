@@ -6,19 +6,19 @@ The entire SendMyStyle website must use this theme as the single source of truth
 
 All pages and components should follow the same color system:
 
-* Navbar
-* Hero
-* Buttons
-* Cards
-* Forms
-* Product sections
-* Modals
-* Badges
-* Footer
-* Links
-* Hover states
-* Active states
-* Focus states
+- Navbar
+- Hero
+- Buttons
+- Cards
+- Forms
+- Product sections
+- Modals
+- Badges
+- Footer
+- Links
+- Hover states
+- Active states
+- Focus states
 
 Do not use random colors or hardcoded hex colors inside HTML unless absolutely required.
 
@@ -96,11 +96,11 @@ Since the website uses Tailwind CSS through CDN, define the theme directly in th
             700: "#89394B",
             800: "#6B2D3B",
             900: "#481F29",
-            950: "#2D141A"
-          }
-        }
-      }
-    }
+            950: "#2D141A",
+          },
+        },
+      },
+    },
   };
 </script>
 ```
@@ -112,16 +112,7 @@ Since the website uses Tailwind CSS through CDN, define the theme directly in th
 ## Primary Button
 
 ```html
-<button
-  class="
-    bg-primary
-    hover:bg-primary-hover
-    active:bg-primary-active
-    text-white
-    px-6 py-3
-    rounded-lg
-  "
->
+<button class="bg-primary hover:bg-primary-hover active:bg-primary-active rounded-lg px-6 py-3 text-white">
   Get Started
 </button>
 ```
@@ -131,15 +122,7 @@ Since the website uses Tailwind CSS through CDN, define the theme directly in th
 ## Secondary Button
 
 ```html
-<button
-  class="
-    bg-sendmystyle-100
-    hover:bg-sendmystyle-200
-    text-sendmystyle-700
-    px-6 py-3
-    rounded-lg
-  "
->
+<button class="bg-sendmystyle-100 hover:bg-sendmystyle-200 text-sendmystyle-700 rounded-lg px-6 py-3">
   Learn More
 </button>
 ```
@@ -149,18 +132,7 @@ Since the website uses Tailwind CSS through CDN, define the theme directly in th
 ## Outline Button
 
 ```html
-<button
-  class="
-    bg-surface
-    border border-border
-    text-primary
-    hover:bg-background
-    px-6 py-3
-    rounded-lg
-  "
->
-  Explore
-</button>
+<button class="bg-surface border-border text-primary hover:bg-background rounded-lg border px-6 py-3">Explore</button>
 ```
 
 ---
@@ -170,7 +142,7 @@ Since the website uses Tailwind CSS through CDN, define the theme directly in th
 All main website pages should use:
 
 ```html
-<body class="bg-background text-body">
+<body class="bg-background text-body"></body>
 ```
 
 This gives:
@@ -187,14 +159,10 @@ Body Text  → #6B2D3B
 Cards, modals and elevated sections should use `surface`.
 
 ```html
-<div class="bg-surface border border-border rounded-2xl p-6">
-  <h3 class="text-heading">
-    Product Title
-  </h3>
+<div class="bg-surface border-border rounded-2xl border p-6">
+  <h3 class="text-heading">Product Title</h3>
 
-  <p class="text-body">
-    Product description goes here.
-  </p>
+  <p class="text-body">Product description goes here.</p>
 </div>
 ```
 
@@ -205,9 +173,7 @@ Cards, modals and elevated sections should use `surface`.
 ## Heading
 
 ```html
-<h1 class="text-heading">
-  Discover Your Style
-</h1>
+<h1 class="text-heading">Discover Your Style</h1>
 ```
 
 Color:
@@ -221,9 +187,7 @@ Color:
 ## Body
 
 ```html
-<p class="text-body">
-  Find products that match your personal style.
-</p>
+<p class="text-body">Find products that match your personal style.</p>
 ```
 
 Color:
@@ -239,25 +203,19 @@ Color:
 Default:
 
 ```html
-<a class="text-primary">
-  View Details
-</a>
+<a class="text-primary"> View Details </a>
 ```
 
 Hover:
 
 ```html
-<a class="text-primary hover:text-primary-hover">
-  View Details
-</a>
+<a class="text-primary hover:text-primary-hover"> View Details </a>
 ```
 
 Active:
 
 ```html
-<a class="text-primary-active">
-  Products
-</a>
+<a class="text-primary-active"> Products </a>
 ```
 
 ---
@@ -267,19 +225,7 @@ Active:
 ```html
 <input
   type="text"
-  class="
-    w-full
-    bg-surface
-    border border-border
-    text-body
-    placeholder:text-sendmystyle-400
-    rounded-lg
-    px-4 py-3
-    outline-none
-    focus:border-primary
-    focus:ring-2
-    focus:ring-sendmystyle-100
-  "
+  class="bg-surface border-border text-body placeholder:text-sendmystyle-400 focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-3 outline-none focus:ring-2"
   placeholder="Enter your name"
 />
 ```
@@ -302,23 +248,19 @@ Focus Ring   → sendmystyle-100
 Recommended navbar:
 
 ```html
-<nav class="bg-surface border-b border-border">
+<nav class="bg-surface border-border border-b"></nav>
 ```
 
 Navigation text:
 
 ```html
-<a class="text-body hover:text-primary">
-  Home
-</a>
+<a class="text-body hover:text-primary"> Home </a>
 ```
 
 Active navigation:
 
 ```html
-<a class="text-primary-active">
-  Products
-</a>
+<a class="text-primary-active"> Products </a>
 ```
 
 ---
@@ -328,31 +270,25 @@ Active navigation:
 Use:
 
 ```html
-<section class="bg-background">
+<section class="bg-background"></section>
 ```
 
 Heading:
 
 ```html
-<h1 class="text-heading">
-  Your Style. Your Way.
-</h1>
+<h1 class="text-heading">Your Style. Your Way.</h1>
 ```
 
 Description:
 
 ```html
-<p class="text-body">
-  Discover a style that feels uniquely yours.
-</p>
+<p class="text-body">Discover a style that feels uniquely yours.</p>
 ```
 
 CTA:
 
 ```html
-<button class="bg-primary hover:bg-primary-hover active:bg-primary-active text-white">
-  Explore Now
-</button>
+<button class="bg-primary hover:bg-primary-hover active:bg-primary-active text-white">Explore Now</button>
 ```
 
 ---
@@ -362,31 +298,13 @@ CTA:
 Primary badge:
 
 ```html
-<span
-  class="
-    bg-sendmystyle-100
-    text-sendmystyle-700
-    px-3 py-1
-    rounded-full
-  "
->
-  New
-</span>
+<span class="bg-sendmystyle-100 text-sendmystyle-700 rounded-full px-3 py-1"> New </span>
 ```
 
 Featured badge:
 
 ```html
-<span
-  class="
-    bg-primary
-    text-white
-    px-3 py-1
-    rounded-full
-  "
->
-  Featured
-</span>
+<span class="bg-primary rounded-full px-3 py-1 text-white"> Featured </span>
 ```
 
 ---
@@ -396,31 +314,25 @@ Featured badge:
 The footer should use the deepest brand color.
 
 ```html
-<footer class="bg-sendmystyle-950 text-white">
+<footer class="bg-sendmystyle-950 text-white"></footer>
 ```
 
 Heading:
 
 ```html
-<h3 class="text-white">
-  SendMyStyle
-</h3>
+<h3 class="text-white">SendMyStyle</h3>
 ```
 
 Description:
 
 ```html
-<p class="text-sendmystyle-100">
-  Your style. Your way.
-</p>
+<p class="text-sendmystyle-100">Your style. Your way.</p>
 ```
 
 Links:
 
 ```html
-<a class="text-sendmystyle-300 hover:text-white">
-  Privacy Policy
-</a>
+<a class="text-sendmystyle-300 hover:text-white"> Privacy Policy </a>
 ```
 
 ---
@@ -446,13 +358,7 @@ Active
 For primary buttons:
 
 ```html
-<button
-  class="
-    bg-primary
-    hover:bg-primary-hover
-    active:bg-primary-active
-  "
->
+<button class="bg-primary hover:bg-primary-hover active:bg-primary-active"></button>
 ```
 
 ---
@@ -462,31 +368,22 @@ For primary buttons:
 The numbered SendMyStyle palette can be used when a specific shade is required.
 
 ```html
-bg-sendmystyle-50
-bg-sendmystyle-100
-bg-sendmystyle-200
-bg-sendmystyle-300
-bg-sendmystyle-400
-bg-sendmystyle-500
-bg-sendmystyle-600
-bg-sendmystyle-700
-bg-sendmystyle-800
-bg-sendmystyle-900
-bg-sendmystyle-950
+bg-sendmystyle-50 bg-sendmystyle-100 bg-sendmystyle-200 bg-sendmystyle-300 bg-sendmystyle-400 bg-sendmystyle-500
+bg-sendmystyle-600 bg-sendmystyle-700 bg-sendmystyle-800 bg-sendmystyle-900 bg-sendmystyle-950
 ```
 
 Example:
 
 ```html
-<div class="bg-sendmystyle-50">
+<div class="bg-sendmystyle-50"></div>
 ```
 
 ```html
-<div class="border border-sendmystyle-200">
+<div class="border-sendmystyle-200 border"></div>
 ```
 
 ```html
-<p class="text-sendmystyle-800">
+<p class="text-sendmystyle-800"></p>
 ```
 
 ---
@@ -496,13 +393,13 @@ Example:
 ## Preferred
 
 ```html
-<button class="bg-primary hover:bg-primary-hover">
+<button class="bg-primary hover:bg-primary-hover"></button>
 ```
 
 ## Avoid
 
 ```html
-<button class="bg-[#C45C72] hover:bg-[#A9475C]">
+<button class="bg-[#C45C72] hover:bg-[#A9475C]"></button>
 ```
 
 The semantic approach makes the entire website easier to maintain.
@@ -615,12 +512,12 @@ unless there is a specific reason.
 
 SendMyStyle should have a:
 
-* Soft
-* Elegant
-* Modern
-* Premium
-* Fashion-focused
-* Clean
+- Soft
+- Elegant
+- Modern
+- Premium
+- Fashion-focused
+- Clean
 
 visual identity.
 

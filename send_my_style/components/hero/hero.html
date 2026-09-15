@@ -1,21 +1,33 @@
 <div class="bg-background px-4 pt-4 sm:px-6 sm:pt-6">
-  <div class="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-border bg-surface shadow-soft">
-    <section id="hero" class="relative overflow-hidden" aria-roledescription="carousel"
-      aria-label="SendMyStyle highlights">
+  <div class="border-border bg-surface shadow-soft mx-auto max-w-7xl overflow-hidden rounded-3xl border">
+    <section
+      id="hero"
+      class="relative overflow-hidden"
+      aria-roledescription="carousel"
+      aria-label="SendMyStyle highlights"
+    >
       <!-- Slides are rendered here by initHeroCarousel() -->
       <div data-hero-track class="grid"></div>
 
       <!-- Pagination Dots + Controls -->
       <div class="relative z-20 -mt-1 flex items-center justify-center gap-4 pb-6 md:pb-8">
-        <button type="button" data-hero-prev aria-label="Previous slide"
-          class="flex h-9 w-9 items-center justify-center rounded-full border border-border text-heading transition hover:border-primary hover:text-primary">
+        <button
+          type="button"
+          data-hero-prev
+          aria-label="Previous slide"
+          class="border-border text-heading hover:border-primary hover:text-primary flex h-9 w-9 items-center justify-center rounded-full border transition"
+        >
           <i class="bx bx-chevron-left text-xl"></i>
         </button>
 
         <div data-hero-dots role="tablist" aria-label="Choose slide" class="flex items-center gap-2"></div>
 
-        <button type="button" data-hero-next aria-label="Next slide"
-          class="flex h-9 w-9 items-center justify-center rounded-full border border-border text-heading transition hover:border-primary hover:text-primary">
+        <button
+          type="button"
+          data-hero-next
+          aria-label="Next slide"
+          class="border-border text-heading hover:border-primary hover:text-primary flex h-9 w-9 items-center justify-center rounded-full border transition"
+        >
           <i class="bx bx-chevron-right text-xl"></i>
         </button>
       </div>
@@ -26,40 +38,56 @@
 <!-- Feature cards (separate section) -->
 <div class="bg-background px-4 pb-4 pt-6 sm:px-6 md:pt-8">
   <div class="mx-auto grid max-w-7xl grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
-    <div class="group flex items-center gap-3 rounded-2xl border border-border bg-surface p-4 transition hover:border-primary hover:shadow-soft">
-      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sendmystyle-100 text-xl text-primary transition group-hover:bg-primary group-hover:text-white">
+    <div
+      class="border-border bg-surface hover:border-primary hover:shadow-soft group flex items-center gap-3 rounded-2xl border p-4 transition"
+    >
+      <span
+        class="bg-sendmystyle-100 text-primary group-hover:bg-primary flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-xl transition group-hover:text-white"
+      >
         <i class="bx bx-pencil"></i>
       </span>
       <div>
-        <p class="text-sm font-semibold text-heading">Customize</p>
-        <p class="text-xs text-body">Personalize before you buy</p>
+        <p class="text-heading text-sm font-semibold">Customize</p>
+        <p class="text-body text-xs">Personalize before you buy</p>
       </div>
     </div>
-    <div class="group flex items-center gap-3 rounded-2xl border border-border bg-surface p-4 transition hover:border-primary hover:shadow-soft">
-      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sendmystyle-100 text-xl text-primary transition group-hover:bg-primary group-hover:text-white">
+    <div
+      class="border-border bg-surface hover:border-primary hover:shadow-soft group flex items-center gap-3 rounded-2xl border p-4 transition"
+    >
+      <span
+        class="bg-sendmystyle-100 text-primary group-hover:bg-primary flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-xl transition group-hover:text-white"
+      >
         <i class="bx bx-store-alt"></i>
       </span>
       <div>
-        <p class="text-sm font-semibold text-heading">Curated sellers</p>
-        <p class="text-xs text-body">Handpicked fashion brands</p>
+        <p class="text-heading text-sm font-semibold">Curated sellers</p>
+        <p class="text-body text-xs">Handpicked fashion brands</p>
       </div>
     </div>
-    <div class="group flex items-center gap-3 rounded-2xl border border-border bg-surface p-4 transition hover:border-primary hover:shadow-soft">
-      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sendmystyle-100 text-xl text-primary transition group-hover:bg-primary group-hover:text-white">
+    <div
+      class="border-border bg-surface hover:border-primary hover:shadow-soft group flex items-center gap-3 rounded-2xl border p-4 transition"
+    >
+      <span
+        class="bg-sendmystyle-100 text-primary group-hover:bg-primary flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-xl transition group-hover:text-white"
+      >
         <i class="bx bx-package"></i>
       </span>
       <div>
-        <p class="text-sm font-semibold text-heading">Made to order</p>
-        <p class="text-xs text-body">Crafted just for you</p>
+        <p class="text-heading text-sm font-semibold">Made to order</p>
+        <p class="text-body text-xs">Crafted just for you</p>
       </div>
     </div>
-    <div class="group flex items-center gap-3 rounded-2xl border border-border bg-surface p-4 transition hover:border-primary hover:shadow-soft">
-      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sendmystyle-100 text-xl text-primary transition group-hover:bg-primary group-hover:text-white">
+    <div
+      class="border-border bg-surface hover:border-primary hover:shadow-soft group flex items-center gap-3 rounded-2xl border p-4 transition"
+    >
+      <span
+        class="bg-sendmystyle-100 text-primary group-hover:bg-primary flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-xl transition group-hover:text-white"
+      >
         <i class="bx bx-check-shield"></i>
       </span>
       <div>
-        <p class="text-sm font-semibold text-heading">Secure checkout</p>
-        <p class="text-xs text-body">Safe, encrypted payments</p>
+        <p class="text-heading text-sm font-semibold">Secure checkout</p>
+        <p class="text-body text-xs">Safe, encrypted payments</p>
       </div>
     </div>
   </div>

@@ -1,544 +1,569 @@
-<header class="sticky top-0 z-40 hidden border-b border-border bg-surface lg:block relative">
-    <div class="container mx-auto flex items-center gap-5 px-6 py-3 xl:gap-8">
-        <!-- Logo -->
-        <a href="index.html" class="flex shrink-0 items-center space-x-1 text-2xl font-bold text-heading">
-            <span>Send</span><span class="text-primary text-3xl">My</span><span>Style</span>
-        </a>
+<header class="border-border bg-surface relative sticky top-0 z-40 hidden border-b lg:block">
+  <div class="container mx-auto flex items-center gap-5 px-6 py-3 xl:gap-8">
+    <!-- Logo -->
+    <a href="index.html" class="text-heading flex shrink-0 items-center space-x-1 text-2xl font-bold">
+      <span>Send</span><span class="text-primary text-3xl">My</span><span>Style</span>
+    </a>
 
-        <!-- Category Tabs (tira-style mega dropdowns) -->
-        <nav class="flex h-16 items-stretch">
-            <ul class="flex items-stretch gap-7 text-sm font-semibold uppercase tracking-wide text-heading">
-                <!-- MEN -->
-                <li class="group static flex items-center">
-                    <a href="#" class="relative flex h-full items-center transition-colors group-hover:text-primary">
-                        Men
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-[3px] scale-x-0 bg-primary transition-transform group-hover:scale-x-100"></span>
-                    </a>
-                    <div
-                        class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100">
-                        <div
-                            class="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
-                            <div class="grid grid-cols-[1fr_1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Topwear</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">T-Shirts</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Casual
-                                                Shirts</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Formal
-                                                Shirts</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Sweatshirts</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Jackets</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Bottomwear</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Jeans</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Casual
-                                                Trousers</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Shorts</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Track
-                                                Pants</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Footwear</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Sneakers</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Formal
-                                                Shoes</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Sandals</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Sports
-                                                Shoes</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Accessories</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Watches</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Wallets</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Bags</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Sunglasses</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Promo card -->
-                                <a href="#"
-                                    class="group/promo relative flex flex-col justify-end overflow-hidden rounded-xl bg-sendmystyle-100 p-5">
-                                    <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=500&q=60"
-                                        alt="Men's collection"
-                                        class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-sendmystyle-950/70 to-transparent">
-                                    </div>
-                                    <div class="relative">
-                                        <p class="text-xs font-semibold uppercase tracking-widest text-sendmystyle-100">
-                                            New Season</p>
-                                        <p class="mt-1 text-lg font-bold text-white">Men's Edit</p>
-                                        <span
-                                            class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4">Shop
-                                            now</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+    <!-- Category Tabs (tira-style mega dropdowns) -->
+    <nav class="flex h-16 items-stretch">
+      <ul class="text-heading flex items-stretch gap-7 text-sm font-semibold uppercase tracking-wide">
+        <!-- MEN -->
+        <li class="group static flex items-center">
+          <a href="#" class="group-hover:text-primary relative flex h-full items-center transition-colors">
+            Men
+            <span
+              class="bg-primary absolute inset-x-0 bottom-0 h-[3px] scale-x-0 transition-transform group-hover:scale-x-100"
+            ></span>
+          </a>
+          <div
+            class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100"
+          >
+            <div class="border-border bg-surface shadow-soft mx-auto max-w-7xl overflow-hidden rounded-2xl border">
+              <div class="grid grid-cols-[1fr_1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Topwear</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">T-Shirts</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Casual Shirts</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Formal Shirts</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Sweatshirts</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Jackets</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Bottomwear</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Jeans</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Casual Trousers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Shorts</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Track Pants</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Footwear</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Sneakers</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Formal Shoes</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Sandals</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Sports Shoes</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Accessories</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Watches</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Wallets</a>
+                    </li>
+                    <li><a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Bags</a></li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Sunglasses</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Promo card -->
+                <a
+                  href="#"
+                  class="group/promo bg-sendmystyle-100 relative flex flex-col justify-end overflow-hidden rounded-xl p-5"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=500&q=60"
+                    alt="Men's collection"
+                    class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105"
+                  />
+                  <div class="from-sendmystyle-950/70 absolute inset-0 bg-gradient-to-t to-transparent"></div>
+                  <div class="relative">
+                    <p class="text-sendmystyle-100 text-xs font-semibold uppercase tracking-widest">New Season</p>
+                    <p class="mt-1 text-lg font-bold text-white">Men's Edit</p>
+                    <span class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4"
+                      >Shop now</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
 
-                <!-- WOMEN -->
-                <li class="group static flex items-center">
-                    <a href="#" class="relative flex h-full items-center transition-colors group-hover:text-primary">
-                        Women
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-[3px] scale-x-0 bg-primary transition-transform group-hover:scale-x-100"></span>
-                    </a>
-                    <div
-                        class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100">
-                        <div
-                            class="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
-                            <div class="grid grid-cols-[1fr_1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">Indian
-                                        Wear</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Kurtas
-                                                & Suits</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Sarees</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Ethnic
-                                                Wear</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Lehenga
-                                                Cholis</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Western Wear</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Dresses</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Tops</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Jeans</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Skirts</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Footwear</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Flats</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Heels</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Boots</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Sneakers</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Jewellery</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Earrings</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Necklaces</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Rings</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Handbags</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="#"
-                                    class="group/promo relative flex flex-col justify-end overflow-hidden rounded-xl bg-sendmystyle-100 p-5">
-                                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=60"
-                                        alt="Women's collection"
-                                        class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-sendmystyle-950/70 to-transparent">
-                                    </div>
-                                    <div class="relative">
-                                        <p class="text-xs font-semibold uppercase tracking-widest text-sendmystyle-100">
-                                            Trending</p>
-                                        <p class="mt-1 text-lg font-bold text-white">Festive Picks</p>
-                                        <span
-                                            class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4">Shop
-                                            now</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+        <!-- WOMEN -->
+        <li class="group static flex items-center">
+          <a href="#" class="group-hover:text-primary relative flex h-full items-center transition-colors">
+            Women
+            <span
+              class="bg-primary absolute inset-x-0 bottom-0 h-[3px] scale-x-0 transition-transform group-hover:scale-x-100"
+            ></span>
+          </a>
+          <div
+            class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100"
+          >
+            <div class="border-border bg-surface shadow-soft mx-auto max-w-7xl overflow-hidden rounded-2xl border">
+              <div class="grid grid-cols-[1fr_1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Indian Wear</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Kurtas & Suits</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Sarees</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Ethnic Wear</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Lehenga Cholis</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Western Wear</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Dresses</a>
+                    </li>
+                    <li><a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Tops</a></li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Jeans</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Skirts</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Footwear</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Flats</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Heels</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Boots</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Sneakers</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Jewellery</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Earrings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Necklaces</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Rings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Handbags</a>
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="#"
+                  class="group/promo bg-sendmystyle-100 relative flex flex-col justify-end overflow-hidden rounded-xl p-5"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=60"
+                    alt="Women's collection"
+                    class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105"
+                  />
+                  <div class="from-sendmystyle-950/70 absolute inset-0 bg-gradient-to-t to-transparent"></div>
+                  <div class="relative">
+                    <p class="text-sendmystyle-100 text-xs font-semibold uppercase tracking-widest">Trending</p>
+                    <p class="mt-1 text-lg font-bold text-white">Festive Picks</p>
+                    <span class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4"
+                      >Shop now</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
 
-                <!-- KIDS -->
-                <li class="group static flex items-center">
-                    <a href="#" class="relative flex h-full items-center transition-colors group-hover:text-primary">
-                        Kids
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-[3px] scale-x-0 bg-primary transition-transform group-hover:scale-x-100"></span>
-                    </a>
-                    <div
-                        class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100">
-                        <div
-                            class="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
-                            <div class="grid grid-cols-[1fr_1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">Boys
-                                    </h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">T-Shirts</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Shirts</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Jeans</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Shorts</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">Girls
-                                    </h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Dresses</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Tops</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Frocks</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Leggings</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Infants</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Bodysuits</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Rompers</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Sleepwear</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">Toys &
-                                        More</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Footwear</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Toys</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">School
-                                                Bags</a></li>
-                                    </ul>
-                                </div>
-                                <a href="#"
-                                    class="group/promo relative flex flex-col justify-end overflow-hidden rounded-xl bg-sendmystyle-100 p-5">
-                                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=500&q=60"
-                                        alt="Kids collection"
-                                        class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-sendmystyle-950/70 to-transparent">
-                                    </div>
-                                    <div class="relative">
-                                        <p class="text-xs font-semibold uppercase tracking-widest text-sendmystyle-100">
-                                            Playtime</p>
-                                        <p class="mt-1 text-lg font-bold text-white">Kids Fest</p>
-                                        <span
-                                            class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4">Shop
-                                            now</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+        <!-- KIDS -->
+        <li class="group static flex items-center">
+          <a href="#" class="group-hover:text-primary relative flex h-full items-center transition-colors">
+            Kids
+            <span
+              class="bg-primary absolute inset-x-0 bottom-0 h-[3px] scale-x-0 transition-transform group-hover:scale-x-100"
+            ></span>
+          </a>
+          <div
+            class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100"
+          >
+            <div class="border-border bg-surface shadow-soft mx-auto max-w-7xl overflow-hidden rounded-2xl border">
+              <div class="grid grid-cols-[1fr_1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Boys</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">T-Shirts</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Shirts</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Jeans</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Shorts</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Girls</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Dresses</a>
+                    </li>
+                    <li><a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Tops</a></li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Frocks</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Leggings</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Infants</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Bodysuits</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Rompers</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Sleepwear</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Toys & More</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Footwear</a>
+                    </li>
+                    <li><a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Toys</a></li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">School Bags</a>
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="#"
+                  class="group/promo bg-sendmystyle-100 relative flex flex-col justify-end overflow-hidden rounded-xl p-5"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=500&q=60"
+                    alt="Kids collection"
+                    class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105"
+                  />
+                  <div class="from-sendmystyle-950/70 absolute inset-0 bg-gradient-to-t to-transparent"></div>
+                  <div class="relative">
+                    <p class="text-sendmystyle-100 text-xs font-semibold uppercase tracking-widest">Playtime</p>
+                    <p class="mt-1 text-lg font-bold text-white">Kids Fest</p>
+                    <span class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4"
+                      >Shop now</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
 
-                <!-- BEAUTY -->
-                <li class="group static flex items-center">
-                    <a href="#" class="relative flex h-full items-center transition-colors group-hover:text-primary">
-                        Beauty
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-[3px] scale-x-0 bg-primary transition-transform group-hover:scale-x-100"></span>
-                    </a>
-                    <div
-                        class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100">
-                        <div
-                            class="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
-                            <div class="grid grid-cols-[1fr_1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">Makeup
-                                    </h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Lipstick</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Foundation</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Mascara</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Eyeliner</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Skincare</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Moisturizers</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Serums</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Sunscreen</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Face
-                                                Wash</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Haircare</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Shampoo</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Conditioner</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Hair
-                                                Oil</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Serums</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Fragrance</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Perfumes</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Deodorants</a>
-                                        </li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Body
-                                                Mists</a></li>
-                                    </ul>
-                                </div>
-                                <a href="#"
-                                    class="group/promo relative flex flex-col justify-end overflow-hidden rounded-xl bg-sendmystyle-100 p-5">
-                                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=500&q=60"
-                                        alt="Beauty collection"
-                                        class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-sendmystyle-950/70 to-transparent">
-                                    </div>
-                                    <div class="relative">
-                                        <p class="text-xs font-semibold uppercase tracking-widest text-sendmystyle-100">
-                                            Glow Up</p>
-                                        <p class="mt-1 text-lg font-bold text-white">Beauty Bestsellers</p>
-                                        <span
-                                            class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4">Shop
-                                            now</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+        <!-- BEAUTY -->
+        <li class="group static flex items-center">
+          <a href="#" class="group-hover:text-primary relative flex h-full items-center transition-colors">
+            Beauty
+            <span
+              class="bg-primary absolute inset-x-0 bottom-0 h-[3px] scale-x-0 transition-transform group-hover:scale-x-100"
+            ></span>
+          </a>
+          <div
+            class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100"
+          >
+            <div class="border-border bg-surface shadow-soft mx-auto max-w-7xl overflow-hidden rounded-2xl border">
+              <div class="grid grid-cols-[1fr_1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Makeup</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Lipstick</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Foundation</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Mascara</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Eyeliner</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Skincare</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Moisturizers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Serums</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Sunscreen</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Face Wash</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Haircare</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Shampoo</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Conditioner</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Hair Oil</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Serums</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Fragrance</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Perfumes</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Deodorants</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Body Mists</a>
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="#"
+                  class="group/promo bg-sendmystyle-100 relative flex flex-col justify-end overflow-hidden rounded-xl p-5"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=500&q=60"
+                    alt="Beauty collection"
+                    class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105"
+                  />
+                  <div class="from-sendmystyle-950/70 absolute inset-0 bg-gradient-to-t to-transparent"></div>
+                  <div class="relative">
+                    <p class="text-sendmystyle-100 text-xs font-semibold uppercase tracking-widest">Glow Up</p>
+                    <p class="mt-1 text-lg font-bold text-white">Beauty Bestsellers</p>
+                    <span class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4"
+                      >Shop now</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
 
-                <!-- CUSTOMIZE -->
-                <li class="group static flex items-center">
-                    <a href="#"
-                        class="relative flex h-full items-center gap-1 transition-colors group-hover:text-primary">
-                        Customize
-                        <span
-                            class="rounded bg-primary px-1.5 py-0.5 text-[10px] font-bold normal-case text-white">New</span>
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-[3px] scale-x-0 bg-primary transition-transform group-hover:scale-x-100"></span>
-                    </a>
-                    <div
-                        class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100">
-                        <div
-                            class="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
-                            <div class="grid grid-cols-[1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">Design
-                                        Studio</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Custom
-                                                T-Shirts</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Custom
-                                                Hoodies</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Add
-                                                Your Text</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Upload
-                                                Artwork</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">
-                                        Templates</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Trending
-                                                Designs</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Festive
-                                                Specials</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Couple
-                                                Sets</a></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-4 text-[11px] font-bold uppercase tracking-widest text-primary">For
-                                        Business</h4>
-                                    <ul class="space-y-2.5 text-sm font-normal text-body">
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Bulk
-                                                Orders</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Corporate
-                                                Gifting</a></li>
-                                        <li><a href="#"
-                                                class="inline-block transition hover:translate-x-1 hover:text-primary">Team
-                                                Merch</a></li>
-                                    </ul>
-                                </div>
-                                <a href="#"
-                                    class="group/promo relative flex flex-col justify-end overflow-hidden rounded-xl bg-sendmystyle-100 p-5">
-                                    <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=500&q=60"
-                                        alt="Customize studio"
-                                        class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105" />
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-t from-sendmystyle-950/70 to-transparent">
-                                    </div>
-                                    <div class="relative">
-                                        <p class="text-xs font-semibold uppercase tracking-widest text-sendmystyle-100">
-                                            Make It Yours</p>
-                                        <p class="mt-1 text-lg font-bold text-white">Start Designing</p>
-                                        <span
-                                            class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4">Try
-                                            now</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <!-- CUSTOMIZE -->
+        <li class="group static flex items-center">
+          <a href="#" class="group-hover:text-primary relative flex h-full items-center gap-1 transition-colors">
+            Customize
+            <span class="bg-primary rounded px-1.5 py-0.5 text-[10px] font-bold normal-case text-white">New</span>
+            <span
+              class="bg-primary absolute inset-x-0 bottom-0 h-[3px] scale-x-0 transition-transform group-hover:scale-x-100"
+            ></span>
+          </a>
+          <div
+            class="mega-panel invisible absolute left-0 right-0 top-full z-50 px-6 pt-3 opacity-0 group-hover:visible group-hover:opacity-100"
+          >
+            <div class="border-border bg-surface shadow-soft mx-auto max-w-5xl overflow-hidden rounded-2xl border">
+              <div class="grid grid-cols-[1fr_1fr_1fr_260px] gap-8 p-8 text-left normal-case">
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Design Studio</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Custom T-Shirts</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Custom Hoodies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Add Your Text</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Upload Artwork</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">Templates</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Trending Designs</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Festive Specials</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Couple Sets</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-primary mb-4 text-[11px] font-bold uppercase tracking-widest">For Business</h4>
+                  <ul class="text-body space-y-2.5 text-sm font-normal">
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Bulk Orders</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1"
+                        >Corporate Gifting</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary inline-block transition hover:translate-x-1">Team Merch</a>
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="#"
+                  class="group/promo bg-sendmystyle-100 relative flex flex-col justify-end overflow-hidden rounded-xl p-5"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=500&q=60"
+                    alt="Customize studio"
+                    class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover/promo:scale-105"
+                  />
+                  <div class="from-sendmystyle-950/70 absolute inset-0 bg-gradient-to-t to-transparent"></div>
+                  <div class="relative">
+                    <p class="text-sendmystyle-100 text-xs font-semibold uppercase tracking-widest">Make It Yours</p>
+                    <p class="mt-1 text-lg font-bold text-white">Start Designing</p>
+                    <span class="mt-2 inline-block text-xs font-semibold text-white underline underline-offset-4"
+                      >Try now</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
 
-        <!-- Search -->
-        <form action="search.html" class="relative min-w-0 flex-1">
-            <i
-                class="bx bx-search pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-lg text-sendmystyle-400"></i>
-            <input type="text" placeholder="Search for products, brands and more"
-                class="w-full rounded-lg border border-border bg-background py-2.5 pl-10 pr-4 text-sm text-body placeholder:text-sendmystyle-400 outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-        </form>
+    <!-- Search -->
+    <form action="search.html" class="relative min-w-0 flex-1">
+      <i
+        class="bx bx-search text-sendmystyle-400 pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-lg"
+      ></i>
+      <input
+        type="text"
+        placeholder="Search for products, brands and more"
+        class="border-border bg-background text-body placeholder:text-sendmystyle-400 focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border py-2.5 pl-10 pr-4 text-sm outline-none focus:ring-2"
+      />
+    </form>
 
-        <!-- Action Icons -->
-        <div class="flex shrink-0 items-center gap-5 text-heading xl:gap-6">
-            <a href="profile.html" class="flex flex-col items-center text-xs font-semibold transition-colors hover:text-primary">
-                <i class="bx bx-user text-xl"></i>
-                Profile
-            </a>
-            <a href="wishlist.html" class="flex flex-col items-center text-xs font-semibold transition-colors hover:text-primary">
-                <i class="bx bx-heart text-xl"></i>
-                Wishlist
-            </a>
-            <a href="cart.html"
-                class="relative flex flex-col items-center text-xs font-semibold transition-colors hover:text-primary">
-                <i class="bx bx-cart text-xl"></i>
-                Bag
-                <span
-                    class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">0</span>
-            </a>
-        </div>
+    <!-- Action Icons -->
+    <div class="text-heading flex shrink-0 items-center gap-5 xl:gap-6">
+      <a
+        href="profile.html"
+        class="hover:text-primary flex flex-col items-center text-xs font-semibold transition-colors"
+      >
+        <i class="bx bx-user text-xl"></i>
+        Profile
+      </a>
+      <a
+        href="wishlist.html"
+        class="hover:text-primary flex flex-col items-center text-xs font-semibold transition-colors"
+      >
+        <i class="bx bx-heart text-xl"></i>
+        Wishlist
+      </a>
+      <a
+        href="cart.html"
+        class="hover:text-primary relative flex flex-col items-center text-xs font-semibold transition-colors"
+      >
+        <i class="bx bx-cart text-xl"></i>
+        Bag
+        <span
+          class="bg-primary absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-bold text-white"
+          >0</span
+        >
+      </a>
     </div>
+  </div>
 </header>

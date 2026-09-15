@@ -1,347 +1,396 @@
-<header class="sticky top-0 z-40 block border-b border-border bg-surface lg:hidden">
-    <div class="flex items-center gap-3 px-4 py-3">
-        <!-- Menu Button -->
-        <button type="button" aria-label="Menu" class="text-2xl text-heading" data-drawer-open>
-            <i class="bx bx-menu"></i>
-        </button>
+<header class="border-border bg-surface sticky top-0 z-40 block border-b lg:hidden">
+  <div class="flex items-center gap-3 px-4 py-3">
+    <!-- Menu Button -->
+    <button type="button" aria-label="Menu" class="text-heading text-2xl" data-drawer-open>
+      <i class="bx bx-menu"></i>
+    </button>
 
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center space-x-0.5 text-lg font-bold text-heading">
-            <span>Send</span><span class="text-primary text-xl">My</span><span>Style</span>
-        </a>
+    <!-- Logo -->
+    <a href="index.html" class="text-heading flex items-center space-x-0.5 text-lg font-bold">
+      <span>Send</span><span class="text-primary text-xl">My</span><span>Style</span>
+    </a>
 
-        <!-- Action Icons -->
-        <div class="ml-auto flex items-center gap-4 text-xl text-heading">
-            <a href="wishlist.html" aria-label="Wishlist" class="transition-colors hover:text-primary"><i
-                    class="bx bx-heart"></i></a>
-            <a href="cart.html" aria-label="Bag" class="relative transition-colors hover:text-primary">
-                <i class="bx bx-cart"></i>
-                <span
-                    class="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">0</span>
-            </a>
-        </div>
+    <!-- Action Icons -->
+    <div class="text-heading ml-auto flex items-center gap-4 text-xl">
+      <a href="wishlist.html" aria-label="Wishlist" class="hover:text-primary transition-colors"
+        ><i class="bx bx-heart"></i
+      ></a>
+      <a href="cart.html" aria-label="Bag" class="hover:text-primary relative transition-colors">
+        <i class="bx bx-cart"></i>
+        <span
+          class="bg-primary absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-bold text-white"
+          >0</span
+        >
+      </a>
     </div>
+  </div>
 
-    <!-- Search -->
-    <form action="search.html" class="px-4 pb-3">
-        <div class="relative">
-            <i
-                class="bx bx-search pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-lg text-sendmystyle-400"></i>
-            <input type="text" placeholder="Search for products, brands..."
-                class="w-full rounded-lg border border-border bg-background py-2.5 pl-10 pr-4 text-sm text-body placeholder:text-sendmystyle-400 outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-        </div>
-    </form>
+  <!-- Search -->
+  <form action="search.html" class="px-4 pb-3">
+    <div class="relative">
+      <i
+        class="bx bx-search text-sendmystyle-400 pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-lg"
+      ></i>
+      <input
+        type="text"
+        placeholder="Search for products, brands..."
+        class="border-border bg-background text-body placeholder:text-sendmystyle-400 focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border py-2.5 pl-10 pr-4 text-sm outline-none focus:ring-2"
+      />
+    </div>
+  </form>
 
-    <!-- Category Tabs (scrollable, Myntra-style) -->
-    <nav class="no-scrollbar overflow-x-auto border-t border-border">
-        <ul
-            class="flex min-w-max items-center gap-6 px-4 py-2.5 text-xs font-semibold uppercase tracking-wide text-heading">
-            <li class="border-b-2 border-primary pb-1 text-primary"><a href="product-listing.html?category=men">Men</a></li>
-            <li class="border-b-2 border-transparent pb-1"><a href="product-listing.html?category=women" class="hover:text-primary">Women</a></li>
-            <li class="border-b-2 border-transparent pb-1"><a href="product-listing.html?category=kids" class="hover:text-primary">Kids</a></li>
-            <li class="border-b-2 border-transparent pb-1"><a href="product-listing.html?category=beauty" class="hover:text-primary">Beauty</a></li>
-            <li class="flex items-center gap-1 border-b-2 border-transparent pb-1">
-                <a href="customize.html" class="hover:text-primary">Customize</a>
-                <span class="rounded bg-primary px-1 py-0.5 text-[9px] font-bold normal-case text-white">New</span>
-            </li>
-        </ul>
-    </nav>
+  <!-- Category Tabs (scrollable, Myntra-style) -->
+  <nav class="no-scrollbar border-border overflow-x-auto border-t">
+    <ul
+      class="text-heading flex min-w-max items-center gap-6 px-4 py-2.5 text-xs font-semibold uppercase tracking-wide"
+    >
+      <li class="border-primary text-primary border-b-2 pb-1"><a href="product-listing.html?category=men">Men</a></li>
+      <li class="border-b-2 border-transparent pb-1">
+        <a href="product-listing.html?category=women" class="hover:text-primary">Women</a>
+      </li>
+      <li class="border-b-2 border-transparent pb-1">
+        <a href="product-listing.html?category=kids" class="hover:text-primary">Kids</a>
+      </li>
+      <li class="border-b-2 border-transparent pb-1">
+        <a href="product-listing.html?category=beauty" class="hover:text-primary">Beauty</a>
+      </li>
+      <li class="flex items-center gap-1 border-b-2 border-transparent pb-1">
+        <a href="customize.html" class="hover:text-primary">Customize</a>
+        <span class="bg-primary rounded px-1 py-0.5 text-[9px] font-bold normal-case text-white">New</span>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <!-- Mobile Drawer Menu -->
 <div id="mobile-drawer" class="fixed inset-0 z-50 hidden lg:hidden">
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-sendmystyle-950/50 opacity-0 transition-opacity duration-300" data-drawer-overlay>
+  <!-- Overlay -->
+  <div
+    class="bg-sendmystyle-950/50 absolute inset-0 opacity-0 transition-opacity duration-300"
+    data-drawer-overlay
+  ></div>
+
+  <!-- Panel -->
+  <aside
+    class="drawer bg-surface shadow-soft absolute left-0 top-0 flex h-full w-[85%] max-w-sm -translate-x-full flex-col"
+    data-drawer-panel
+  >
+    <!-- Login / Profile banner -->
+    <div class="bg-sendmystyle-950 flex items-center justify-between px-5 py-4">
+      <div class="flex items-center gap-3">
+        <span class="bg-primary flex h-10 w-10 items-center justify-center rounded-full text-xl text-white">
+          <i class="bx bx-user"></i>
+        </span>
+        <div>
+          <p class="text-sm font-semibold text-white">Welcome</p>
+          <p class="text-sendmystyle-200 text-xs">To access account & manage orders</p>
+        </div>
+      </div>
+      <button type="button" aria-label="Close menu" class="text-sendmystyle-200 text-2xl" data-drawer-close>
+        <i class="bx bx-x"></i>
+      </button>
     </div>
+    <a
+      href="login.html"
+      class="border-border bg-surface text-primary block border-b px-5 py-3 text-center text-sm font-bold uppercase tracking-wide"
+    >
+      Login / Sign Up
+    </a>
 
-    <!-- Panel -->
-    <aside
-        class="drawer absolute left-0 top-0 flex h-full w-[85%] max-w-sm -translate-x-full flex-col bg-surface shadow-soft"
-        data-drawer-panel>
-        <!-- Login / Profile banner -->
-        <div class="flex items-center justify-between bg-sendmystyle-950 px-5 py-4">
-            <div class="flex items-center gap-3">
-                <span class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xl text-white">
-                    <i class="bx bx-user"></i>
-                </span>
-                <div>
-                    <p class="text-sm font-semibold text-white">Welcome</p>
-                    <p class="text-xs text-sendmystyle-200">To access account & manage orders</p>
-                </div>
+    <!-- Accordion Categories -->
+    <nav class="flex-1 overflow-y-auto py-1">
+      <!-- MEN -->
+      <div class="border-border border-b">
+        <button
+          type="button"
+          class="text-heading flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide"
+          data-accordion
+        >
+          Men
+          <i class="bx bx-chevron-down text-xl transition-transform"></i>
+        </button>
+        <div class="bg-background hidden px-5 pb-4" data-accordion-body>
+          <div class="space-y-4 pt-1">
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Topwear</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">T-Shirts</a></li>
+                <li><a href="#" class="hover:text-primary block">Casual Shirts</a></li>
+                <li><a href="#" class="hover:text-primary block">Formal Shirts</a></li>
+                <li><a href="#" class="hover:text-primary block">Sweatshirts & Hoodies</a></li>
+                <li><a href="#" class="hover:text-primary block">Jackets & Coats</a></li>
+              </ul>
             </div>
-            <button type="button" aria-label="Close menu" class="text-2xl text-sendmystyle-200" data-drawer-close>
-                <i class="bx bx-x"></i>
-            </button>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Bottomwear</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Jeans</a></li>
+                <li><a href="#" class="hover:text-primary block">Casual Trousers</a></li>
+                <li><a href="#" class="hover:text-primary block">Shorts</a></li>
+                <li><a href="#" class="hover:text-primary block">Track Pants & Joggers</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Footwear</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Sneakers</a></li>
+                <li><a href="#" class="hover:text-primary block">Formal Shoes</a></li>
+                <li><a href="#" class="hover:text-primary block">Sports Shoes</a></li>
+                <li><a href="#" class="hover:text-primary block">Sandals & Floaters</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Accessories</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Watches</a></li>
+                <li><a href="#" class="hover:text-primary block">Wallets & Belts</a></li>
+                <li><a href="#" class="hover:text-primary block">Bags & Backpacks</a></li>
+                <li><a href="#" class="hover:text-primary block">Sunglasses</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <a href="login.html" class="block border-b border-border bg-surface px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-primary">
-            Login / Sign Up
-        </a>
+      </div>
 
-        <!-- Accordion Categories -->
-        <nav class="flex-1 overflow-y-auto py-1">
-            <!-- MEN -->
-            <div class="border-b border-border">
-                <button type="button"
-                    class="flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide text-heading"
-                    data-accordion>
-                    Men
-                    <i class="bx bx-chevron-down text-xl transition-transform"></i>
-                </button>
-                <div class="hidden bg-background px-5 pb-4" data-accordion-body>
-                    <div class="space-y-4 pt-1">
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Topwear</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">T-Shirts</a></li>
-                                <li><a href="#" class="block hover:text-primary">Casual Shirts</a></li>
-                                <li><a href="#" class="block hover:text-primary">Formal Shirts</a></li>
-                                <li><a href="#" class="block hover:text-primary">Sweatshirts & Hoodies</a></li>
-                                <li><a href="#" class="block hover:text-primary">Jackets & Coats</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Bottomwear</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Jeans</a></li>
-                                <li><a href="#" class="block hover:text-primary">Casual Trousers</a></li>
-                                <li><a href="#" class="block hover:text-primary">Shorts</a></li>
-                                <li><a href="#" class="block hover:text-primary">Track Pants & Joggers</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Footwear</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Sneakers</a></li>
-                                <li><a href="#" class="block hover:text-primary">Formal Shoes</a></li>
-                                <li><a href="#" class="block hover:text-primary">Sports Shoes</a></li>
-                                <li><a href="#" class="block hover:text-primary">Sandals & Floaters</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Accessories</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Watches</a></li>
-                                <li><a href="#" class="block hover:text-primary">Wallets & Belts</a></li>
-                                <li><a href="#" class="block hover:text-primary">Bags & Backpacks</a></li>
-                                <li><a href="#" class="block hover:text-primary">Sunglasses</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <!-- WOMEN -->
+      <div class="border-border border-b">
+        <button
+          type="button"
+          class="text-heading flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide"
+          data-accordion
+        >
+          Women
+          <i class="bx bx-chevron-down text-xl transition-transform"></i>
+        </button>
+        <div class="bg-background hidden px-5 pb-4" data-accordion-body>
+          <div class="space-y-4 pt-1">
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Indian Wear</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Kurtas & Suits</a></li>
+                <li><a href="#" class="hover:text-primary block">Sarees</a></li>
+                <li><a href="#" class="hover:text-primary block">Ethnic Wear</a></li>
+                <li><a href="#" class="hover:text-primary block">Lehenga Cholis</a></li>
+                <li><a href="#" class="hover:text-primary block">Dupattas & Shawls</a></li>
+              </ul>
             </div>
-
-            <!-- WOMEN -->
-            <div class="border-b border-border">
-                <button type="button"
-                    class="flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide text-heading"
-                    data-accordion>
-                    Women
-                    <i class="bx bx-chevron-down text-xl transition-transform"></i>
-                </button>
-                <div class="hidden bg-background px-5 pb-4" data-accordion-body>
-                    <div class="space-y-4 pt-1">
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Indian Wear</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Kurtas & Suits</a></li>
-                                <li><a href="#" class="block hover:text-primary">Sarees</a></li>
-                                <li><a href="#" class="block hover:text-primary">Ethnic Wear</a></li>
-                                <li><a href="#" class="block hover:text-primary">Lehenga Cholis</a></li>
-                                <li><a href="#" class="block hover:text-primary">Dupattas & Shawls</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Western Wear</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Dresses</a></li>
-                                <li><a href="#" class="block hover:text-primary">Tops & Tunics</a></li>
-                                <li><a href="#" class="block hover:text-primary">Jeans & Jeggings</a></li>
-                                <li><a href="#" class="block hover:text-primary">Skirts & Shorts</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Footwear</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Flats</a></li>
-                                <li><a href="#" class="block hover:text-primary">Heels</a></li>
-                                <li><a href="#" class="block hover:text-primary">Boots</a></li>
-                                <li><a href="#" class="block hover:text-primary">Casual Shoes</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Jewellery & More</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Earrings</a></li>
-                                <li><a href="#" class="block hover:text-primary">Necklaces</a></li>
-                                <li><a href="#" class="block hover:text-primary">Handbags & Clutches</a></li>
-                                <li><a href="#" class="block hover:text-primary">Watches</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Western Wear</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Dresses</a></li>
+                <li><a href="#" class="hover:text-primary block">Tops & Tunics</a></li>
+                <li><a href="#" class="hover:text-primary block">Jeans & Jeggings</a></li>
+                <li><a href="#" class="hover:text-primary block">Skirts & Shorts</a></li>
+              </ul>
             </div>
-
-            <!-- KIDS -->
-            <div class="border-b border-border">
-                <button type="button"
-                    class="flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide text-heading"
-                    data-accordion>
-                    Kids
-                    <i class="bx bx-chevron-down text-xl transition-transform"></i>
-                </button>
-                <div class="hidden bg-background px-5 pb-4" data-accordion-body>
-                    <div class="space-y-4 pt-1">
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Boys Clothing</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">T-Shirts</a></li>
-                                <li><a href="#" class="block hover:text-primary">Shirts</a></li>
-                                <li><a href="#" class="block hover:text-primary">Jeans & Trousers</a></li>
-                                <li><a href="#" class="block hover:text-primary">Shorts & Co-ords</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Girls Clothing</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Dresses & Frocks</a></li>
-                                <li><a href="#" class="block hover:text-primary">Tops</a></li>
-                                <li><a href="#" class="block hover:text-primary">Leggings & Jeans</a></li>
-                                <li><a href="#" class="block hover:text-primary">Ethnic Wear</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Infants</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Bodysuits & Rompers</a></li>
-                                <li><a href="#" class="block hover:text-primary">Sleepwear</a></li>
-                                <li><a href="#" class="block hover:text-primary">Baby Sets</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Toys & More</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Footwear</a></li>
-                                <li><a href="#" class="block hover:text-primary">Toys & Games</a></li>
-                                <li><a href="#" class="block hover:text-primary">School Bags</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Footwear</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Flats</a></li>
+                <li><a href="#" class="hover:text-primary block">Heels</a></li>
+                <li><a href="#" class="hover:text-primary block">Boots</a></li>
+                <li><a href="#" class="hover:text-primary block">Casual Shoes</a></li>
+              </ul>
             </div>
-
-            <!-- BEAUTY -->
-            <div class="border-b border-border">
-                <button type="button"
-                    class="flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide text-heading"
-                    data-accordion>
-                    Beauty
-                    <i class="bx bx-chevron-down text-xl transition-transform"></i>
-                </button>
-                <div class="hidden bg-background px-5 pb-4" data-accordion-body>
-                    <div class="space-y-4 pt-1">
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Makeup</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Lipstick</a></li>
-                                <li><a href="#" class="block hover:text-primary">Foundation</a></li>
-                                <li><a href="#" class="block hover:text-primary">Mascara & Kajal</a></li>
-                                <li><a href="#" class="block hover:text-primary">Eyeliner</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Skincare</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Moisturizers</a></li>
-                                <li><a href="#" class="block hover:text-primary">Serums</a></li>
-                                <li><a href="#" class="block hover:text-primary">Sunscreen</a></li>
-                                <li><a href="#" class="block hover:text-primary">Face Wash</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Haircare</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Shampoo</a></li>
-                                <li><a href="#" class="block hover:text-primary">Conditioner</a></li>
-                                <li><a href="#" class="block hover:text-primary">Hair Oil & Serum</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Fragrance</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Perfumes</a></li>
-                                <li><a href="#" class="block hover:text-primary">Deodorants</a></li>
-                                <li><a href="#" class="block hover:text-primary">Body Mists</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Jewellery & More</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Earrings</a></li>
+                <li><a href="#" class="hover:text-primary block">Necklaces</a></li>
+                <li><a href="#" class="hover:text-primary block">Handbags & Clutches</a></li>
+                <li><a href="#" class="hover:text-primary block">Watches</a></li>
+              </ul>
             </div>
-
-            <!-- CUSTOMIZE -->
-            <div class="border-b border-border">
-                <button type="button"
-                    class="flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide text-heading"
-                    data-accordion>
-                    <span class="flex items-center gap-2">
-                        Customize
-                        <span
-                            class="rounded bg-primary px-1.5 py-0.5 text-[9px] font-bold normal-case text-white">New</span>
-                    </span>
-                    <i class="bx bx-chevron-down text-xl transition-transform"></i>
-                </button>
-                <div class="hidden bg-background px-5 pb-4" data-accordion-body>
-                    <div class="space-y-4 pt-1">
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Design Studio</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Custom T-Shirts</a></li>
-                                <li><a href="#" class="block hover:text-primary">Custom Hoodies</a></li>
-                                <li><a href="#" class="block hover:text-primary">Add Your Text</a></li>
-                                <li><a href="#" class="block hover:text-primary">Upload Artwork</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">Templates</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Trending Designs</a></li>
-                                <li><a href="#" class="block hover:text-primary">Festive Specials</a></li>
-                                <li><a href="#" class="block hover:text-primary">Couple Sets</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-widest text-primary">For Business</p>
-                            <ul class="space-y-2 text-sm text-body">
-                                <li><a href="#" class="block hover:text-primary">Bulk Orders</a></li>
-                                <li><a href="#" class="block hover:text-primary">Corporate Gifting</a></li>
-                                <li><a href="#" class="block hover:text-primary">Team Merch</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="px-5 py-4">
-                <p class="mb-3 text-[11px] font-bold uppercase tracking-widest text-sendmystyle-400">More</p>
-                <ul class="space-y-3 text-sm text-body">
-                    <li><a href="#" class="flex items-center gap-3 hover:text-primary"><i class="bx bx-package text-lg"></i> Orders & Returns</a></li>
-                    <li><a href="#" class="flex items-center gap-3 hover:text-primary"><i class="bx bx-help-circle text-lg"></i> Help & FAQs</a></li>
-                    <li><a href="become-a-seller.html" class="flex items-center gap-3 hover:text-primary"><i class="bx bx-store text-lg"></i> Become a Seller</a></li>
-                    <li><a href="#" class="flex items-center gap-3 hover:text-primary"><i class="bx bx-shield text-lg"></i> Terms & Privacy</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- Drawer Footer Actions -->
-        <div class="grid grid-cols-2 gap-3 border-t border-border p-4">
-            <a href="wishlist.html"
-                class="flex items-center justify-center gap-2 rounded-lg border border-border py-2.5 text-sm font-semibold text-heading hover:border-primary hover:text-primary">
-                <i class="bx bx-heart text-lg"></i> Wishlist
-            </a>
-            <a href="cart.html"
-                class="flex items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-sm font-semibold text-white hover:bg-primary-hover">
-                <i class="bx bx-cart text-lg"></i> View Bag
-            </a>
+          </div>
         </div>
-    </aside>
+      </div>
+
+      <!-- KIDS -->
+      <div class="border-border border-b">
+        <button
+          type="button"
+          class="text-heading flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide"
+          data-accordion
+        >
+          Kids
+          <i class="bx bx-chevron-down text-xl transition-transform"></i>
+        </button>
+        <div class="bg-background hidden px-5 pb-4" data-accordion-body>
+          <div class="space-y-4 pt-1">
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Boys Clothing</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">T-Shirts</a></li>
+                <li><a href="#" class="hover:text-primary block">Shirts</a></li>
+                <li><a href="#" class="hover:text-primary block">Jeans & Trousers</a></li>
+                <li><a href="#" class="hover:text-primary block">Shorts & Co-ords</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Girls Clothing</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Dresses & Frocks</a></li>
+                <li><a href="#" class="hover:text-primary block">Tops</a></li>
+                <li><a href="#" class="hover:text-primary block">Leggings & Jeans</a></li>
+                <li><a href="#" class="hover:text-primary block">Ethnic Wear</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Infants</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Bodysuits & Rompers</a></li>
+                <li><a href="#" class="hover:text-primary block">Sleepwear</a></li>
+                <li><a href="#" class="hover:text-primary block">Baby Sets</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Toys & More</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Footwear</a></li>
+                <li><a href="#" class="hover:text-primary block">Toys & Games</a></li>
+                <li><a href="#" class="hover:text-primary block">School Bags</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEAUTY -->
+      <div class="border-border border-b">
+        <button
+          type="button"
+          class="text-heading flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide"
+          data-accordion
+        >
+          Beauty
+          <i class="bx bx-chevron-down text-xl transition-transform"></i>
+        </button>
+        <div class="bg-background hidden px-5 pb-4" data-accordion-body>
+          <div class="space-y-4 pt-1">
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Makeup</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Lipstick</a></li>
+                <li><a href="#" class="hover:text-primary block">Foundation</a></li>
+                <li><a href="#" class="hover:text-primary block">Mascara & Kajal</a></li>
+                <li><a href="#" class="hover:text-primary block">Eyeliner</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Skincare</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Moisturizers</a></li>
+                <li><a href="#" class="hover:text-primary block">Serums</a></li>
+                <li><a href="#" class="hover:text-primary block">Sunscreen</a></li>
+                <li><a href="#" class="hover:text-primary block">Face Wash</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Haircare</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Shampoo</a></li>
+                <li><a href="#" class="hover:text-primary block">Conditioner</a></li>
+                <li><a href="#" class="hover:text-primary block">Hair Oil & Serum</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Fragrance</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Perfumes</a></li>
+                <li><a href="#" class="hover:text-primary block">Deodorants</a></li>
+                <li><a href="#" class="hover:text-primary block">Body Mists</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CUSTOMIZE -->
+      <div class="border-border border-b">
+        <button
+          type="button"
+          class="text-heading flex w-full items-center justify-between px-5 py-3.5 text-sm font-semibold uppercase tracking-wide"
+          data-accordion
+        >
+          <span class="flex items-center gap-2">
+            Customize
+            <span class="bg-primary rounded px-1.5 py-0.5 text-[9px] font-bold normal-case text-white">New</span>
+          </span>
+          <i class="bx bx-chevron-down text-xl transition-transform"></i>
+        </button>
+        <div class="bg-background hidden px-5 pb-4" data-accordion-body>
+          <div class="space-y-4 pt-1">
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Design Studio</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Custom T-Shirts</a></li>
+                <li><a href="#" class="hover:text-primary block">Custom Hoodies</a></li>
+                <li><a href="#" class="hover:text-primary block">Add Your Text</a></li>
+                <li><a href="#" class="hover:text-primary block">Upload Artwork</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">Templates</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Trending Designs</a></li>
+                <li><a href="#" class="hover:text-primary block">Festive Specials</a></li>
+                <li><a href="#" class="hover:text-primary block">Couple Sets</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-primary mb-2 text-[11px] font-bold uppercase tracking-widest">For Business</p>
+              <ul class="text-body space-y-2 text-sm">
+                <li><a href="#" class="hover:text-primary block">Bulk Orders</a></li>
+                <li><a href="#" class="hover:text-primary block">Corporate Gifting</a></li>
+                <li><a href="#" class="hover:text-primary block">Team Merch</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="px-5 py-4">
+        <p class="text-sendmystyle-400 mb-3 text-[11px] font-bold uppercase tracking-widest">More</p>
+        <ul class="text-body space-y-3 text-sm">
+          <li>
+            <a href="#" class="hover:text-primary flex items-center gap-3"
+              ><i class="bx bx-package text-lg"></i> Orders & Returns</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-primary flex items-center gap-3"
+              ><i class="bx bx-help-circle text-lg"></i> Help & FAQs</a
+            >
+          </li>
+          <li>
+            <a href="become-a-seller.html" class="hover:text-primary flex items-center gap-3"
+              ><i class="bx bx-store text-lg"></i> Become a Seller</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-primary flex items-center gap-3"
+              ><i class="bx bx-shield text-lg"></i> Terms & Privacy</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Drawer Footer Actions -->
+    <div class="border-border grid grid-cols-2 gap-3 border-t p-4">
+      <a
+        href="wishlist.html"
+        class="border-border text-heading hover:border-primary hover:text-primary flex items-center justify-center gap-2 rounded-lg border py-2.5 text-sm font-semibold"
+      >
+        <i class="bx bx-heart text-lg"></i> Wishlist
+      </a>
+      <a
+        href="cart.html"
+        class="bg-primary hover:bg-primary-hover flex items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold text-white"
+      >
+        <i class="bx bx-cart text-lg"></i> View Bag
+      </a>
+    </div>
+  </aside>
 </div>

@@ -1,117 +1,156 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
     <title>My Profile — SendMyStyle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
-                    boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
-                    colors: {
-                        primary: "#C45C72", "primary-hover": "#A9475C", "primary-active": "#89394B",
-                        background: "#FCF3F5", surface: "#FFFFFF", border: "#F1CBD3",
-                        heading: "#481F29", body: "#6B2D3B", accent: "#89394B",
-                        sendmystyle: { 50: "#FCF3F5", 100: "#F8E5E9", 200: "#F1CBD3", 300: "#E5A9B5", 400: "#D78494", 500: "#C45C72", 600: "#A9475C", 700: "#89394B", 800: "#6B2D3B", 900: "#481F29", 950: "#2D141A" },
-                    },
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+            boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
+            colors: {
+              primary: "#C45C72",
+              "primary-hover": "#A9475C",
+              "primary-active": "#89394B",
+              background: "#FCF3F5",
+              surface: "#FFFFFF",
+              border: "#F1CBD3",
+              heading: "#481F29",
+              body: "#6B2D3B",
+              accent: "#89394B",
+              sendmystyle: {
+                50: "#FCF3F5",
+                100: "#F8E5E9",
+                200: "#F1CBD3",
+                300: "#E5A9B5",
+                400: "#D78494",
+                500: "#C45C72",
+                600: "#A9475C",
+                700: "#89394B",
+                800: "#6B2D3B",
+                900: "#481F29",
+                950: "#2D141A",
+              },
             },
-        };
+          },
+        },
+      };
     </script>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/script.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body class="flex min-h-screen flex-col bg-background text-body antialiased">
+  <body class="bg-background text-body flex min-h-screen flex-col antialiased">
     <div id="site-web-header"></div>
     <div id="site-mobile-header"></div>
 
     <main class="flex-1">
-        <div class="mx-auto max-w-6xl px-5 py-6 sm:px-6 md:py-8">
-            <h1 class="font-display text-2xl font-bold text-heading sm:text-3xl">My Account</h1>
+      <div class="mx-auto max-w-6xl px-5 py-6 sm:px-6 md:py-8">
+        <h1 class="font-display text-heading text-2xl font-bold sm:text-3xl">My Account</h1>
 
-            <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[240px_1fr]">
-                <!-- Account nav -->
-                <aside class="h-fit rounded-2xl border border-border bg-surface p-3">
-                    <nav class="no-scrollbar flex gap-1 overflow-x-auto text-sm font-medium lg:flex-col lg:gap-1">
-                        <a href="profile.html"
-                            class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg bg-sendmystyle-100 px-3 py-2.5 font-semibold text-primary"><i
-                                class="bx bx-user text-lg"></i> Profile</a>
-                        <a href="my-orders.html"
-                            class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-heading transition hover:bg-background"><i
-                                class="bx bx-package text-lg"></i> My Orders</a>
-                        <a href="wishlist.html"
-                            class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-heading transition hover:bg-background"><i
-                                class="bx bx-heart text-lg"></i> Wishlist</a>
-                        <a href="addresses.html"
-                            class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-heading transition hover:bg-background"><i
-                                class="bx bx-map text-lg"></i> Saved Addresses</a>
-                        <a href="login.html"
-                            class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-heading transition hover:bg-background"><i
-                                class="bx bx-log-out text-lg"></i> Logout</a>
-                    </nav>
-                </aside>
+        <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[240px_1fr]">
+          <!-- Account nav -->
+          <aside class="border-border bg-surface h-fit rounded-2xl border p-3">
+            <nav class="no-scrollbar flex gap-1 overflow-x-auto text-sm font-medium lg:flex-col lg:gap-1">
+              <a
+                href="profile.html"
+                class="bg-sendmystyle-100 text-primary flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 font-semibold"
+                ><i class="bx bx-user text-lg"></i> Profile</a
+              >
+              <a
+                href="my-orders.html"
+                class="text-heading hover:bg-background flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 transition"
+                ><i class="bx bx-package text-lg"></i> My Orders</a
+              >
+              <a
+                href="wishlist.html"
+                class="text-heading hover:bg-background flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 transition"
+                ><i class="bx bx-heart text-lg"></i> Wishlist</a
+              >
+              <a
+                href="addresses.html"
+                class="text-heading hover:bg-background flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 transition"
+                ><i class="bx bx-map text-lg"></i> Saved Addresses</a
+              >
+              <a
+                href="login.html"
+                class="text-heading hover:bg-background flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 transition"
+                ><i class="bx bx-log-out text-lg"></i> Logout</a
+              >
+            </nav>
+          </aside>
 
-                <!-- Profile form -->
-                <section class="rounded-2xl border border-border bg-surface p-5 sm:p-6">
-                    <div class="flex items-center gap-4">
-                        <span
-                            class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl text-white"><i
-                                class="bx bx-user"></i></span>
-                        <div>
-                            <p class="text-lg font-semibold text-heading">Priya Sharma</p>
-                            <p class="text-sm text-body">priya@example.com</p>
-                        </div>
-                    </div>
-
-                    <form class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2" onsubmit="return false;">
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">Full Name</span>
-                            <input type="text" value="Priya Sharma"
-                                class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                        </label>
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">Email</span>
-                            <input type="email" value="priya@example.com"
-                                class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                        </label>
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">Phone</span>
-                            <input type="tel" value="+91 84285 82242"
-                                class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                        </label>
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">Gender</span>
-                            <select
-                                class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary">
-                                <option>Female</option>
-                                <option>Male</option>
-                                <option>Prefer not to say</option>
-                            </select>
-                        </label>
-                        <div class="sm:col-span-2">
-                            <button
-                                class="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-hover active:bg-primary-active">Save
-                                Changes</button>
-                        </div>
-                    </form>
-                </section>
+          <!-- Profile form -->
+          <section class="border-border bg-surface rounded-2xl border p-5 sm:p-6">
+            <div class="flex items-center gap-4">
+              <span class="bg-primary flex h-16 w-16 items-center justify-center rounded-full text-2xl text-white"
+                ><i class="bx bx-user"></i
+              ></span>
+              <div>
+                <p class="text-heading text-lg font-semibold">Priya Sharma</p>
+                <p class="text-body text-sm">priya@example.com</p>
+              </div>
             </div>
+
+            <form class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2" onsubmit="return false;">
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">Full Name</span>
+                <input
+                  type="text"
+                  value="Priya Sharma"
+                  class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                />
+              </label>
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">Email</span>
+                <input
+                  type="email"
+                  value="priya@example.com"
+                  class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                />
+              </label>
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">Phone</span>
+                <input
+                  type="tel"
+                  value="+91 84285 82242"
+                  class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                />
+              </label>
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">Gender</span>
+                <select
+                  class="border-border bg-background text-body focus:border-primary w-full rounded-lg border px-4 py-2.5 text-sm outline-none"
+                >
+                  <option>Female</option>
+                  <option>Male</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </label>
+              <div class="sm:col-span-2">
+                <button
+                  class="bg-primary shadow-soft hover:bg-primary-hover active:bg-primary-active rounded-full px-6 py-3 text-sm font-semibold text-white transition"
+                >
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </section>
         </div>
+      </div>
     </main>
 
     <footer id="site-footer"></footer>
-</body>
-
+  </body>
 </html>

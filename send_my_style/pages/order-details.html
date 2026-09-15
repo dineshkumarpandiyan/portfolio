@@ -1,99 +1,140 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
     <title>Order Details — SendMyStyle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
-                    boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
-                    colors: {
-                        primary: "#C45C72", "primary-hover": "#A9475C", "primary-active": "#89394B",
-                        background: "#FCF3F5", surface: "#FFFFFF", border: "#F1CBD3",
-                        heading: "#481F29", body: "#6B2D3B", accent: "#89394B",
-                        sendmystyle: { 50: "#FCF3F5", 100: "#F8E5E9", 200: "#F1CBD3", 300: "#E5A9B5", 400: "#D78494", 500: "#C45C72", 600: "#A9475C", 700: "#89394B", 800: "#6B2D3B", 900: "#481F29", 950: "#2D141A" },
-                    },
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+            boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
+            colors: {
+              primary: "#C45C72",
+              "primary-hover": "#A9475C",
+              "primary-active": "#89394B",
+              background: "#FCF3F5",
+              surface: "#FFFFFF",
+              border: "#F1CBD3",
+              heading: "#481F29",
+              body: "#6B2D3B",
+              accent: "#89394B",
+              sendmystyle: {
+                50: "#FCF3F5",
+                100: "#F8E5E9",
+                200: "#F1CBD3",
+                300: "#E5A9B5",
+                400: "#D78494",
+                500: "#C45C72",
+                600: "#A9475C",
+                700: "#89394B",
+                800: "#6B2D3B",
+                900: "#481F29",
+                950: "#2D141A",
+              },
             },
-        };
+          },
+        },
+      };
     </script>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/script.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body class="flex min-h-screen flex-col bg-background text-body antialiased">
+  <body class="bg-background text-body flex min-h-screen flex-col antialiased">
     <div id="site-web-header"></div>
     <div id="site-mobile-header"></div>
 
     <main class="flex-1">
-        <div class="mx-auto max-w-3xl px-5 py-6 sm:px-6 md:py-8">
-            <nav class="text-xs text-body" aria-label="Breadcrumb">
-                <a href="my-orders.html" class="hover:text-primary">My Orders</a>
-                <span class="px-1.5 text-sendmystyle-400">/</span>
-                <span class="font-semibold text-heading">#SMS-2026-00184</span>
-            </nav>
+      <div class="mx-auto max-w-3xl px-5 py-6 sm:px-6 md:py-8">
+        <nav class="text-body text-xs" aria-label="Breadcrumb">
+          <a href="my-orders.html" class="hover:text-primary">My Orders</a>
+          <span class="text-sendmystyle-400 px-1.5">/</span>
+          <span class="text-heading font-semibold">#SMS-2026-00184</span>
+        </nav>
 
-            <div class="mt-4 flex items-center justify-between">
-                <h1 class="font-display text-2xl font-bold text-heading">Order #SMS-2026-00184</h1>
-                <span class="rounded-full bg-sendmystyle-100 px-3 py-1 text-xs font-semibold text-primary">In Production</span>
-            </div>
-            <p class="mt-1 text-sm text-body">Placed on Sep 15, 2026</p>
-
-            <!-- Items -->
-            <div class="mt-6 space-y-3">
-                <div class="flex gap-4 rounded-2xl border border-border bg-surface p-4">
-                    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=160&q=60" alt="" class="h-20 w-16 rounded-lg object-cover" />
-                    <div class="flex-1">
-                        <p class="text-sm font-semibold text-heading">Classic Oxford Shirt</p>
-                        <p class="text-xs text-body">Urban Thread · Size M · Customized</p>
-                    </div>
-                    <span class="text-sm font-bold text-heading">₹1,299</span>
-                </div>
-                <div class="flex gap-4 rounded-2xl border border-border bg-surface p-4">
-                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=160&q=60" alt="" class="h-20 w-16 rounded-lg object-cover" />
-                    <div class="flex-1">
-                        <p class="text-sm font-semibold text-heading">Relaxed Cotton Tee</p>
-                        <p class="text-xs text-body">Everyday Co. · Size L</p>
-                    </div>
-                    <span class="text-sm font-bold text-heading">₹699</span>
-                </div>
-            </div>
-
-            <!-- Delivery + Summary -->
-            <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div class="rounded-2xl border border-border bg-surface p-5">
-                    <h2 class="text-sm font-bold uppercase tracking-wide text-heading">Delivery Address</h2>
-                    <p class="mt-3 text-sm text-body">Priya Sharma<br />12 Anna Nagar, Chennai<br />Tamil Nadu — 600040<br />+91 84285 82242</p>
-                </div>
-                <div class="rounded-2xl border border-border bg-surface p-5">
-                    <h2 class="text-sm font-bold uppercase tracking-wide text-heading">Payment Summary</h2>
-                    <dl class="mt-3 space-y-2 text-sm">
-                        <div class="flex justify-between"><dt class="text-body">Subtotal</dt><dd class="text-heading">₹1,998</dd></div>
-                        <div class="flex justify-between"><dt class="text-body">Delivery</dt><dd class="text-primary">Free</dd></div>
-                        <div class="flex justify-between border-t border-border pt-2 font-semibold"><dt class="text-heading">Total</dt><dd class="text-heading">₹1,998</dd></div>
-                    </dl>
-                </div>
-            </div>
-
-            <a href="track-order.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-hover active:bg-primary-active">
-                <i class="bx bx-map-pin"></i> Track Order
-            </a>
+        <div class="mt-4 flex items-center justify-between">
+          <h1 class="font-display text-heading text-2xl font-bold">Order #SMS-2026-00184</h1>
+          <span class="bg-sendmystyle-100 text-primary rounded-full px-3 py-1 text-xs font-semibold"
+            >In Production</span
+          >
         </div>
+        <p class="text-body mt-1 text-sm">Placed on Sep 15, 2026</p>
+
+        <!-- Items -->
+        <div class="mt-6 space-y-3">
+          <div class="border-border bg-surface flex gap-4 rounded-2xl border p-4">
+            <img
+              src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=160&q=60"
+              alt=""
+              class="h-20 w-16 rounded-lg object-cover"
+            />
+            <div class="flex-1">
+              <p class="text-heading text-sm font-semibold">Classic Oxford Shirt</p>
+              <p class="text-body text-xs">Urban Thread · Size M · Customized</p>
+            </div>
+            <span class="text-heading text-sm font-bold">₹1,299</span>
+          </div>
+          <div class="border-border bg-surface flex gap-4 rounded-2xl border p-4">
+            <img
+              src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=160&q=60"
+              alt=""
+              class="h-20 w-16 rounded-lg object-cover"
+            />
+            <div class="flex-1">
+              <p class="text-heading text-sm font-semibold">Relaxed Cotton Tee</p>
+              <p class="text-body text-xs">Everyday Co. · Size L</p>
+            </div>
+            <span class="text-heading text-sm font-bold">₹699</span>
+          </div>
+        </div>
+
+        <!-- Delivery + Summary -->
+        <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div class="border-border bg-surface rounded-2xl border p-5">
+            <h2 class="text-heading text-sm font-bold uppercase tracking-wide">Delivery Address</h2>
+            <p class="text-body mt-3 text-sm">
+              Priya Sharma<br />12 Anna Nagar, Chennai<br />Tamil Nadu — 600040<br />+91 84285 82242
+            </p>
+          </div>
+          <div class="border-border bg-surface rounded-2xl border p-5">
+            <h2 class="text-heading text-sm font-bold uppercase tracking-wide">Payment Summary</h2>
+            <dl class="mt-3 space-y-2 text-sm">
+              <div class="flex justify-between">
+                <dt class="text-body">Subtotal</dt>
+                <dd class="text-heading">₹1,998</dd>
+              </div>
+              <div class="flex justify-between">
+                <dt class="text-body">Delivery</dt>
+                <dd class="text-primary">Free</dd>
+              </div>
+              <div class="border-border flex justify-between border-t pt-2 font-semibold">
+                <dt class="text-heading">Total</dt>
+                <dd class="text-heading">₹1,998</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <a
+          href="track-order.html"
+          class="bg-primary shadow-soft hover:bg-primary-hover active:bg-primary-active mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition"
+        >
+          <i class="bx bx-map-pin"></i> Track Order
+        </a>
+      </div>
     </main>
 
     <footer id="site-footer"></footer>
-</body>
-
+  </body>
 </html>

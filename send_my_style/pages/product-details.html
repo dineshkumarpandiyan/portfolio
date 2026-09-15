@@ -1,47 +1,64 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
     <title>Product Details — SendMyStyle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
-                    boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
-                    colors: {
-                        primary: "#C45C72", "primary-hover": "#A9475C", "primary-active": "#89394B",
-                        background: "#FCF3F5", surface: "#FFFFFF", border: "#F1CBD3",
-                        heading: "#481F29", body: "#6B2D3B", accent: "#89394B",
-                        sendmystyle: { 50: "#FCF3F5", 100: "#F8E5E9", 200: "#F1CBD3", 300: "#E5A9B5", 400: "#D78494", 500: "#C45C72", 600: "#A9475C", 700: "#89394B", 800: "#6B2D3B", 900: "#481F29", 950: "#2D141A" },
-                    },
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+            boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
+            colors: {
+              primary: "#C45C72",
+              "primary-hover": "#A9475C",
+              "primary-active": "#89394B",
+              background: "#FCF3F5",
+              surface: "#FFFFFF",
+              border: "#F1CBD3",
+              heading: "#481F29",
+              body: "#6B2D3B",
+              accent: "#89394B",
+              sendmystyle: {
+                50: "#FCF3F5",
+                100: "#F8E5E9",
+                200: "#F1CBD3",
+                300: "#E5A9B5",
+                400: "#D78494",
+                500: "#C45C72",
+                600: "#A9475C",
+                700: "#89394B",
+                800: "#6B2D3B",
+                900: "#481F29",
+                950: "#2D141A",
+              },
             },
-        };
+          },
+        },
+      };
     </script>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/script.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body class="flex min-h-screen flex-col bg-background text-body antialiased">
+  <body class="bg-background text-body flex min-h-screen flex-col antialiased">
     <div id="site-web-header"></div>
     <div id="site-mobile-header"></div>
 
     <main class="flex-1">
-        <div data-product-details class="mx-auto max-w-6xl px-5 py-6 sm:px-6 md:py-8"></div>
+      <div data-product-details class="mx-auto max-w-6xl px-5 py-6 sm:px-6 md:py-8"></div>
     </main>
 
     <footer id="site-footer"></footer>
-</body>
-
+  </body>
 </html>

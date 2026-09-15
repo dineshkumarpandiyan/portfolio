@@ -1,206 +1,310 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
     <title>Become a Seller — SendMyStyle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
-                    boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
-                    colors: {
-                        primary: "#C45C72", "primary-hover": "#A9475C", "primary-active": "#89394B",
-                        background: "#FCF3F5", surface: "#FFFFFF", border: "#F1CBD3",
-                        heading: "#481F29", body: "#6B2D3B", accent: "#89394B",
-                        sendmystyle: { 50: "#FCF3F5", 100: "#F8E5E9", 200: "#F1CBD3", 300: "#E5A9B5", 400: "#D78494", 500: "#C45C72", 600: "#A9475C", 700: "#89394B", 800: "#6B2D3B", 900: "#481F29", 950: "#2D141A" },
-                    },
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+            boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
+            colors: {
+              primary: "#C45C72",
+              "primary-hover": "#A9475C",
+              "primary-active": "#89394B",
+              background: "#FCF3F5",
+              surface: "#FFFFFF",
+              border: "#F1CBD3",
+              heading: "#481F29",
+              body: "#6B2D3B",
+              accent: "#89394B",
+              sendmystyle: {
+                50: "#FCF3F5",
+                100: "#F8E5E9",
+                200: "#F1CBD3",
+                300: "#E5A9B5",
+                400: "#D78494",
+                500: "#C45C72",
+                600: "#A9475C",
+                700: "#89394B",
+                800: "#6B2D3B",
+                900: "#481F29",
+                950: "#2D141A",
+              },
             },
-        };
+          },
+        },
+      };
     </script>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body class="flex min-h-screen flex-col bg-background text-body antialiased">
+  <body class="bg-background text-body flex min-h-screen flex-col antialiased">
     <!-- Simple header -->
-    <header class="sticky top-0 z-40 border-b border-border bg-surface">
-        <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-6">
-            <a href="index.html" class="flex items-center space-x-0.5 text-xl font-bold text-heading">
-                <span>Send</span><span class="text-primary">My</span><span>Style</span>
-            </a>
-            <div class="flex items-center gap-4 text-sm font-medium">
-                <a href="#seller-form" class="hidden text-heading hover:text-primary sm:inline">Register</a>
-                <a href="login.html" class="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-heading transition hover:border-primary hover:text-primary">
-                    <i class="bx bx-user"></i> Seller Login
-                </a>
-            </div>
+    <header class="border-border bg-surface sticky top-0 z-40 border-b">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-6">
+        <a href="index.html" class="text-heading flex items-center space-x-0.5 text-xl font-bold">
+          <span>Send</span><span class="text-primary">My</span><span>Style</span>
+        </a>
+        <div class="flex items-center gap-4 text-sm font-medium">
+          <a href="#seller-form" class="text-heading hover:text-primary hidden sm:inline">Register</a>
+          <a
+            href="login.html"
+            class="border-border text-heading hover:border-primary hover:text-primary inline-flex items-center gap-1.5 rounded-full border px-4 py-2 transition"
+          >
+            <i class="bx bx-user"></i> Seller Login
+          </a>
         </div>
+      </div>
     </header>
 
     <main class="flex-1">
-        <!-- Hero -->
-        <section class="bg-background">
-            <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-5 py-12 sm:px-6 md:grid-cols-2 md:py-16">
-                <div>
-                    <p class="inline-flex items-center gap-2 rounded-full bg-sendmystyle-100 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">
-                        <span class="inline-block h-1.5 w-1.5 rounded-full bg-primary"></span> Sell on SendMyStyle
-                    </p>
-                    <h1 class="font-display mt-4 text-3xl font-bold leading-tight text-heading sm:text-4xl md:text-5xl">
-                        Turn your styles into a business
-                    </h1>
-                    <p class="mt-4 max-w-md text-base leading-relaxed text-body">
-                        Reach customers who love to personalize. List your products, offer customization, and grow your fashion brand with SendMyStyle.
-                    </p>
-                    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-                        <a href="#seller-form" class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-hover active:bg-primary-active">
-                            Start Selling <i class="bx bx-right-arrow-alt text-lg"></i>
-                        </a>
-                        <a href="#how" class="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-surface px-7 py-3 text-sm font-semibold text-heading transition hover:border-primary hover:text-primary">
-                            How it works
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="mx-auto max-w-md overflow-hidden rounded-3xl bg-sendmystyle-100 shadow-soft">
-                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=70" alt="Seller packing an order" class="aspect-[4/3] w-full object-cover" />
-                    </div>
-                </div>
+      <!-- Hero -->
+      <section class="bg-background">
+        <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-5 py-12 sm:px-6 md:grid-cols-2 md:py-16">
+          <div>
+            <p
+              class="bg-sendmystyle-100 text-primary inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+            >
+              <span class="bg-primary inline-block h-1.5 w-1.5 rounded-full"></span> Sell on SendMyStyle
+            </p>
+            <h1 class="font-display text-heading mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+              Turn your styles into a business
+            </h1>
+            <p class="text-body mt-4 max-w-md text-base leading-relaxed">
+              Reach customers who love to personalize. List your products, offer customization, and grow your fashion
+              brand with SendMyStyle.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#seller-form"
+                class="bg-primary shadow-soft hover:bg-primary-hover active:bg-primary-active inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold text-white transition"
+              >
+                Start Selling <i class="bx bx-right-arrow-alt text-lg"></i>
+              </a>
+              <a
+                href="#how"
+                class="border-border bg-surface text-heading hover:border-primary hover:text-primary inline-flex items-center justify-center gap-2 rounded-full border px-7 py-3 text-sm font-semibold transition"
+              >
+                How it works
+              </a>
             </div>
-        </section>
-
-        <!-- Stats -->
-        <section class="border-y border-border bg-surface">
-            <div class="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-5 py-8 text-center sm:px-6 md:grid-cols-4">
-                <div><p class="font-display text-2xl font-bold text-heading">10L+</p><p class="mt-1 text-xs text-body">Active shoppers</p></div>
-                <div><p class="font-display text-2xl font-bold text-heading">₹0</p><p class="mt-1 text-xs text-body">Registration fee</p></div>
-                <div><p class="font-display text-2xl font-bold text-heading">7 days</p><p class="mt-1 text-xs text-body">Fast payouts</p></div>
-                <div><p class="font-display text-2xl font-bold text-heading">28+</p><p class="mt-1 text-xs text-body">States reached</p></div>
+          </div>
+          <div>
+            <div class="bg-sendmystyle-100 shadow-soft mx-auto max-w-md overflow-hidden rounded-3xl">
+              <img
+                src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=70"
+                alt="Seller packing an order"
+                class="aspect-[4/3] w-full object-cover"
+              />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Benefits -->
-        <section class="bg-background py-14 md:py-20">
-            <div class="mx-auto max-w-6xl px-5 sm:px-6">
-                <div class="mb-10 text-center">
-                    <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Why sell with us</p>
-                    <h2 class="font-display mt-2 text-2xl font-bold text-heading sm:text-3xl">Built for fashion brands</h2>
-                </div>
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                    <div class="rounded-2xl border border-border bg-surface p-6">
-                        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-sendmystyle-100 text-2xl text-primary"><i class="bx bx-group"></i></span>
-                        <h3 class="mt-4 text-lg font-semibold text-heading">Reach more buyers</h3>
-                        <p class="mt-2 text-sm text-body">Get discovered by customers actively looking to customize and buy.</p>
-                    </div>
-                    <div class="rounded-2xl border border-border bg-surface p-6">
-                        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-sendmystyle-100 text-2xl text-primary"><i class="bx bx-pencil"></i></span>
-                        <h3 class="mt-4 text-lg font-semibold text-heading">Offer customization</h3>
-                        <p class="mt-2 text-sm text-body">Enable made-to-order options and stand out from generic listings.</p>
-                    </div>
-                    <div class="rounded-2xl border border-border bg-surface p-6">
-                        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-sendmystyle-100 text-2xl text-primary"><i class="bx bx-wallet"></i></span>
-                        <h3 class="mt-4 text-lg font-semibold text-heading">Reliable payouts</h3>
-                        <p class="mt-2 text-sm text-body">Transparent pricing and fast, secure settlements every week.</p>
-                    </div>
-                </div>
+      <!-- Stats -->
+      <section class="border-border bg-surface border-y">
+        <div class="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-5 py-8 text-center sm:px-6 md:grid-cols-4">
+          <div>
+            <p class="font-display text-heading text-2xl font-bold">10L+</p>
+            <p class="text-body mt-1 text-xs">Active shoppers</p>
+          </div>
+          <div>
+            <p class="font-display text-heading text-2xl font-bold">₹0</p>
+            <p class="text-body mt-1 text-xs">Registration fee</p>
+          </div>
+          <div>
+            <p class="font-display text-heading text-2xl font-bold">7 days</p>
+            <p class="text-body mt-1 text-xs">Fast payouts</p>
+          </div>
+          <div>
+            <p class="font-display text-heading text-2xl font-bold">28+</p>
+            <p class="text-body mt-1 text-xs">States reached</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section class="bg-background py-14 md:py-20">
+        <div class="mx-auto max-w-6xl px-5 sm:px-6">
+          <div class="mb-10 text-center">
+            <p class="text-primary text-[11px] font-bold uppercase tracking-[0.16em]">Why sell with us</p>
+            <h2 class="font-display text-heading mt-2 text-2xl font-bold sm:text-3xl">Built for fashion brands</h2>
+          </div>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div class="border-border bg-surface rounded-2xl border p-6">
+              <span
+                class="bg-sendmystyle-100 text-primary flex h-12 w-12 items-center justify-center rounded-full text-2xl"
+                ><i class="bx bx-group"></i
+              ></span>
+              <h3 class="text-heading mt-4 text-lg font-semibold">Reach more buyers</h3>
+              <p class="text-body mt-2 text-sm">Get discovered by customers actively looking to customize and buy.</p>
             </div>
-        </section>
-
-        <!-- How it works -->
-        <section id="how" class="bg-surface py-14 md:py-20">
-            <div class="mx-auto max-w-6xl px-5 sm:px-6">
-                <div class="mb-10 text-center">
-                    <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">How it works</p>
-                    <h2 class="font-display mt-2 text-2xl font-bold text-heading sm:text-3xl">Start in 3 simple steps</h2>
-                </div>
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                    <div class="rounded-2xl border border-border bg-background p-6 text-center">
-                        <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary text-lg font-bold text-white">1</span>
-                        <h3 class="mt-4 text-base font-semibold text-heading">Register</h3>
-                        <p class="mt-2 text-sm text-body">Sign up with your business details and GST.</p>
-                    </div>
-                    <div class="rounded-2xl border border-border bg-background p-6 text-center">
-                        <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary text-lg font-bold text-white">2</span>
-                        <h3 class="mt-4 text-base font-semibold text-heading">List products</h3>
-                        <p class="mt-2 text-sm text-body">Upload styles and set your customization options.</p>
-                    </div>
-                    <div class="rounded-2xl border border-border bg-background p-6 text-center">
-                        <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary text-lg font-bold text-white">3</span>
-                        <h3 class="mt-4 text-base font-semibold text-heading">Start selling</h3>
-                        <p class="mt-2 text-sm text-body">Receive orders and get paid on a weekly cycle.</p>
-                    </div>
-                </div>
+            <div class="border-border bg-surface rounded-2xl border p-6">
+              <span
+                class="bg-sendmystyle-100 text-primary flex h-12 w-12 items-center justify-center rounded-full text-2xl"
+                ><i class="bx bx-pencil"></i
+              ></span>
+              <h3 class="text-heading mt-4 text-lg font-semibold">Offer customization</h3>
+              <p class="text-body mt-2 text-sm">Enable made-to-order options and stand out from generic listings.</p>
             </div>
-        </section>
-
-        <!-- Register form -->
-        <section id="seller-form" class="bg-background py-14 md:py-20">
-            <div class="mx-auto max-w-xl px-5 sm:px-6">
-                <div class="rounded-3xl border border-border bg-surface p-6 shadow-soft sm:p-8">
-                    <h2 class="font-display text-2xl font-bold text-heading">Register as a seller</h2>
-                    <p class="mt-1 text-sm text-body">It takes only a few minutes to get started.</p>
-
-                    <form class="mt-6 space-y-4" onsubmit="this.querySelector('[data-done]').classList.remove('hidden');this.reset();return false;">
-                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                            <label class="block">
-                                <span class="mb-1 block text-sm font-medium text-heading">Business Name</span>
-                                <input required type="text" placeholder="Your brand" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                            </label>
-                            <label class="block">
-                                <span class="mb-1 block text-sm font-medium text-heading">Contact Person</span>
-                                <input required type="text" placeholder="Full name" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                            </label>
-                            <label class="block">
-                                <span class="mb-1 block text-sm font-medium text-heading">Email</span>
-                                <input required type="email" placeholder="you@brand.com" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                            </label>
-                            <label class="block">
-                                <span class="mb-1 block text-sm font-medium text-heading">Phone</span>
-                                <input required type="tel" placeholder="Mobile number" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                            </label>
-                        </div>
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">GSTIN</span>
-                            <input type="text" placeholder="15-digit GST number" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                        </label>
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">Product Category</span>
-                            <select class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary">
-                                <option>Men's Fashion</option>
-                                <option>Women's Fashion</option>
-                                <option>Kids</option>
-                                <option>Beauty</option>
-                                <option>Footwear</option>
-                            </select>
-                        </label>
-                        <button type="submit" class="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-hover active:bg-primary-active">
-                            Submit Application
-                        </button>
-                        <p data-done class="hidden rounded-lg bg-sendmystyle-100 px-4 py-3 text-center text-sm font-medium text-primary">
-                            <i class="bx bx-check-circle"></i> Thanks! Our team will reach out within 2 business days.
-                        </p>
-                    </form>
-                </div>
+            <div class="border-border bg-surface rounded-2xl border p-6">
+              <span
+                class="bg-sendmystyle-100 text-primary flex h-12 w-12 items-center justify-center rounded-full text-2xl"
+                ><i class="bx bx-wallet"></i
+              ></span>
+              <h3 class="text-heading mt-4 text-lg font-semibold">Reliable payouts</h3>
+              <p class="text-body mt-2 text-sm">Transparent pricing and fast, secure settlements every week.</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how" class="bg-surface py-14 md:py-20">
+        <div class="mx-auto max-w-6xl px-5 sm:px-6">
+          <div class="mb-10 text-center">
+            <p class="text-primary text-[11px] font-bold uppercase tracking-[0.16em]">How it works</p>
+            <h2 class="font-display text-heading mt-2 text-2xl font-bold sm:text-3xl">Start in 3 simple steps</h2>
+          </div>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div class="border-border bg-background rounded-2xl border p-6 text-center">
+              <span
+                class="bg-primary mx-auto flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold text-white"
+                >1</span
+              >
+              <h3 class="text-heading mt-4 text-base font-semibold">Register</h3>
+              <p class="text-body mt-2 text-sm">Sign up with your business details and GST.</p>
+            </div>
+            <div class="border-border bg-background rounded-2xl border p-6 text-center">
+              <span
+                class="bg-primary mx-auto flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold text-white"
+                >2</span
+              >
+              <h3 class="text-heading mt-4 text-base font-semibold">List products</h3>
+              <p class="text-body mt-2 text-sm">Upload styles and set your customization options.</p>
+            </div>
+            <div class="border-border bg-background rounded-2xl border p-6 text-center">
+              <span
+                class="bg-primary mx-auto flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold text-white"
+                >3</span
+              >
+              <h3 class="text-heading mt-4 text-base font-semibold">Start selling</h3>
+              <p class="text-body mt-2 text-sm">Receive orders and get paid on a weekly cycle.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Register form -->
+      <section id="seller-form" class="bg-background py-14 md:py-20">
+        <div class="mx-auto max-w-xl px-5 sm:px-6">
+          <div class="border-border bg-surface shadow-soft rounded-3xl border p-6 sm:p-8">
+            <h2 class="font-display text-heading text-2xl font-bold">Register as a seller</h2>
+            <p class="text-body mt-1 text-sm">It takes only a few minutes to get started.</p>
+
+            <form
+              class="mt-6 space-y-4"
+              onsubmit="
+                this.querySelector('[data-done]').classList.remove('hidden');
+                this.reset();
+                return false;
+              "
+            >
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <label class="block">
+                  <span class="text-heading mb-1 block text-sm font-medium">Business Name</span>
+                  <input
+                    required
+                    type="text"
+                    placeholder="Your brand"
+                    class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                  />
+                </label>
+                <label class="block">
+                  <span class="text-heading mb-1 block text-sm font-medium">Contact Person</span>
+                  <input
+                    required
+                    type="text"
+                    placeholder="Full name"
+                    class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                  />
+                </label>
+                <label class="block">
+                  <span class="text-heading mb-1 block text-sm font-medium">Email</span>
+                  <input
+                    required
+                    type="email"
+                    placeholder="you@brand.com"
+                    class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                  />
+                </label>
+                <label class="block">
+                  <span class="text-heading mb-1 block text-sm font-medium">Phone</span>
+                  <input
+                    required
+                    type="tel"
+                    placeholder="Mobile number"
+                    class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                  />
+                </label>
+              </div>
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">GSTIN</span>
+                <input
+                  type="text"
+                  placeholder="15-digit GST number"
+                  class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                />
+              </label>
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">Product Category</span>
+                <select
+                  class="border-border bg-background text-body focus:border-primary w-full rounded-lg border px-4 py-2.5 text-sm outline-none"
+                >
+                  <option>Men's Fashion</option>
+                  <option>Women's Fashion</option>
+                  <option>Kids</option>
+                  <option>Beauty</option>
+                  <option>Footwear</option>
+                </select>
+              </label>
+              <button
+                type="submit"
+                class="bg-primary shadow-soft hover:bg-primary-hover active:bg-primary-active flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition"
+              >
+                Submit Application
+              </button>
+              <p
+                data-done
+                class="bg-sendmystyle-100 text-primary hidden rounded-lg px-4 py-3 text-center text-sm font-medium"
+              >
+                <i class="bx bx-check-circle"></i> Thanks! Our team will reach out within 2 business days.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Simple footer -->
-    <footer class="border-t border-border bg-surface">
-        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-6 text-sm text-body sm:flex-row sm:px-6">
-            <span>SendMyStyle © 2026. All Rights Reserved.</span>
-            <a href="index.html" class="font-semibold text-primary hover:text-primary-hover">Back to store</a>
-        </div>
+    <footer class="border-border bg-surface border-t">
+      <div
+        class="text-body mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-6 text-sm sm:flex-row sm:px-6"
+      >
+        <span>SendMyStyle © 2026. All Rights Reserved.</span>
+        <a href="index.html" class="text-primary hover:text-primary-hover font-semibold">Back to store</a>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

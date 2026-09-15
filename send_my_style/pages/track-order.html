@@ -1,79 +1,109 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
     <title>Track Order — SendMyStyle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
-                    boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
-                    colors: {
-                        primary: "#C45C72", "primary-hover": "#A9475C", "primary-active": "#89394B",
-                        background: "#FCF3F5", surface: "#FFFFFF", border: "#F1CBD3",
-                        heading: "#481F29", body: "#6B2D3B", accent: "#89394B",
-                        sendmystyle: { 50: "#FCF3F5", 100: "#F8E5E9", 200: "#F1CBD3", 300: "#E5A9B5", 400: "#D78494", 500: "#C45C72", 600: "#A9475C", 700: "#89394B", 800: "#6B2D3B", 900: "#481F29", 950: "#2D141A" },
-                    },
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+            boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
+            colors: {
+              primary: "#C45C72",
+              "primary-hover": "#A9475C",
+              "primary-active": "#89394B",
+              background: "#FCF3F5",
+              surface: "#FFFFFF",
+              border: "#F1CBD3",
+              heading: "#481F29",
+              body: "#6B2D3B",
+              accent: "#89394B",
+              sendmystyle: {
+                50: "#FCF3F5",
+                100: "#F8E5E9",
+                200: "#F1CBD3",
+                300: "#E5A9B5",
+                400: "#D78494",
+                500: "#C45C72",
+                600: "#A9475C",
+                700: "#89394B",
+                800: "#6B2D3B",
+                900: "#481F29",
+                950: "#2D141A",
+              },
             },
-        };
+          },
+        },
+      };
     </script>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/script.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body class="flex min-h-screen flex-col bg-background text-body antialiased">
+  <body class="bg-background text-body flex min-h-screen flex-col antialiased">
     <div id="site-web-header"></div>
     <div id="site-mobile-header"></div>
 
     <main class="flex-1">
-        <div class="mx-auto max-w-2xl px-5 py-6 sm:px-6 md:py-8">
-            <h1 class="font-display text-2xl font-bold text-heading sm:text-3xl">Track Order</h1>
-            <p class="mt-1 text-sm text-body">Order <span class="font-semibold text-heading">#SMS-2026-00184</span></p>
+      <div class="mx-auto max-w-2xl px-5 py-6 sm:px-6 md:py-8">
+        <h1 class="font-display text-heading text-2xl font-bold sm:text-3xl">Track Order</h1>
+        <p class="text-body mt-1 text-sm">Order <span class="text-heading font-semibold">#SMS-2026-00184</span></p>
 
-            <div class="mt-6 rounded-2xl border border-border bg-surface p-6">
-                <ol class="relative border-l-2 border-sendmystyle-200">
-                    <li class="mb-8 ml-6">
-                        <span class="absolute -left-[11px] flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] text-white"><i class="bx bx-check"></i></span>
-                        <p class="text-sm font-semibold text-heading">Order Confirmed</p>
-                        <p class="text-xs text-body">Sep 15, 2026 · 10:24 AM</p>
-                    </li>
-                    <li class="mb-8 ml-6">
-                        <span class="absolute -left-[11px] flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] text-white"><i class="bx bx-check"></i></span>
-                        <p class="text-sm font-semibold text-heading">Being Customized</p>
-                        <p class="text-xs text-body">Your pieces are in production</p>
-                    </li>
-                    <li class="mb-8 ml-6">
-                        <span class="absolute -left-[11px] flex h-5 w-5 items-center justify-center rounded-full border-2 border-primary bg-surface"></span>
-                        <p class="text-sm font-semibold text-heading">Shipped</p>
-                        <p class="text-xs text-body">Expected by Sep 20</p>
-                    </li>
-                    <li class="ml-6">
-                        <span class="absolute -left-[11px] flex h-5 w-5 items-center justify-center rounded-full border-2 border-sendmystyle-200 bg-surface"></span>
-                        <p class="text-sm font-semibold text-body">Delivered</p>
-                        <p class="text-xs text-body">Est. Sep 20–22</p>
-                    </li>
-                </ol>
-            </div>
-
-            <a href="order-details.html" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-hover">
-                View Order Details <i class="bx bx-right-arrow-alt text-lg"></i>
-            </a>
+        <div class="border-border bg-surface mt-6 rounded-2xl border p-6">
+          <ol class="border-sendmystyle-200 relative border-l-2">
+            <li class="mb-8 ml-6">
+              <span
+                class="bg-primary absolute -left-[11px] flex h-5 w-5 items-center justify-center rounded-full text-[10px] text-white"
+                ><i class="bx bx-check"></i
+              ></span>
+              <p class="text-heading text-sm font-semibold">Order Confirmed</p>
+              <p class="text-body text-xs">Sep 15, 2026 · 10:24 AM</p>
+            </li>
+            <li class="mb-8 ml-6">
+              <span
+                class="bg-primary absolute -left-[11px] flex h-5 w-5 items-center justify-center rounded-full text-[10px] text-white"
+                ><i class="bx bx-check"></i
+              ></span>
+              <p class="text-heading text-sm font-semibold">Being Customized</p>
+              <p class="text-body text-xs">Your pieces are in production</p>
+            </li>
+            <li class="mb-8 ml-6">
+              <span
+                class="border-primary bg-surface absolute -left-[11px] flex h-5 w-5 items-center justify-center rounded-full border-2"
+              ></span>
+              <p class="text-heading text-sm font-semibold">Shipped</p>
+              <p class="text-body text-xs">Expected by Sep 20</p>
+            </li>
+            <li class="ml-6">
+              <span
+                class="border-sendmystyle-200 bg-surface absolute -left-[11px] flex h-5 w-5 items-center justify-center rounded-full border-2"
+              ></span>
+              <p class="text-body text-sm font-semibold">Delivered</p>
+              <p class="text-body text-xs">Est. Sep 20–22</p>
+            </li>
+          </ol>
         </div>
+
+        <a
+          href="order-details.html"
+          class="text-primary hover:text-primary-hover mt-6 inline-flex items-center gap-1 text-sm font-semibold"
+        >
+          View Order Details <i class="bx bx-right-arrow-alt text-lg"></i>
+        </a>
+      </div>
     </main>
 
     <footer id="site-footer"></footer>
-</body>
-
+  </body>
 </html>

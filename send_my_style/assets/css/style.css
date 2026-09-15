@@ -1,85 +1,85 @@
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .font-display {
-    font-family: "Space Grotesk", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .no-scrollbar {
-    scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .fade-in {
-    animation: fade 0.25s ease;
+  animation: fade 0.25s ease;
 }
 
 .drawer {
-    transition: transform 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .modal {
-    transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 @keyframes fade {
-    from {
-        opacity: 0;
-        transform: translateY(5px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
 
-    to {
-        opacity: 1;
-        transform: none;
-    }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Mega menu reveal */
 .mega-panel {
-    transform: translateY(8px);
-    transition:
-        opacity 0.2s ease,
-        transform 0.2s ease,
-        visibility 0.2s ease;
+  transform: translateY(8px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
 }
 
 .group:hover .mega-panel {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 /* Hero carousel slides */
 .hero-slide {
-    transition:
-        opacity 0.6s ease,
-        visibility 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
 }
 
 /* Entrance animation for active slide content */
 .hero-slide .hero-anim {
-    opacity: 0;
-    transform: translateY(18px);
-    transition:
-        opacity 0.6s ease,
-        transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .hero-slide.is-active .hero-anim {
-    opacity: 1;
-    transform: none;
+  opacity: 1;
+  transform: none;
 }
 
 .hero-slide.is-active .hero-anim:nth-child(2) {
-    transition-delay: 0.12s;
+  transition-delay: 0.12s;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-slide,
-    .hero-slide .hero-anim {
-        transition: none;
-        transform: none;
-        opacity: 1;
-    }
+  .hero-slide,
+  .hero-slide .hero-anim {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
 }

@@ -1,97 +1,159 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
     <title>Checkout — SendMyStyle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
-                    boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
-                    colors: {
-                        primary: "#C45C72", "primary-hover": "#A9475C", "primary-active": "#89394B",
-                        background: "#FCF3F5", surface: "#FFFFFF", border: "#F1CBD3",
-                        heading: "#481F29", body: "#6B2D3B", accent: "#89394B",
-                        sendmystyle: { 50: "#FCF3F5", 100: "#F8E5E9", 200: "#F1CBD3", 300: "#E5A9B5", 400: "#D78494", 500: "#C45C72", 600: "#A9475C", 700: "#89394B", 800: "#6B2D3B", 900: "#481F29", 950: "#2D141A" },
-                    },
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+            boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
+            colors: {
+              primary: "#C45C72",
+              "primary-hover": "#A9475C",
+              "primary-active": "#89394B",
+              background: "#FCF3F5",
+              surface: "#FFFFFF",
+              border: "#F1CBD3",
+              heading: "#481F29",
+              body: "#6B2D3B",
+              accent: "#89394B",
+              sendmystyle: {
+                50: "#FCF3F5",
+                100: "#F8E5E9",
+                200: "#F1CBD3",
+                300: "#E5A9B5",
+                400: "#D78494",
+                500: "#C45C72",
+                600: "#A9475C",
+                700: "#89394B",
+                800: "#6B2D3B",
+                900: "#481F29",
+                950: "#2D141A",
+              },
             },
-        };
+          },
+        },
+      };
     </script>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/script.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body class="flex min-h-screen flex-col bg-background text-body antialiased">
+  <body class="bg-background text-body flex min-h-screen flex-col antialiased">
     <div id="site-web-header"></div>
     <div id="site-mobile-header"></div>
 
     <main class="flex-1">
-        <div class="mx-auto max-w-6xl px-5 py-6 sm:px-6 md:py-8">
-            <h1 class="font-display text-2xl font-bold text-heading sm:text-3xl">Checkout</h1>
+      <div class="mx-auto max-w-6xl px-5 py-6 sm:px-6 md:py-8">
+        <h1 class="font-display text-heading text-2xl font-bold sm:text-3xl">Checkout</h1>
 
-            <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_340px]">
-                <!-- Address form -->
-                <form class="space-y-5 rounded-2xl border border-border bg-surface p-5 sm:p-6" onsubmit="location.href='payment.html';return false;">
-                    <h2 class="text-sm font-bold uppercase tracking-wide text-heading">Delivery Address</h2>
-                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">Full Name</span>
-                            <input required type="text" placeholder="Your name" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                        </label>
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">Phone</span>
-                            <input required type="tel" placeholder="Mobile number" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                        </label>
-                    </div>
-                    <label class="block">
-                        <span class="mb-1 block text-sm font-medium text-heading">Address</span>
-                        <textarea required rows="2" placeholder="House no, street, area" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100"></textarea>
-                    </label>
-                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">City</span>
-                            <input required type="text" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                        </label>
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">State</span>
-                            <input required type="text" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                        </label>
-                        <label class="block">
-                            <span class="mb-1 block text-sm font-medium text-heading">Pincode</span>
-                            <input required type="text" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
-                        </label>
-                    </div>
-                    <button type="submit" class="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-hover active:bg-primary-active sm:w-auto">
-                        Continue to Payment <i class="bx bx-right-arrow-alt text-lg"></i>
-                    </button>
-                </form>
-
-                <!-- Summary -->
-                <aside class="h-fit rounded-2xl border border-border bg-surface p-5">
-                    <h2 class="text-sm font-bold uppercase tracking-wide text-heading">Order Summary</h2>
-                    <dl class="mt-4 space-y-3 text-sm">
-                        <div class="flex justify-between"><dt class="text-body">Subtotal</dt><dd class="font-semibold text-heading" data-order-subtotal>₹0</dd></div>
-                        <div class="flex justify-between"><dt class="text-body">Delivery</dt><dd class="font-semibold text-primary">Free</dd></div>
-                        <div class="flex justify-between border-t border-border pt-3 text-base"><dt class="font-semibold text-heading">Total</dt><dd class="font-bold text-heading" data-order-total>₹0</dd></div>
-                    </dl>
-                </aside>
+        <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_340px]">
+          <!-- Address form -->
+          <form
+            class="border-border bg-surface space-y-5 rounded-2xl border p-5 sm:p-6"
+            onsubmit="
+              location.href = 'payment.html';
+              return false;
+            "
+          >
+            <h2 class="text-heading text-sm font-bold uppercase tracking-wide">Delivery Address</h2>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">Full Name</span>
+                <input
+                  required
+                  type="text"
+                  placeholder="Your name"
+                  class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                />
+              </label>
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">Phone</span>
+                <input
+                  required
+                  type="tel"
+                  placeholder="Mobile number"
+                  class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                />
+              </label>
             </div>
+            <label class="block">
+              <span class="text-heading mb-1 block text-sm font-medium">Address</span>
+              <textarea
+                required
+                rows="2"
+                placeholder="House no, street, area"
+                class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+              ></textarea>
+            </label>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">City</span>
+                <input
+                  required
+                  type="text"
+                  class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                />
+              </label>
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">State</span>
+                <input
+                  required
+                  type="text"
+                  class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                />
+              </label>
+              <label class="block">
+                <span class="text-heading mb-1 block text-sm font-medium">Pincode</span>
+                <input
+                  required
+                  type="text"
+                  class="border-border bg-background text-body focus:border-primary focus:ring-sendmystyle-100 w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:ring-2"
+                />
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="bg-primary shadow-soft hover:bg-primary-hover active:bg-primary-active flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition sm:w-auto"
+            >
+              Continue to Payment <i class="bx bx-right-arrow-alt text-lg"></i>
+            </button>
+          </form>
+
+          <!-- Summary -->
+          <aside class="border-border bg-surface h-fit rounded-2xl border p-5">
+            <h2 class="text-heading text-sm font-bold uppercase tracking-wide">Order Summary</h2>
+            <dl class="mt-4 space-y-3 text-sm">
+              <div class="flex justify-between">
+                <dt class="text-body">Subtotal</dt>
+                <dd class="text-heading font-semibold" data-order-subtotal>₹0</dd>
+              </div>
+              <div class="flex justify-between">
+                <dt class="text-body">Delivery</dt>
+                <dd class="text-primary font-semibold">Free</dd>
+              </div>
+              <div class="border-border flex justify-between border-t pt-3 text-base">
+                <dt class="text-heading font-semibold">Total</dt>
+                <dd class="text-heading font-bold" data-order-total>₹0</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
+      </div>
     </main>
 
     <footer id="site-footer"></footer>
-</body>
-
+  </body>
 </html>
