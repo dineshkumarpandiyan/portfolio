@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
+    <title>Payment — SendMyStyle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+                    boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
+                    colors: {
+                        primary: "#C45C72", "primary-hover": "#A9475C", "primary-active": "#89394B",
+                        background: "#FCF3F5", surface: "#FFFFFF", border: "#F1CBD3",
+                        heading: "#481F29", body: "#6B2D3B", accent: "#89394B",
+                        sendmystyle: { 50: "#FCF3F5", 100: "#F8E5E9", 200: "#F1CBD3", 300: "#E5A9B5", 400: "#D78494", 500: "#C45C72", 600: "#A9475C", 700: "#89394B", 800: "#6B2D3B", 900: "#481F29", 950: "#2D141A" },
+                    },
+                },
+            },
+        };
+    </script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body class="flex min-h-screen flex-col bg-background text-body antialiased">
+    <div id="site-web-header"></div>
+    <div id="site-mobile-header"></div>
+
+    <main class="flex-1">
+        <div class="mx-auto max-w-3xl px-5 py-6 sm:px-6 md:py-8">
+            <h1 class="font-display text-2xl font-bold text-heading sm:text-3xl">Payment</h1>
+            <p class="mt-1 text-sm text-body">Amount payable: <span class="font-bold text-heading" data-pay-amount>₹0</span></p>
+
+            <form class="mt-6 space-y-4" onsubmit="localStorage.removeItem('sms_cart');location.href='order-success.html';return false;">
+                <!-- Payment methods -->
+                <label class="flex cursor-pointer items-center gap-3 rounded-2xl border border-primary bg-surface p-4">
+                    <input type="radio" name="pay" checked class="accent-primary" />
+                    <i class="bx bx-credit-card text-2xl text-primary"></i>
+                    <span class="text-sm font-semibold text-heading">Credit / Debit Card</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-3 rounded-2xl border border-border bg-surface p-4">
+                    <input type="radio" name="pay" class="accent-primary" />
+                    <i class="bx bx-mobile-alt text-2xl text-primary"></i>
+                    <span class="text-sm font-semibold text-heading">UPI</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-3 rounded-2xl border border-border bg-surface p-4">
+                    <input type="radio" name="pay" class="accent-primary" />
+                    <i class="bx bx-money text-2xl text-primary"></i>
+                    <span class="text-sm font-semibold text-heading">Cash on Delivery</span>
+                </label>
+
+                <!-- Card fields -->
+                <div class="rounded-2xl border border-border bg-surface p-5 space-y-4">
+                    <label class="block">
+                        <span class="mb-1 block text-sm font-medium text-heading">Card Number</span>
+                        <input type="text" placeholder="1234 5678 9012 3456" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
+                    </label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="block">
+                            <span class="mb-1 block text-sm font-medium text-heading">Expiry</span>
+                            <input type="text" placeholder="MM/YY" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
+                        </label>
+                        <label class="block">
+                            <span class="mb-1 block text-sm font-medium text-heading">CVV</span>
+                            <input type="password" placeholder="•••" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-hover active:bg-primary-active">
+                    <i class="bx bx-lock-alt"></i> Pay <span data-pay-amount>₹0</span>
+                </button>
+                <p class="text-center text-xs text-body"><i class="bx bx-shield"></i> Secure, encrypted payment</p>
+            </form>
+        </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+</body>
+
+</html>

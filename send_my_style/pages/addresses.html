@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
+    <title>Saved Addresses — SendMyStyle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+                    boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
+                    colors: {
+                        primary: "#C45C72", "primary-hover": "#A9475C", "primary-active": "#89394B",
+                        background: "#FCF3F5", surface: "#FFFFFF", border: "#F1CBD3",
+                        heading: "#481F29", body: "#6B2D3B", accent: "#89394B",
+                        sendmystyle: { 50: "#FCF3F5", 100: "#F8E5E9", 200: "#F1CBD3", 300: "#E5A9B5", 400: "#D78494", 500: "#C45C72", 600: "#A9475C", 700: "#89394B", 800: "#6B2D3B", 900: "#481F29", 950: "#2D141A" },
+                    },
+                },
+            },
+        };
+    </script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body class="flex min-h-screen flex-col bg-background text-body antialiased">
+    <div id="site-web-header"></div>
+    <div id="site-mobile-header"></div>
+
+    <main class="flex-1">
+        <div class="mx-auto max-w-6xl px-5 py-6 sm:px-6 md:py-8">
+            <h1 class="font-display text-2xl font-bold text-heading sm:text-3xl">My Account</h1>
+
+            <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[240px_1fr]">
+                <aside class="h-fit rounded-2xl border border-border bg-surface p-3">
+                    <nav class="no-scrollbar flex gap-1 overflow-x-auto text-sm font-medium lg:flex-col">
+                        <a href="profile.html" class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-heading transition hover:bg-background"><i class="bx bx-user text-lg"></i> Profile</a>
+                        <a href="my-orders.html" class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-heading transition hover:bg-background"><i class="bx bx-package text-lg"></i> My Orders</a>
+                        <a href="wishlist.html" class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-heading transition hover:bg-background"><i class="bx bx-heart text-lg"></i> Wishlist</a>
+                        <a href="addresses.html" class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg bg-sendmystyle-100 px-3 py-2.5 font-semibold text-primary"><i class="bx bx-map text-lg"></i> Saved Addresses</a>
+                        <a href="login.html" class="flex shrink-0 items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2.5 text-heading transition hover:bg-background"><i class="bx bx-log-out text-lg"></i> Logout</a>
+                    </nav>
+                </aside>
+
+                <section>
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <!-- Address -->
+                        <div class="rounded-2xl border border-primary bg-surface p-5">
+                            <div class="flex items-center justify-between">
+                                <span class="rounded-full bg-sendmystyle-100 px-2.5 py-1 text-[11px] font-semibold text-primary">Home · Default</span>
+                                <button class="text-sm text-body hover:text-primary">Edit</button>
+                            </div>
+                            <p class="mt-3 text-sm font-semibold text-heading">Priya Sharma</p>
+                            <p class="mt-1 text-sm text-body">12 Anna Nagar, Chennai, Tamil Nadu — 600040</p>
+                            <p class="mt-1 text-sm text-body">+91 84285 82242</p>
+                        </div>
+                        <!-- Address -->
+                        <div class="rounded-2xl border border-border bg-surface p-5">
+                            <div class="flex items-center justify-between">
+                                <span class="rounded-full bg-background px-2.5 py-1 text-[11px] font-semibold text-body">Work</span>
+                                <button class="text-sm text-body hover:text-primary">Edit</button>
+                            </div>
+                            <p class="mt-3 text-sm font-semibold text-heading">Priya Sharma</p>
+                            <p class="mt-1 text-sm text-body">4th Floor, Tech Park, OMR, Chennai — 600096</p>
+                            <p class="mt-1 text-sm text-body">+91 84285 82242</p>
+                        </div>
+                    </div>
+
+                    <button class="mt-4 inline-flex items-center gap-2 rounded-full border border-dashed border-primary px-6 py-3 text-sm font-semibold text-primary transition hover:bg-sendmystyle-100">
+                        <i class="bx bx-plus"></i> Add New Address
+                    </button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+</body>
+
+</html>

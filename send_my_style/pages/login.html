@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
+    <title>Login / Sign Up — SendMyStyle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ["Poppins", "Inter", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+                    boxShadow: { soft: "0 18px 50px rgba(15,23,42,.08)" },
+                    colors: {
+                        primary: "#C45C72", "primary-hover": "#A9475C", "primary-active": "#89394B",
+                        background: "#FCF3F5", surface: "#FFFFFF", border: "#F1CBD3",
+                        heading: "#481F29", body: "#6B2D3B", accent: "#89394B",
+                        sendmystyle: { 50: "#FCF3F5", 100: "#F8E5E9", 200: "#F1CBD3", 300: "#E5A9B5", 400: "#D78494", 500: "#C45C72", 600: "#A9475C", 700: "#89394B", 800: "#6B2D3B", 900: "#481F29", 950: "#2D141A" },
+                    },
+                },
+            },
+        };
+    </script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body class="flex min-h-screen flex-col bg-background text-body antialiased">
+    <div id="site-web-header"></div>
+    <div id="site-mobile-header"></div>
+
+    <main class="flex flex-1 items-center justify-center px-5 py-12 sm:px-6">
+        <div class="w-full max-w-md rounded-3xl border border-border bg-surface p-6 shadow-soft sm:p-8">
+            <div class="text-center">
+                <h1 class="flex items-center justify-center gap-1 text-2xl font-bold text-heading">
+                    <span>Send</span><span class="text-primary">My</span><span>Style</span>
+                </h1>
+                <p class="mt-2 text-sm text-body" data-auth-sub>Login or sign up to continue</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="mt-6 grid grid-cols-2 rounded-full bg-background p-1 text-sm font-semibold">
+                <button data-auth-tab="login" class="rounded-full bg-primary py-2 text-white">Login</button>
+                <button data-auth-tab="signup" class="rounded-full py-2 text-heading">Sign Up</button>
+            </div>
+
+            <form class="mt-6 space-y-4" onsubmit="location.href='profile.html';return false;">
+                <label data-signup-only class="hidden">
+                    <span class="mb-1 block text-sm font-medium text-heading">Full Name</span>
+                    <input type="text" placeholder="Your name" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
+                </label>
+                <label class="block">
+                    <span class="mb-1 block text-sm font-medium text-heading">Mobile / Email</span>
+                    <input required type="text" placeholder="Enter mobile or email" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
+                </label>
+                <label class="block">
+                    <span class="mb-1 block text-sm font-medium text-heading">Password</span>
+                    <input required type="password" placeholder="••••••••" class="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-body outline-none focus:border-primary focus:ring-2 focus:ring-sendmystyle-100" />
+                </label>
+                <button type="submit" class="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-hover active:bg-primary-active" data-auth-submit>Login</button>
+            </form>
+
+            <p class="mt-4 text-center text-xs text-body">By continuing you agree to our Terms & Privacy Policy.</p>
+        </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script>
+        (() => {
+            const sub = document.querySelector("[data-auth-sub]");
+            const submit = document.querySelector("[data-auth-submit]");
+            const signupOnly = document.querySelectorAll("[data-signup-only]");
+            const tabs = document.querySelectorAll("[data-auth-tab]");
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    const isSignup = tab.dataset.authTab === "signup";
+                    tabs.forEach((t) => {
+                        const active = t === tab;
+                        t.classList.toggle("bg-primary", active);
+                        t.classList.toggle("text-white", active);
+                        t.classList.toggle("text-heading", !active);
+                    });
+                    signupOnly.forEach((el) => el.classList.toggle("hidden", !isSignup));
+                    if (submit) submit.textContent = isSignup ? "Create Account" : "Login";
+                    if (sub) sub.textContent = isSignup ? "Create your account to get started" : "Login or sign up to continue";
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
