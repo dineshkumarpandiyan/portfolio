@@ -283,7 +283,7 @@ const HERO_SLIDES = [
     eyebrow: "Choose it. Customize it. Make it yours.",
     title: "Wear Your Style. Your Way.",
     description: "Choose a product. Customize the details. Make it truly yours.",
-    primary: { label: "Customize Your Style", href: "customize.html" },
+    primary: { label: "Customize Your Style", href: "../customizer/index.html" },
     secondary: { label: "Explore Styles", href: "product-listing.html" },
     image: "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&w=1000&q=70",
     alt: "A shirt transforming into a customized design",
@@ -295,7 +295,7 @@ const HERO_SLIDES = [
     eyebrow: "Made to fit your taste",
     title: "Not Just Your Size. Your Style.",
     description: "Customize colors, collars, cuffs, buttons and more — before you buy.",
-    primary: { label: "Start Customizing", href: "customize.html" },
+    primary: { label: "Start Customizing", href: "../customizer/index.html" },
     secondary: null,
     image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1000&q=70",
     alt: "A shirt with color, collar and cuff customization options",
@@ -765,7 +765,7 @@ function initProductDetails() {
     : "";
 
   const customBtn = p.customizable
-    ? `<a href="customize.html?id=${p.id}" class="group inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-hover active:bg-primary-active"><i class="bx bx-pencil"></i> Customize This</a>`
+    ? `<a href="../customizer/index.html?id=${p.id}" class="group inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-primary-hover active:bg-primary-active"><i class="bx bx-pencil"></i> Customize This</a>`
     : "";
 
   const bagBtnClass = p.customizable
