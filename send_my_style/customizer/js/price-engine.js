@@ -28,7 +28,13 @@ function calculateTotalPrice(product, state) {
     const opt = findVariantOption(product, gid, oid);
     if (opt) {
       variantsPrice += opt.price || 0;
-      lines.push({ type: "variant", group: gid, groupName: groupName(product.variants, gid), label: opt.name, price: opt.price || 0 });
+      lines.push({
+        type: "variant",
+        group: gid,
+        groupName: groupName(product.variants, gid),
+        label: opt.name,
+        price: opt.price || 0,
+      });
     }
   });
 
@@ -53,7 +59,13 @@ function calculateTotalPrice(product, state) {
       const opt = oid ? findCustomOption(group, oid) : null;
       if (opt) {
         customizationPrice += opt.price || 0;
-        lines.push({ type: "customization", group: group.id, groupName: group.name, label: opt.name, price: opt.price || 0 });
+        lines.push({
+          type: "customization",
+          group: group.id,
+          groupName: group.name,
+          label: opt.name,
+          price: opt.price || 0,
+        });
       }
     }
   });

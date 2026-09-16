@@ -62,10 +62,16 @@ const UploadHandler = (() => {
     CustomizationEngine.setTransform(group.id, { rotation: deg });
     onChange();
   }
-  function setActive(groupId) { activeGroupId = groupId; }
+  function setActive(groupId) {
+    activeGroupId = groupId;
+  }
 
   function enableDrag() {
-    let dragging = false, startX = 0, startY = 0, origDx = 0, origDy = 0;
+    let dragging = false,
+      startX = 0,
+      startY = 0,
+      origDx = 0,
+      origDy = 0;
 
     function ratio(delta, dim) {
       const rect = canvas.getBoundingClientRect();
@@ -79,8 +85,10 @@ const UploadHandler = (() => {
       if (!CustomizationEngine.state.uploads[activeGroupId]) return;
       dragging = true;
       canvas.setPointerCapture(e.pointerId);
-      startX = e.clientX; startY = e.clientY;
-      origDx = t.dx; origDy = t.dy;
+      startX = e.clientX;
+      startY = e.clientY;
+      origDx = t.dx;
+      origDy = t.dy;
     });
     canvas.addEventListener("pointermove", (e) => {
       if (!dragging || !activeGroupId) return;
@@ -90,7 +98,14 @@ const UploadHandler = (() => {
       });
       onChange();
     });
-    const end = (e) => { if (dragging) { dragging = false; try { canvas.releasePointerCapture(e.pointerId); } catch (_) {} } };
+    const end = (e) => {
+      if (dragging) {
+        dragging = false;
+        try {
+          canvas.releasePointerCapture(e.pointerId);
+        } catch (_) {}
+      }
+    };
     canvas.addEventListener("pointerup", end);
     canvas.addEventListener("pointercancel", end);
   }

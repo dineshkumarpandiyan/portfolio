@@ -31,13 +31,13 @@ specific category. There are **no** `if (product.category === ...)` conditionals
 The UI is built entirely from `product.customization.groups`, and the engine
 handles every `displayType`:
 
-| displayType | UI                          | Data                     |
-| ----------- | --------------------------- | ------------------------ |
-| `image`     | image option cards          | `options[].asset`        |
-| `color`     | colour swatches             | `options[].value`        |
-| `card`      | text option cards           | `options[].description`  |
-| `text`      | input + font + colour       | `config` (maxLength…)    |
-| `upload`    | file upload + move/scale/rot| `config.printableArea`   |
+| displayType | UI                           | Data                    |
+| ----------- | ---------------------------- | ----------------------- |
+| `image`     | image option cards           | `options[].asset`       |
+| `color`     | colour swatches              | `options[].value`       |
+| `card`      | text option cards            | `options[].description` |
+| `text`      | input + font + colour        | `config` (maxLength…)   |
+| `upload`    | file upload + move/scale/rot | `config.printableArea`  |
 
 To add a new product, append another object with the same shape to `products`.
 Nothing in the engine changes.
@@ -83,10 +83,10 @@ One source of truth (`customization-engine.js`):
 
 ```js
 customizationState = {
-  variants: {},          // { color, size, fit }
-  customization: {},     // { collar, cuff, pattern, buttons }
-  personalization: { text, font, textColor, uploadedImage, position, scale, rotation }
-}
+  variants: {}, // { color, size, fit }
+  customization: {}, // { collar, cuff, pattern, buttons }
+  personalization: { text, font, textColor, uploadedImage, position, scale, rotation },
+};
 ```
 
 ## Cart item
@@ -96,7 +96,9 @@ customizationState = {
 it is **not** a new SKU:
 
 ```js
-{ productId, variants, customization, personalization, basePrice, customizationPrice, totalPrice }
+{
+  (productId, variants, customization, personalization, basePrice, customizationPrice, totalPrice);
+}
 ```
 
 ## Connecting real data / APIs later

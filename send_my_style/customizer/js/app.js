@@ -35,7 +35,11 @@
       toast: document.getElementById("toast"),
     };
 
-    PreviewEngine.init(els.canvas, () => product, () => state);
+    PreviewEngine.init(
+      els.canvas,
+      () => product,
+      () => state,
+    );
     UploadHandler.init({ canvasEl: els.canvas, onChangeCb: refresh });
 
     renderPicker();
@@ -76,8 +80,7 @@
       const selectedName = group.options.find((o) => o.id === selectedId)?.name || "";
       const wrap = document.createElement("div");
       wrap.className = "mt-5 first:mt-0";
-      wrap.innerHTML =
-        `<div class="mb-2 flex items-center justify-between">
+      wrap.innerHTML = `<div class="mb-2 flex items-center justify-between">
            <p class="text-sm font-semibold text-heading">${group.name}</p>
            <span class="text-xs text-body">${selectedName}</span>
          </div>`;
@@ -92,18 +95,27 @@
     product.customization.groups.forEach((group) => {
       const wrap = document.createElement("div");
       wrap.className = "mt-6 first:mt-0 border-t border-border pt-5 first:border-0 first:pt-0";
-      wrap.innerHTML =
-        `<p class="text-sm font-semibold text-heading">${group.name}${group.required ? "" : ' <span class="text-xs font-normal text-body">(optional)</span>'}</p>
+      wrap.innerHTML = `<p class="text-sm font-semibold text-heading">${group.name}${group.required ? "" : ' <span class="text-xs font-normal text-body">(optional)</span>'}</p>
          ${group.description ? `<p class="text-xs text-body">${group.description}</p>` : ""}`;
 
       let body;
       switch (group.displayType) {
-        case "color": body = colorRow(group, "custom", true); break;
-        case "card":  body = cardGrid(group); break;
-        case "text":  body = textControl(group); break;
-        case "upload": body = uploadControl(group); break;
+        case "color":
+          body = colorRow(group, "custom", true);
+          break;
+        case "card":
+          body = cardGrid(group);
+          break;
+        case "text":
+          body = textControl(group);
+          break;
+        case "upload":
+          body = uploadControl(group);
+          break;
         case "image":
-        default:      body = imageGrid(group); break;
+        default:
+          body = imageGrid(group);
+          break;
       }
       wrap.appendChild(body);
       els.customization.appendChild(wrap);
@@ -125,8 +137,11 @@
       b.setAttribute("role", "radio");
       b.setAttribute("aria-checked", active ? "true" : "false");
       b.setAttribute("aria-label", `${group.name}: ${opt.name}${opt.price ? ", +" + formatINR(opt.price) : ""}`);
-      b.className = "min-w-[3rem] rounded-lg border px-3 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary " +
-        (active ? "border-primary bg-primary text-white" : "border-border bg-surface text-heading hover:border-primary");
+      b.className =
+        "min-w-[3rem] rounded-lg border px-3 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary " +
+        (active
+          ? "border-primary bg-primary text-white"
+          : "border-border bg-surface text-heading hover:border-primary");
       b.textContent = opt.name + (opt.price ? ` +${formatINR(opt.price)}` : "");
       b.addEventListener("click", () => select(scope, group.id, opt.id));
       row.appendChild(b);
@@ -148,10 +163,12 @@
       b.setAttribute("aria-checked", active ? "true" : "false");
       b.setAttribute("aria-label", `${opt.name}${opt.price ? ", +" + formatINR(opt.price) : ""}`);
       b.title = opt.name + (opt.price ? ` (+${formatINR(opt.price)})` : "");
-      b.className = "relative h-9 w-9 rounded-full border transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary " +
+      b.className =
+        "relative h-9 w-9 rounded-full border transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary " +
         (active ? "border-primary ring-2 ring-sendmystyle-200" : "border-border");
       b.style.background = opt.value || "#eee";
-      if (active) b.innerHTML = `<i class="bx bx-check absolute inset-0 flex items-center justify-center text-lg" style="color:${contrast(opt.value || '#eee')}"></i>`;
+      if (active)
+        b.innerHTML = `<i class="bx bx-check absolute inset-0 flex items-center justify-center text-lg" style="color:${contrast(opt.value || "#eee")}"></i>`;
       b.addEventListener("click", () => select(scope, group.id, opt.id));
       row.appendChild(b);
     });
@@ -170,13 +187,20 @@
       b.type = "button";
       b.setAttribute("role", "radio");
       b.setAttribute("aria-checked", active ? "true" : "false");
-      b.setAttribute("aria-label", `${group.name}: ${opt.name}, ${opt.price ? "+" + formatINR(opt.price) : "included"}`);
-      b.className = "group flex flex-col rounded-xl border p-3 text-left transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary " +
-        (active ? "border-primary bg-sendmystyle-50 ring-1 ring-primary" : "border-border bg-surface hover:border-primary");
+      b.setAttribute(
+        "aria-label",
+        `${group.name}: ${opt.name}, ${opt.price ? "+" + formatINR(opt.price) : "included"}`,
+      );
+      b.className =
+        "group flex flex-col rounded-xl border p-3 text-left transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary " +
+        (active
+          ? "border-primary bg-sendmystyle-50 ring-1 ring-primary"
+          : "border-border bg-surface hover:border-primary");
       const preview = opt.value
         ? `<span class="mb-2 h-16 rounded-lg border border-border" style="background:${opt.value}"></span>`
         : `<span class="mb-2 flex h-16 items-center justify-center rounded-lg bg-sendmystyle-50 text-primary"><i class="bx ${iconFor(group.id)} text-2xl"></i></span>`;
-      b.innerHTML = preview +
+      b.innerHTML =
+        preview +
         `<span class="flex items-center gap-1.5 text-sm font-semibold text-heading">${opt.name}${active ? ' <i class="bx bx-check-circle text-primary"></i>' : ""}</span>` +
         (opt.description ? `<span class="mt-0.5 text-xs text-body">${opt.description}</span>` : "") +
         `<span class="mt-1 text-xs font-semibold text-primary">${opt.price ? "+" + formatINR(opt.price) : "Included"}</span>`;
@@ -198,11 +222,16 @@
       b.type = "button";
       b.setAttribute("role", "radio");
       b.setAttribute("aria-checked", active ? "true" : "false");
-      b.setAttribute("aria-label", `${group.name}: ${opt.name}, ${opt.price ? "+" + formatINR(opt.price) : "included"}`);
-      b.className = "flex items-start justify-between gap-2 rounded-xl border p-3.5 text-left transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary " +
-        (active ? "border-primary bg-sendmystyle-50 ring-1 ring-primary" : "border-border bg-surface hover:border-primary");
-      b.innerHTML =
-        `<span>
+      b.setAttribute(
+        "aria-label",
+        `${group.name}: ${opt.name}, ${opt.price ? "+" + formatINR(opt.price) : "included"}`,
+      );
+      b.className =
+        "flex items-start justify-between gap-2 rounded-xl border p-3.5 text-left transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary " +
+        (active
+          ? "border-primary bg-sendmystyle-50 ring-1 ring-primary"
+          : "border-border bg-surface hover:border-primary");
+      b.innerHTML = `<span>
            <span class="flex items-center gap-1.5 text-sm font-semibold text-heading">${opt.name}${active ? ' <i class="bx bx-check-circle text-primary"></i>' : ""}</span>
            ${opt.description ? `<span class="mt-0.5 block text-xs text-body">${opt.description}</span>` : ""}
          </span>
@@ -219,7 +248,10 @@
     const wrap = document.createElement("div");
     wrap.className = "mt-3";
     const fonts = (cfg.fontOptions || [cfg.defaultFont || "sans-serif"])
-      .map((f) => `<option value="${f}" ${f === meta.font ? "selected" : ""}>${f === "serif" ? "Serif" : "Sans"}</option>`).join("");
+      .map(
+        (f) => `<option value="${f}" ${f === meta.font ? "selected" : ""}>${f === "serif" ? "Serif" : "Sans"}</option>`,
+      )
+      .join("");
     wrap.innerHTML = `
       <div class="flex flex-wrap items-center gap-2">
         <input type="text" maxlength="${cfg.maxLength || 20}" placeholder="${cfg.placeholder || "Enter text"}" value="${state.text[group.id] || ""}"
@@ -233,9 +265,18 @@
     const input = wrap.querySelector("[data-text-input]");
     const font = wrap.querySelector("[data-text-font]");
     const color = wrap.querySelector("[data-text-color]");
-    input.addEventListener("input", () => { CustomizationEngine.setText(group.id, input.value); refresh(); });
-    font.addEventListener("change", () => { CustomizationEngine.setTextMeta(group.id, { font: font.value }); refresh(); });
-    color.addEventListener("input", () => { CustomizationEngine.setTextMeta(group.id, { color: color.value }); refresh(); });
+    input.addEventListener("input", () => {
+      CustomizationEngine.setText(group.id, input.value);
+      refresh();
+    });
+    font.addEventListener("change", () => {
+      CustomizationEngine.setTextMeta(group.id, { font: font.value });
+      refresh();
+    });
+    color.addEventListener("input", () => {
+      CustomizationEngine.setTextMeta(group.id, { color: color.value });
+      refresh();
+    });
     return wrap;
   }
 
@@ -278,12 +319,21 @@
       const file = e.target.files[0];
       if (!file) return;
       err.classList.add("hidden");
-      try { await UploadHandler.handleFile(group, file); controls.classList.remove("hidden"); }
-      catch (msg) { err.textContent = msg; err.classList.remove("hidden"); }
+      try {
+        await UploadHandler.handleFile(group, file);
+        controls.classList.remove("hidden");
+      } catch (msg) {
+        err.textContent = msg;
+        err.classList.remove("hidden");
+      }
     });
     scale.addEventListener("input", () => UploadHandler.setScale(group, parseFloat(scale.value)));
     rotate.addEventListener("input", () => UploadHandler.setRotation(group, parseInt(rotate.value, 10)));
-    removeBtn.addEventListener("click", () => { UploadHandler.remove(group); controls.classList.add("hidden"); input.value = ""; });
+    removeBtn.addEventListener("click", () => {
+      UploadHandler.remove(group);
+      controls.classList.add("hidden");
+      input.value = "";
+    });
     // Make this the active drag target when interacted
     wrap.addEventListener("pointerenter", () => UploadHandler.setActive(group.id));
     return wrap;
@@ -301,11 +351,13 @@
   // ---------- Summary + sync ----------
   function renderSummary(pricing) {
     els.summary.innerHTML = pricing.lines
-      .map((l) =>
-        `<div class="flex items-center justify-between py-1 text-sm">
+      .map(
+        (l) =>
+          `<div class="flex items-center justify-between py-1 text-sm">
            <span class="text-body">${l.groupName}</span>
            <span class="font-medium text-heading">${l.label}${l.price > 0 ? ` <span class="text-primary">+${formatINR(l.price)}</span>` : ""}</span>
-         </div>`)
+         </div>`,
+      )
       .join("");
   }
 
@@ -338,20 +390,37 @@
 
   // ---------- Helpers ----------
   function iconFor(groupId) {
-    return {
-      neck: "bx-collection", neckline: "bx-collection", collar: "bx-collection",
-      sleeve: "bx-move-horizontal", cuff: "bx-been-here",
-      print: "bx-image", pattern: "bx-grid-alt", embroidery: "bx-crown",
-      laces: "bx-git-commit", sole: "bx-shape-square", accent: "bx-palette",
-      wash: "bx-water", distressing: "bx-cut", stitching: "bx-git-branch",
-      strap: "bx-link", hardware: "bx-cog", patch: "bx-badge",
-      material: "bx-diamond", pendant: "bx-heart", buttons: "bx-radio-circle-marked",
-    }[groupId] || "bx-customize";
+    return (
+      {
+        neck: "bx-collection",
+        neckline: "bx-collection",
+        collar: "bx-collection",
+        sleeve: "bx-move-horizontal",
+        cuff: "bx-been-here",
+        print: "bx-image",
+        pattern: "bx-grid-alt",
+        embroidery: "bx-crown",
+        laces: "bx-git-commit",
+        sole: "bx-shape-square",
+        accent: "bx-palette",
+        wash: "bx-water",
+        distressing: "bx-cut",
+        stitching: "bx-git-branch",
+        strap: "bx-link",
+        hardware: "bx-cog",
+        patch: "bx-badge",
+        material: "bx-diamond",
+        pendant: "bx-heart",
+        buttons: "bx-radio-circle-marked",
+      }[groupId] || "bx-customize"
+    );
   }
 
   function contrast(hex) {
     const c = (hex || "#eeeeee").replace("#", "");
-    const r = parseInt(c.substr(0, 2), 16), g = parseInt(c.substr(2, 2), 16), b = parseInt(c.substr(4, 2), 16);
+    const r = parseInt(c.substr(0, 2), 16),
+      g = parseInt(c.substr(2, 2), 16),
+      b = parseInt(c.substr(4, 2), 16);
     return (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.6 ? "#481F29" : "#FFFFFF";
   }
 

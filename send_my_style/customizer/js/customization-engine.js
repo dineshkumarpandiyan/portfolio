@@ -10,12 +10,12 @@ const CustomizationEngine = (() => {
   // One state object.
   const state = {
     productId: null,
-    variants: {},        // { groupId: optionId }
-    customization: {},    // { groupId: optionId }  (image/color/card groups)
-    text: {},             // { groupId: string }     (text groups)
-    textMeta: {},         // { groupId: { font, color } }
-    uploads: {},          // { groupId: dataURL }    (upload groups)
-    transform: {},        // { groupId: { dx, dy, scale, rotation } } for uploads
+    variants: {}, // { groupId: optionId }
+    customization: {}, // { groupId: optionId }  (image/color/card groups)
+    text: {}, // { groupId: string }     (text groups)
+    textMeta: {}, // { groupId: { font, color } }
+    uploads: {}, // { groupId: dataURL }    (upload groups)
+    transform: {}, // { groupId: { dx, dy, scale, rotation } } for uploads
   };
 
   let initialState;
@@ -31,7 +31,9 @@ const CustomizationEngine = (() => {
     state.transform = {};
 
     // Defaults: first option of each variant + each option-based custom group
-    product.variants.forEach((g) => { state.variants[g.id] = g.options[0].id; });
+    product.variants.forEach((g) => {
+      state.variants[g.id] = g.options[0].id;
+    });
 
     product.customization.groups.forEach((g) => {
       if (g.displayType === "text") {
@@ -51,13 +53,23 @@ const CustomizationEngine = (() => {
     initialState = JSON.parse(JSON.stringify(state));
   }
 
-  function getProduct() { return product; }
+  function getProduct() {
+    return product;
+  }
 
-  function selectVariant(groupId, optionId) { state.variants[groupId] = optionId; }
-  function selectCustomization(groupId, optionId) { state.customization[groupId] = optionId; }
+  function selectVariant(groupId, optionId) {
+    state.variants[groupId] = optionId;
+  }
+  function selectCustomization(groupId, optionId) {
+    state.customization[groupId] = optionId;
+  }
 
-  function setText(groupId, value) { state.text[groupId] = value; }
-  function setTextMeta(groupId, meta) { state.textMeta[groupId] = { ...state.textMeta[groupId], ...meta }; }
+  function setText(groupId, value) {
+    state.text[groupId] = value;
+  }
+  function setTextMeta(groupId, meta) {
+    state.textMeta[groupId] = { ...state.textMeta[groupId], ...meta };
+  }
 
   function setUpload(groupId, dataURL) {
     state.uploads[groupId] = dataURL;
@@ -73,7 +85,9 @@ const CustomizationEngine = (() => {
 
   function resetCustomization() {
     const fresh = JSON.parse(JSON.stringify(initialState));
-    Object.keys(fresh).forEach((k) => { state[k] = fresh[k]; });
+    Object.keys(fresh).forEach((k) => {
+      state[k] = fresh[k];
+    });
     PreviewEngine.clearUploadCache();
   }
 
