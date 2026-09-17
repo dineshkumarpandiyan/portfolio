@@ -184,24 +184,37 @@
                 >
                   <b
                     x-data="{
-                      startDate: new Date('2023-11-20'),
+                      startDate: new Date(2023, 10, 20), // in JS 10 = nov, 0 = jan
+
                       get years() {
                         const now = new Date();
-                        let years = now.getFullYear() - this.startDate.getFullYear();
 
-                        if (
-                          now.getMonth() < this.startDate.getMonth() ||
-                          (now.getMonth() === this.startDate.getMonth() &&
-                            now.getDate() < this.startDate.getDate())
-                        ) {
+                        let years = now.getFullYear() - this.startDate.getFullYear();
+                        let months = now.getMonth() - this.startDate.getMonth();
+
+                        if (now.getDate() < this.startDate.getDate()) {
+                          months--;
+                        }
+
+                        if (months < 0) {
                           years--;
+                          months += 12;
+                        }
+
+                        // 9 months is the cutoff
+                        if (months >= 9) {
+                          years++;
                         }
 
                         return years;
                       }
                     }"
-                    x-bind:title="startDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })"
-                    x-text="years + 1'+ yrs'"
+                    x-bind:title="'From ' + startDate.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })"
+                    x-text="years + '+ yrs'"
                     class="block text-xl tracking-tight text-slate-900 dark:text-white"
                   >
                     3+ yrs
