@@ -1,0 +1,282 @@
+<!-- ============================================================
+     DESKTOP HEADER  (visible lg and up)
+     ============================================================ -->
+<div class="hidden lg:block">
+  <!-- Top offer bar -->
+  <div class="bg-neutral-950 text-white">
+    <div class="flex h-9 w-full items-center justify-between px-6 text-xs lg:px-10">
+      <!-- left: trust -->
+      <div class="flex items-center gap-2 text-neutral-400">
+        <i class="bx bx-check-shield text-sm"></i>
+        <span>100% Secure Payments</span>
+      </div>
+
+      <!-- center: rotating offers -->
+      <div class="relative h-9 flex-1 overflow-hidden">
+        <div id="offer-slider" class="flex flex-col transition-transform duration-500 ease-out">
+          <!-- offers injected by JS -->
+        </div>
+      </div>
+
+      <!-- right: quick links -->
+      <div class="flex items-center gap-5">
+        <a href="#" class="text-neutral-300 transition-colors hover:text-white">Track Order</a>
+        <span class="h-3 w-px bg-neutral-700"></span>
+        <a href="#" class="text-neutral-300 transition-colors hover:text-white">Help</a>
+        <span class="h-3 w-px bg-neutral-700"></span>
+        <a href="#" class="text-neutral-300 transition-colors hover:text-white">Sell With Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky group: main bar + nav stick together -->
+  <div class="sticky top-0 z-40">
+    <!-- Main bar -->
+    <div class="border-border bg-surface/95 border-b backdrop-blur">
+      <div class="flex h-[72px] w-full items-center gap-5 px-6 lg:px-10">
+        <!-- Logo + brand -->
+        <a href="index.html" class="flex shrink-0 items-center gap-2.5">
+          <img src="assets/images/sms_icon_logo.png" alt="SendMyStyle" class="h-9 w-auto" />
+          <span class="font-display text-heading text-xl font-bold tracking-tight">
+            Send<span class="text-primary">My</span>Style
+          </span>
+        </a>
+
+        <!-- Location / pincode (right next to logo, Amazon style) -->
+        <button
+          id="location-btn"
+          class="group flex shrink-0 items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-neutral-50"
+        >
+          <i class="bx bx-map text-primary text-lg"></i>
+          <span class="leading-tight">
+            <span class="text-muted block text-[10px] uppercase tracking-wide">Deliver to</span>
+            <span id="location-label" class="text-heading flex items-center gap-1 text-xs font-semibold">
+              Select Location <i class="bx bx-chevron-down text-muted text-sm"></i>
+            </span>
+          </span>
+        </button>
+
+        <!-- Inline nav (xl and up only) -->
+        <ul id="desktop-nav-inline" class="hidden shrink-0 items-center gap-0.5 xl:flex">
+          <!-- nav items injected by JS -->
+        </ul>
+
+        <!-- Search -->
+        <div class="relative flex-1" data-search-wrap>
+          <i class="bx bx-search text-muted absolute left-4 top-1/2 -translate-y-1/2 text-lg"></i>
+          <input
+            type="text"
+            id="site-search"
+            autocomplete="off"
+            placeholder="Search for products, brands and more"
+            class="border-border text-heading placeholder:text-muted focus:border-primary focus:ring-primary h-11 w-full rounded-lg border bg-neutral-50 pl-11 pr-4 text-sm transition-colors focus:bg-white focus:outline-none focus:ring-1"
+          />
+          <div
+            id="site-search-panel"
+            class="border-border bg-surface shadow-soft absolute left-0 right-0 top-full z-50 mt-2 hidden overflow-hidden rounded-xl border"
+          ></div>
+        </div>
+
+        <!-- Action icons -->
+        <div class="flex shrink-0 items-center gap-1">
+          <!-- Profile (with hover dropdown) -->
+          <div class="group/profile relative">
+            <button
+              class="text-heading hover:text-primary flex flex-col items-center rounded-lg px-3 py-1.5 transition-colors"
+            >
+              <i class="bx bx-user text-xl"></i>
+              <span id="profile-label" class="text-[11px] font-medium">Profile</span>
+            </button>
+
+            <!-- Dropdown -->
+            <div
+              class="invisible absolute right-0 top-full z-50 w-64 -translate-y-1 pt-2 opacity-0 transition-all duration-200 group-hover/profile:visible group-hover/profile:translate-y-0 group-hover/profile:opacity-100"
+            >
+              <div id="profile-menu" class="border-border bg-surface shadow-soft overflow-hidden rounded-xl border">
+                <!-- injected by JS (guest / logged-in) -->
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="pages/wishlist.html"
+            data-nav-link="wishlist"
+            class="text-heading hover:text-primary relative flex flex-col items-center rounded-lg px-3 py-1.5 transition-colors"
+          >
+            <i class="bx bx-heart text-xl"></i>
+            <span class="text-[11px] font-medium">Wishlist</span>
+            <span
+              data-wishlist-count
+              class="bg-primary absolute right-1.5 top-0.5 flex hidden h-4 min-w-4 items-center justify-center rounded-full px-1 text-[9px] font-bold text-white"
+              >0</span
+            >
+          </a>
+
+          <a
+            href="pages/cart.html"
+            data-nav-link="cart"
+            class="text-heading hover:text-primary relative flex flex-col items-center rounded-lg px-3 py-1.5 transition-colors"
+          >
+            <i class="bx bx-shopping-bag text-xl"></i>
+            <span class="text-[11px] font-medium">Cart</span>
+            <span
+              data-cart-count
+              class="bg-primary absolute right-1.5 top-0.5 flex hidden h-4 min-w-4 items-center justify-center rounded-full px-1 text-[9px] font-bold text-white"
+              >0</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation bar with mega menu (lg only, hidden on xl since nav is inline) -->
+    <nav class="border-border bg-surface/95 border-b backdrop-blur xl:hidden">
+      <ul id="desktop-nav" class="flex w-full items-center justify-center gap-1 px-6 lg:px-10">
+        <!-- nav items injected by JS -->
+      </ul>
+    </nav>
+  </div>
+  <!-- /sticky group -->
+</div>
+
+<!-- ============================================================
+     LOCATION / PINCODE MODAL  (shared desktop + mobile)
+     ============================================================ -->
+<div id="location-modal" class="fixed inset-0 z-[100] hidden">
+  <div class="location-overlay absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+  <div
+    class="bg-surface shadow-soft absolute left-1/2 top-1/2 w-[90%] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-2xl p-6"
+  >
+    <div class="mb-5 flex items-center justify-between">
+      <h3 id="location-title" class="font-display text-heading text-lg font-bold">Choose your location</h3>
+      <button class="location-close text-muted hover:text-heading transition-colors">
+        <i class="bx bx-x text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Guest banner (shown when NOT logged in) -->
+    <div id="location-guest" class="border-border mb-4 hidden rounded-xl border bg-neutral-50 p-4">
+      <p class="text-body text-sm">Select a delivery location to see product availability and delivery options.</p>
+      <a
+        id="location-signin"
+        href="#"
+        class="bg-primary hover:bg-primary-hover mt-3 flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold text-white transition-colors"
+      >
+        <i class="bx bx-user"></i> Sign in to see your addresses
+      </a>
+    </div>
+
+    <!-- Intro text (logged-in) -->
+    <p id="location-intro" class="text-body mb-4 hidden text-sm">
+      Select a delivery location to see product availability and delivery options.
+    </p>
+
+    <!-- Saved addresses (logged-in users) -->
+    <div id="saved-addresses" class="mb-4 hidden">
+      <p class="text-muted mb-2 text-xs font-bold uppercase tracking-wide">Your saved addresses</p>
+      <div id="saved-addresses-list" class="space-y-2">
+        <!-- injected by JS -->
+      </div>
+
+      <!-- Add new address (Amazon style) -->
+      <a
+        id="location-add-address"
+        href="#"
+        class="hover:border-primary hover:bg-sendmystyle-50 mt-2 flex items-center gap-3 rounded-lg border border-dashed border-neutral-300 px-3 py-2.5 text-left transition-colors"
+      >
+        <span class="text-primary flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-100">
+          <i class="bx bx-plus text-xl"></i>
+        </span>
+        <span class="leading-tight">
+          <span class="text-primary block text-sm font-semibold">Add a new address</span>
+          <span class="text-muted block text-xs">Save home, work or other locations</span>
+        </span>
+      </a>
+
+      <div class="mt-4 flex items-center gap-3">
+        <span class="bg-border h-px flex-1"></span>
+        <span class="text-muted text-xs">or enter a pincode</span>
+        <span class="bg-border h-px flex-1"></span>
+      </div>
+    </div>
+
+    <!-- Detect current location (GPS devices only — injected via JS) -->
+    <button
+      id="detect-location"
+      class="border-primary bg-sendmystyle-50 hover:bg-sendmystyle-100 mb-4 hidden w-full items-center gap-3 rounded-lg border px-4 py-3 text-left transition-colors"
+    >
+      <i class="bx bx-current-location text-primary text-xl"></i>
+      <span class="leading-tight">
+        <span class="text-primary block text-sm font-semibold">Use my current location</span>
+        <span id="detect-status" class="text-body block text-xs">Detect via GPS for accurate delivery</span>
+      </span>
+      <i class="bx bx-loader-alt text-primary ml-auto hidden animate-spin text-lg" id="detect-spinner"></i>
+    </button>
+
+    <form id="pincode-form" class="flex gap-2">
+      <input
+        type="text"
+        id="pincode-input"
+        inputmode="numeric"
+        maxlength="6"
+        placeholder="Enter 6-digit pincode"
+        class="border-border text-heading placeholder:text-muted focus:border-primary focus:ring-primary h-11 flex-1 rounded-lg border bg-neutral-50 px-4 text-sm focus:bg-white focus:outline-none focus:ring-1"
+      />
+      <button
+        type="submit"
+        class="bg-primary hover:bg-primary-hover h-11 rounded-lg px-5 text-sm font-semibold text-white transition-colors"
+      >
+        Apply
+      </button>
+    </form>
+    <p id="pincode-error" class="text-primary mt-2 hidden text-xs font-medium">Please enter a valid 6-digit pincode.</p>
+
+    <div class="mt-6">
+      <p class="text-muted mb-3 text-xs font-bold uppercase tracking-wide">Popular cities</p>
+      <div class="flex flex-wrap gap-2">
+        <button
+          class="city-chip border-border text-body hover:border-primary hover:text-primary rounded-full border px-4 py-1.5 text-sm transition-colors"
+          data-city="Chennai"
+          data-pin="600001"
+        >
+          Chennai
+        </button>
+        <button
+          class="city-chip border-border text-body hover:border-primary hover:text-primary rounded-full border px-4 py-1.5 text-sm transition-colors"
+          data-city="Bengaluru"
+          data-pin="560001"
+        >
+          Bengaluru
+        </button>
+        <button
+          class="city-chip border-border text-body hover:border-primary hover:text-primary rounded-full border px-4 py-1.5 text-sm transition-colors"
+          data-city="Mumbai"
+          data-pin="400001"
+        >
+          Mumbai
+        </button>
+        <button
+          class="city-chip border-border text-body hover:border-primary hover:text-primary rounded-full border px-4 py-1.5 text-sm transition-colors"
+          data-city="Delhi"
+          data-pin="110001"
+        >
+          Delhi
+        </button>
+        <button
+          class="city-chip border-border text-body hover:border-primary hover:text-primary rounded-full border px-4 py-1.5 text-sm transition-colors"
+          data-city="Hyderabad"
+          data-pin="500001"
+        >
+          Hyderabad
+        </button>
+        <button
+          class="city-chip border-border text-body hover:border-primary hover:text-primary rounded-full border px-4 py-1.5 text-sm transition-colors"
+          data-city="Kolkata"
+          data-pin="700001"
+        >
+          Kolkata
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

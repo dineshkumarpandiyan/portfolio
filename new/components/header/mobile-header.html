@@ -1,0 +1,114 @@
+<!-- ============================================================
+     MOBILE HEADER  (below lg)
+     ============================================================ -->
+<div class="lg:hidden">
+  <!-- Compact offer bar -->
+  <div class="flex h-8 items-center justify-center bg-neutral-950 px-4 text-center">
+    <span id="offer-mobile" class="truncate text-[11px] font-medium text-neutral-200">
+      Free shipping on orders above ₹999
+    </span>
+  </div>
+
+  <!-- Main bar (sticky) -->
+  <div class="border-border bg-surface sticky top-0 z-40 border-b">
+    <div class="flex h-14 items-center gap-3 px-4">
+      <button id="menu-open" class="text-heading -ml-1 p-1" aria-label="Open menu">
+        <i class="bx bx-menu text-2xl"></i>
+      </button>
+
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/images/sms_icon_logo.png" alt="SendMyStyle" class="h-7 w-auto" />
+        <span class="font-display text-heading text-base font-bold tracking-tight">
+          Send<span class="text-primary">My</span>Style
+        </span>
+      </a>
+
+      <div class="ml-auto flex items-center gap-1">
+        <a href="pages/wishlist.html" data-nav-link="wishlist" class="text-heading relative p-2" aria-label="Wishlist">
+          <i class="bx bx-heart text-xl"></i>
+          <span
+            data-wishlist-count
+            class="bg-primary absolute right-0.5 top-0.5 flex hidden h-4 min-w-4 items-center justify-center rounded-full px-1 text-[9px] font-bold text-white"
+            >0</span
+          >
+        </a>
+        <a href="pages/cart.html" data-nav-link="cart" class="text-heading relative p-2" aria-label="Cart">
+          <i class="bx bx-shopping-bag text-xl"></i>
+          <span
+            data-cart-count
+            class="bg-primary absolute right-0.5 top-0.5 flex hidden h-4 min-w-4 items-center justify-center rounded-full px-1 text-[9px] font-bold text-white"
+            >0</span
+          >
+        </a>
+      </div>
+    </div>
+
+    <!-- Search (prominent, full width) -->
+    <div class="px-4 pb-3">
+      <div class="relative" data-search-wrap>
+        <i class="bx bx-search text-muted absolute left-3.5 top-1/2 -translate-y-1/2 text-xl"></i>
+        <input
+          type="text"
+          id="site-search-mobile"
+          autocomplete="off"
+          placeholder="Search for products, brands and more"
+          class="border-border text-heading placeholder:text-muted focus:border-primary focus:ring-primary h-11 w-full rounded-lg border bg-neutral-50 pl-11 pr-3 text-sm focus:bg-white focus:outline-none focus:ring-1"
+        />
+        <div
+          id="site-search-panel-mobile"
+          class="border-border bg-surface shadow-soft absolute left-0 right-0 top-full z-50 mt-2 hidden overflow-hidden rounded-xl border"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Location bar (Amazon style, below search) -->
+  <button
+    id="location-btn-mobile"
+    class="border-border flex w-full items-center gap-2 border-b bg-neutral-100 px-4 py-2 text-left"
+  >
+    <i class="bx bx-map text-primary shrink-0 text-lg"></i>
+    <span id="location-label-mobile" class="text-heading truncate text-xs font-medium"> Select delivery location </span>
+    <i class="bx bx-chevron-down text-muted ml-auto shrink-0 text-base"></i>
+  </button>
+</div>
+
+<!-- ============================================================
+     MOBILE DRAWER (slide-in nav)
+     ============================================================ -->
+<div id="mobile-drawer" class="fixed inset-0 z-[90] hidden lg:hidden">
+  <div class="drawer-overlay absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+  <aside
+    class="drawer-panel bg-surface absolute left-0 top-0 flex h-full w-[85%] max-w-sm -translate-x-full flex-col transition-transform duration-300 ease-out"
+  >
+    <!-- Drawer header -->
+    <div class="border-border flex items-center justify-between border-b px-4 py-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="assets/images/sms_icon_logo.png" alt="SendMyStyle" class="h-7 w-auto" />
+        <span class="font-display text-heading text-base font-bold tracking-tight">
+          Send<span class="text-primary">My</span>Style
+        </span>
+      </a>
+      <button id="menu-close" class="text-muted p-1" aria-label="Close menu">
+        <i class="bx bx-x text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Account row (populated by JS: guest / logged-in) -->
+    <a id="mobile-account" href="#" class="border-border flex items-center gap-3 border-b px-4 py-4">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100">
+        <i class="bx bx-user text-heading text-xl"></i>
+      </span>
+      <span class="leading-tight">
+        <span id="mobile-account-title" class="text-heading block text-sm font-semibold">Login / Sign up</span>
+        <span id="mobile-account-sub" class="text-muted block text-xs">Access orders & designs</span>
+      </span>
+      <i class="bx bx-chevron-right text-muted ml-auto text-xl"></i>
+    </a>
+
+    <!-- Accordion nav -->
+    <nav id="mobile-nav" class="flex-1 overflow-y-auto px-2 py-2">
+      <!-- injected by JS -->
+    </nav>
+  </aside>
+</div>
